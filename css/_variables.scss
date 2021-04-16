@@ -1,0 +1,33 @@
+// Colors Light Mode
+
+    // LM: border lines, botton hover, all texts, menu, icons, background menu mf, cards & social hover
+    $c-hovercardsgifs: #572EE5;  // $c-blue
+    $c-contrast: #572EE5; // $c-blue
+    // LM: placeholders, active bottons & menu, suggestions search
+    $c-placeholdersactives: #9CAFC3; // $c-placeholdersactives $c-grey
+    // LM: search, subtitle trending, texts footer, texts cards expand
+    $c-blacktexts: #000000;  // $c-black
+    // LM:  Background white
+    $c-background: #FFFFFF; //  $c-white
+    // LM: 
+    $c-whitetexts: #fffff1;
+    // LM: GIFOS, texts msj sections
+    $c-turquoise: #5ED7C6; 
+    // LM: background trending
+    $c-grey-backtrending: #F3F5F8;  // $c-grey-back
+
+    
+/* Fonts ======================================================================= */
+
+/* ITEMS / TITLE / MSJS 1º & CAM / TITLE SECTIONS / BOT VER MÁS */
+$title-font: 'Montserrat-Bold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+/* SUB TEXT DOWN TRENDING SECTION 1 */
+$subtitle1-font: 'Montserrat-Medium', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+/* SEARCH / TEXT CARDS / NUMEROS PAG / SUB TITLES / FOOTER */
+$subtitle2-font: 'Roboto-Regular', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+/* BOLD TEXT CARDS */
+$blodtext-font: 'Roboto-Bold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+/* BOLD TEXT CARDS */
+$botnumcreate-font: 'Roboto-Medium', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+/* ======================================================================= */

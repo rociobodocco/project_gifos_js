@@ -1,0 +1,200 @@
+@mixin shadow {
+    box-shadow: 0 2px 4px 1px $c-placeholdersactives;
+}
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 19.842vh;
+    padding: 0.75em 0.90em;
+    background-color: $c-background;
+    border-top: 0.3125em solid $c-contrast;
+    z-index: 99;
+
+    &.fixedHeaderShadow {
+        @include shadow;
+    }
+
+    nav {
+       
+        input {
+            display: none;
+            font-size: 1.125em;
+            margin-right: 1em;
+        }
+        .open {
+            display: block;
+            color: $c-contrast;
+        }
+          
+        .close {
+            display: none;
+            color: $c-contrast;
+        }
+          
+        input:checked ~ .open {
+            display: none;
+        }
+        
+        input:checked ~ .close {
+            display: block;
+        }
+
+        input:checked ~ ul {
+            display: block;
+        }
+
+        ul {
+            display: none;
+            position: absolute;
+            right: 0%;
+            top: 19vh;
+            width: 100vw;
+            height: 100vh;
+            padding: 0.5em;
+            background-color: $c-contrast;
+            opacity: 90%;
+
+            .underline {
+                width: 15%;
+                height: 0.01vh;
+                margin: auto;
+                border-bottom: 0.01em solid $c-whitetexts;
+                opacity: 50%;
+                padding: 0;
+            }
+
+            li {
+                list-style: none;
+                line-height: 6vh;
+                padding: 1em 0;
+                text-align: center;
+
+                a {
+                    font-family: $title-font;
+                    font-size: 0.93em;
+                    letter-spacing: 0;
+                    color: $c-whitetexts;
+                    text-decoration: none;
+                }
+                
+                a:active {
+                    color: $c-placeholdersactives;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+@media screen and (min-width: 768px) {
+    header {
+        position: fixed;
+    
+        nav {
+           
+            .mh, .x {
+                display: none;
+            }
+    
+            ul {
+                display: inline-block;
+                position: relative;
+                top: 0;
+                width: auto;
+                height: auto;
+                padding: 0;
+                background: none;      
+                
+                .underline {
+                    display: none;
+                }
+    
+                li {
+                    display: inline-block;
+                    padding: 0 1em;
+
+                    .changeTheme {
+                        color: $c-contrast;
+                        text-transform: uppercase;
+                        font-size: 0.8129em;
+                    }
+
+                    .changeTheme:hover {
+                        border-bottom: 0.2em solid $c-turquoise;
+                    }
+
+                    .changeTheme:active {
+                        color: $c-placeholdersactives;
+                        text-decoration: none;
+                    }
+
+                    .lineDecorate:hover {
+                        border-bottom: 0.2em solid $c-turquoise;
+                    }
+    
+                    a {
+                        text-transform: uppercase;
+                        font-size: 0.8129em;
+                        color: $c-contrast;
+    
+                        &:active {
+                            color: $c-placeholdersactives;
+                            text-decoration: none;
+                        }
+
+                        .fa-plus, .menusearch {
+                            width: 100%;
+                            padding: 1em;
+                            border-radius: 100%;
+                            border: 0.1em solid $c-contrast;
+                        }
+
+                        .fa-plus:hover {
+                            background: $c-contrast;
+                            color: $c-whitetexts;
+                        }
+
+                        .fa-plus:active {
+                            background: $c-placeholdersactives;
+                            color: $c-whitetexts;
+                        }
+
+                        .menusearch:hover {
+                            background: $c-contrast;
+                            color: $c-whitetexts;
+                        }
+
+                        .menusearch:active {
+                            background: $c-placeholdersactives;
+                            color: $c-whitetexts;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Tablets en horizonal y escritorios normales   
+    ------------------------------------------------------------------------- */
+@media screen and (min-width: 1024px) {
+    header {
+        padding: 0.75em 6em;
+    }
+}
+
+// /* Escritorios muy anchos
+//    ------------------------------------------------------------------------- */
+// @media screen and (min-width: 1200px) {}
+

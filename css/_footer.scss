@@ -1,0 +1,101 @@
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 33.16vh;
+    border-bottom: 0.3125em solid $c-contrast;
+
+    .social-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .textRedes {
+            padding: 2em 0 1em 0;
+            font-size: 0.95em;
+        }
+
+        .containerRedes {
+            display: flex;
+            justify-content: space-between;
+            width: 28vw;
+
+            .fa-facebook-f, .fa-twitter, .fa-instagram {
+                color: #CDD6E0;
+            }
+        }
+    }
+}
+
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+   @media screen and (min-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 24vh;
+        padding: 0 3em;
+        border-bottom: 0.3125em solid $c-contrast;
+    
+        .social-footer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+    
+            .textRedes {
+                padding: 0;
+                font-size: 0.815em;
+            }
+    
+            .containerRedes {
+                display: flex;
+                justify-content: space-evenly;
+                width: 15vw;
+                padding: 0 0 0 0.8em;
+
+                .fa-facebook-f:hover {
+                    color: $c-contrast;
+                }
+                .fa-twitter:hover {
+                    color: $c-contrast;
+                } 
+                .fa-instagram:hover {
+                    color: $c-contrast;
+                }
+
+            }
+        }
+
+        .textDescriptionFooter {
+            font-size: 0.815em;
+        }
+    }
+}
+
+
+/* Tablets en horizonal y escritorios normales
+    ------------------------------------------------------------------------- */
+@media screen and (min-width: 1024px) {
+    footer {
+    padding: 0.75em 6em;
+    }
+}
+
+// /* Escritorios muy anchos
+//     ------------------------------------------------------------------------- */
+@media screen and (min-width: 1200px) {
+    footer {    
+        .social-footer {
+            .containerRedes {
+                width: 10vw;
+                padding: 0 0 0 0.2em;
+            }
+        }
+    }
+} 
+
+   

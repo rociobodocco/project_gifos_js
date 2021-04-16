@@ -1,0 +1,1362 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw;
+  scroll-behavior: smooth; }
+
+.night-mode * {
+  background-color: #37383c;
+  color: #fffff1; }
+.night-mode header {
+  border-top: 0.3125em solid #000000; }
+.night-mode .fa-plus, .night-mode .menusearch {
+  width: 100%;
+  padding: 1em;
+  border-radius: 100%;
+  border: 0.1em solid #fffff1; }
+.night-mode .fa-plus:hover {
+  background: #fffff1;
+  color: #37383c; }
+.night-mode .fa-facebook-f, .night-mode .fa-twitter, .night-mode .fa-instagram:hover {
+  color: #fffff1; }
+.night-mode .home .containerSearch {
+  border: 0.1em solid #fffff1; }
+.night-mode .home .containerSearch .containerInputIcons .inputTextSearch {
+  color: #fffff1; }
+.night-mode .home .containerSearch .containerInputIcons .inputTextSearch {
+  color: #9CAFC3; }
+.night-mode .home .containerTrending .subtitleSec1 {
+  color: #fffff1; }
+.night-mode .home .containerTrending .trending {
+  color: #fffff1; }
+.night-mode main .trendingSection {
+  background-color: #222326; }
+.night-mode main .trendingSection .titleTrendingSection {
+  background-color: #222326; }
+.night-mode main .trendingSection .containerSubtitle .subtitleTrendingSection1 {
+  background-color: #222326; }
+.night-mode main .trendingSection .containerSubtitle .subtitleTrendingSection2 {
+  background-color: #222326; }
+.night-mode body main .trendingSection .container-slider {
+  background-color: #222326; }
+.night-mode .containerDetails .content-overlay {
+  background-color: #572EE5; }
+.night-mode footer {
+  border-bottom: 0.3125em solid #000000; }
+
+body {
+  /* Fonts ======================================================================= */
+  /* ITEMS / TITLE / MSJS 1º & CAM / TITLE SECTIONS / BOT VER MÁS */
+  /* SUB TEXT DOWN TRENDING SECTION 1 */
+  /* SEARCH / TEXT CARDS / NUMEROS PAG / SUB TITLES / FOOTER */
+  /* BOLD TEXT CARDS */
+  /* BOLD TEXT CARDS */
+  /* ======================================================================= */
+  /* Móviles en horizontal o tablets en vertical
+     ------------------------------------------------------------------------- */
+  /* Tablets en horizonal y escritorios normales   
+      ------------------------------------------------------------------------- */
+  /* ITEMS / TITLE / MSJS 1º & CAM / TITLE SECTIONS / BOT VER MÁS */
+  /* SUB TEXT DOWN TRENDING SECTION 1 */
+  /* SEARCH / TEXT CARDS / NUMEROS PAG / SUB TITLES / FOOTER */
+  /* BOLD TEXT CARDS */
+  /* Móviles en horizontal o tablets en vertical
+     ------------------------------------------------------------------------- */
+  /* Tablets en horizonal y escritorios normales
+      ------------------------------------------------------------------------- */
+  /* Escritorios muy anchos
+  //     ------------------------------------------------------------------------- */
+  /* Móviles en horizontal o tablets en vertical
+     ------------------------------------------------------------------------- */
+  /* Tablets en horizonal y escritorios normales
+      ------------------------------------------------------------------------- */
+  /* Escritorios muy anchos
+      ------------------------------------------------------------------------- */
+  /* Móviles en horizontal o tablets en vertical
+     ------------------------------------------------------------------------- */
+  /* Tablets en horizonal y escritorios normales
+      ------------------------------------------------------------------------- */
+  /* Escritorios muy anchos
+      ------------------------------------------------------------------------- */
+  /* Móviles en horizontal o tablets en vertical
+     ------------------------------------------------------------------------- */
+  /* Tablets en horizonal y escritorios normales
+      ------------------------------------------------------------------------- */
+  /* Móviles en horizontal o tablets en vertical
+     ------------------------------------------------------------------------- */
+  /* Escritorios muy anchos
+      ------------------------------------------------------------------------- */
+  /* Móviles en horizontal o tablets en vertical
+     ------------------------------------------------------------------------- */
+  /* Tablets en horizonal y escritorios normales
+      ------------------------------------------------------------------------- */ }
+  body header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 19.842vh;
+    padding: 0.75em 0.90em;
+    background-color: #FFFFFF;
+    border-top: 0.3125em solid #572EE5;
+    z-index: 99; }
+    body header.fixedHeaderShadow {
+      box-shadow: 0 2px 4px 1px #9CAFC3; }
+    body header nav input {
+      display: none;
+      font-size: 1.125em;
+      margin-right: 1em; }
+    body header nav .open {
+      display: block;
+      color: #572EE5; }
+    body header nav .close {
+      display: none;
+      color: #572EE5; }
+    body header nav input:checked ~ .open {
+      display: none; }
+    body header nav input:checked ~ .close {
+      display: block; }
+    body header nav input:checked ~ ul {
+      display: block; }
+    body header nav ul {
+      display: none;
+      position: absolute;
+      right: 0%;
+      top: 19vh;
+      width: 100vw;
+      height: 100vh;
+      padding: 0.5em;
+      background-color: #572EE5;
+      opacity: 90%; }
+      body header nav ul .underline {
+        width: 15%;
+        height: 0.01vh;
+        margin: auto;
+        border-bottom: 0.01em solid #fffff1;
+        opacity: 50%;
+        padding: 0; }
+      body header nav ul li {
+        list-style: none;
+        line-height: 6vh;
+        padding: 1em 0;
+        text-align: center; }
+        body header nav ul li a {
+          font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+          font-size: 0.93em;
+          letter-spacing: 0;
+          color: #fffff1;
+          text-decoration: none; }
+        body header nav ul li a:active {
+          color: #9CAFC3; }
+  @media screen and (min-width: 768px) {
+    body header {
+      position: fixed; }
+      body header nav .mh, body header nav .x {
+        display: none; }
+      body header nav ul {
+        display: inline-block;
+        position: relative;
+        top: 0;
+        width: auto;
+        height: auto;
+        padding: 0;
+        background: none; }
+        body header nav ul .underline {
+          display: none; }
+        body header nav ul li {
+          display: inline-block;
+          padding: 0 1em; }
+          body header nav ul li .changeTheme {
+            color: #572EE5;
+            text-transform: uppercase;
+            font-size: 0.8129em; }
+          body header nav ul li .changeTheme:hover {
+            border-bottom: 0.2em solid #5ED7C6; }
+          body header nav ul li .changeTheme:active {
+            color: #9CAFC3;
+            text-decoration: none; }
+          body header nav ul li .lineDecorate:hover {
+            border-bottom: 0.2em solid #5ED7C6; }
+          body header nav ul li a {
+            text-transform: uppercase;
+            font-size: 0.8129em;
+            color: #572EE5; }
+            body header nav ul li a:active {
+              color: #9CAFC3;
+              text-decoration: none; }
+            body header nav ul li a .fa-plus, body header nav ul li a .menusearch {
+              width: 100%;
+              padding: 1em;
+              border-radius: 100%;
+              border: 0.1em solid #572EE5; }
+            body header nav ul li a .fa-plus:hover {
+              background: #572EE5;
+              color: #fffff1; }
+            body header nav ul li a .fa-plus:active {
+              background: #9CAFC3;
+              color: #fffff1; }
+            body header nav ul li a .menusearch:hover {
+              background: #572EE5;
+              color: #fffff1; }
+            body header nav ul li a .menusearch:active {
+              background: #9CAFC3;
+              color: #fffff1; } }
+  @media screen and (min-width: 1024px) {
+    body header {
+      padding: 0.75em 6em; } }
+  body h2, body h3, body h4 {
+    font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    letter-spacing: 0;
+    color: #572EE5;
+    text-align: center; }
+  body h6, body p {
+    font-family: "Roboto-Regular", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    letter-spacing: 0;
+    text-align: center; }
+  body main .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7em 0 1em 0em;
+    height: max-content; }
+    body main .home .titleprincipal {
+      font-size: 1.5625em; }
+      body main .home .titleprincipal .gifosColor {
+        color: #5ED7C6; }
+    body main .home .imgHome {
+      display: flex;
+      justify-content: center;
+      padding: 1.5em 0 0 0; }
+      body main .home .imgHome img {
+        width: 85.32vw;
+        height: 25.8vh; }
+    body main .home .containerSearch {
+      display: flex;
+      flex-direction: column;
+      top: 111vw;
+      padding: 0.5em;
+      border: 0.1em solid #572EE5;
+      border-radius: 1.6875em;
+      width: 90vw; }
+      body main .home .containerSearch.sticky {
+        position: fixed;
+        display: block;
+        top: 5vh;
+        left: 25vw;
+        width: 60vw;
+        z-index: 250; }
+        body main .home .containerSearch.sticky .containerInputIcons .inputTextSearch {
+          width: 42vw;
+          border: none;
+          font-size: 0.8em; }
+      body main .home .containerSearch .containerInputIcons {
+        display: flex;
+        justify-content: space-between;
+        /* clears the ‘X’ from Internet Explorer */
+        /* clears the ‘X’ from Chrome */ }
+        body main .home .containerSearch .containerInputIcons .inputTextSearch {
+          text-align: center;
+          width: 60vw;
+          outline: none;
+          border: none;
+          font-size: 1em;
+          color: #000000; }
+        body main .home .containerSearch .containerInputIcons input[type=search]::-ms-clear {
+          display: none;
+          width: 0;
+          height: 0; }
+        body main .home .containerSearch .containerInputIcons input[type=search]::-ms-reveal {
+          display: none;
+          width: 0;
+          height: 0; }
+        body main .home .containerSearch .containerInputIcons input[type="search"]::-webkit-search-decoration,
+        body main .home .containerSearch .containerInputIcons input[type="search"]::-webkit-search-cancel-button,
+        body main .home .containerSearch .containerInputIcons input[type="search"]::-webkit-search-results-button,
+        body main .home .containerSearch .containerInputIcons input[type="search"]::-webkit-search-results-decoration {
+          display: none; }
+        body main .home .containerSearch .containerInputIcons .search {
+          height: max-content;
+          cursor: pointer;
+          padding: 0.5em;
+          color: #572EE5; }
+        body main .home .containerSearch .containerInputIcons .cross {
+          display: none;
+          height: max-content;
+          color: #572EE5;
+          cursor: pointer;
+          padding: 0.5em; }
+      body main .home .containerSearch .lineSearchSuggestions {
+        display: none;
+        width: 76vw;
+        margin: 1em 0;
+        border: 0.01em solid #9CAFC3;
+        align-self: center;
+        opacity: 50%; }
+      body main .home .containerSearch .containerAutocomplete {
+        display: none;
+        width: 70vw; }
+        body main .home .containerSearch .containerAutocomplete .itemSuggestions {
+          text-transform: capitalize;
+          list-style: none;
+          text-align: left;
+          font-size: 1em;
+          color: #9CAFC3;
+          padding: 0.2em;
+          font-family: "Roboto-Regular", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; }
+          body main .home .containerSearch .containerAutocomplete .itemSuggestions .fa-search {
+            padding: 0.2em; }
+    body main .home .containerTrending .trending {
+      padding: 1em 0 0.4em 0;
+      font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      letter-spacing: 0;
+      color: #572EE5;
+      text-align: center;
+      font-size: 1em; }
+    body main .home .containerTrending .subtitleSec1 {
+      width: 70vw;
+      font-family: "Montserrat-Medium", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      color: #572EE5;
+      letter-spacing: 0;
+      text-align: center;
+      font-size: 0.88em;
+      line-height: 1.5em; }
+    body main .home .containerTitleSearch .lineSearch {
+      width: 50vw;
+      margin: 1em 0;
+      border: 0.01em solid #9CAFC3;
+      opacity: 50%; }
+    body main .home .containerTitleSearch .newtitleSearch {
+      text-transform: capitalize;
+      font-size: 1.879em;
+      padding: 0.5em 0; }
+    body main .home .containerGifsSearch {
+      display: grid;
+      grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+      align-items: center;
+      width: 95%;
+      height: 100%;
+      padding: 1em; }
+      body main .home .containerGifsSearch .container-img-searchGifos .imgnewgifosSearch {
+        width: 95%;
+        padding: 0.5em 0; }
+      body main .home .containerGifsSearch .container-img-searchGifos .containerDetails {
+        display: none; }
+      body main .home .containerGifsSearch .searchEmpty {
+        grid-area: 1 / 1 / 3 / 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 0 2em 0em; }
+        body main .home .containerGifsSearch .searchEmpty .containerImgSearchEmpty .imgSearchEmpty {
+          padding: 1em 0 1em 0em; }
+        body main .home .containerGifsSearch .searchEmpty .newtextnotfoundsearch {
+          padding: 1em;
+          font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+          color: #5ED7C6;
+          font-size: 1.38em; }
+      body main .home .containerGifsSearch .show {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 6.3em;
+        padding: 0.5em 5em;
+        width: 100%;
+        overflow: auto;
+        background-color: rgba(255, 255, 255, 0.842); }
+        body main .home .containerGifsSearch .show .close-btn-modalExpand {
+          align-self: flex-end;
+          width: 3vw;
+          height: 3vw;
+          color: #572EE5;
+          background: #FFFFFF;
+          opacity: 0.7;
+          padding: 0.35em;
+          border-radius: 0.375em; }
+        body main .home .containerGifsSearch .show .img-expand {
+          padding: 0.5em;
+          width: 35vw;
+          height: 35vw; }
+          body main .home .containerGifsSearch .show .img-expand img {
+            width: 100%;
+            height: 100%; }
+        body main .home .containerGifsSearch .show .constainerIcons {
+          align-self: flex-end;
+          display: flex; }
+          body main .home .containerGifsSearch .show .constainerIcons a {
+            padding: 0.2em; }
+            body main .home .containerGifsSearch .show .constainerIcons a .fa-heart, body main .home .containerGifsSearch .show .constainerIcons a .fa-download, body main .home .containerGifsSearch .show .constainerIcons a .fa-expand-alt {
+              width: 3vw;
+              height: 3vw;
+              color: #572EE5;
+              background: #FFFFFF;
+              opacity: 0.7;
+              padding: 0.2em;
+              border-radius: 0.375em; }
+              body main .home .containerGifsSearch .show .constainerIcons a .fa-heart:hover, body main .home .containerGifsSearch .show .constainerIcons a .fa-download:hover, body main .home .containerGifsSearch .show .constainerIcons a .fa-expand-alt:hover {
+                opacity: 1; }
+        body main .home .containerGifsSearch .show .textCardimg, body main .home .containerGifsSearch .show .titleCardimg {
+          align-self: flex-start;
+          color: #000000; }
+        body main .home .containerGifsSearch .show .textCardimg {
+          font-size: 0.9em;
+          width: max-content; }
+        body main .home .containerGifsSearch .show .titleCardimg {
+          padding: 0.3em 0 0 0;
+          font-family: "Roboto-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+          font-size: 1em;
+          width: 22vw;
+          text-align: left; }
+    body main .home .btnSeeMoreGifos {
+      width: 50vw;
+      padding: 1em;
+      margin: 1em 0;
+      font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 0.815em;
+      color: #572EE5;
+      border: 0.1em solid #572EE5;
+      border-radius: 1.6875em;
+      background: none; }
+  @media screen and (min-width: 768px) {
+    body main .home {
+      padding: 2em 0; }
+      body main .home .titleprincipal {
+        margin-top: 2.5em;
+        width: 78vw;
+        font-size: 2.189em; }
+      body main .home .imgHome img {
+        width: 51.99vw;
+        height: 37.7vh; }
+      body main .home .containerSearch {
+        width: 63.2vw;
+        height: max-content; }
+        body main .home .containerSearch .lineSearchSuggestions {
+          width: 59vw; }
+        body main .home .containerSearch .containerAutocomplete .itemSuggestions {
+          width: max-content; }
+      body main .home .containerTrending {
+        padding: 3em 0; }
+        body main .home .containerTrending .trending {
+          font-size: 1.15em; }
+        body main .home .containerTrending .subtitleSec1 {
+          font-size: 1em; }
+      body main .home .containerTitleSearch .lineSearch {
+        width: 40vw; }
+      body main .home .containerTitleSearch .newtitleSearch {
+        font-size: 2.189em; }
+      body main .home .containerGifsSearch {
+        width: 85vw;
+        grid-template: repeat(3, 1fr)/repeat(4, 1fr); }
+        body main .home .containerGifsSearch .container-img-searchGifos {
+          display: flex;
+          position: relative;
+          width: max-content;
+          height: max-content;
+          margin: none; }
+          body main .home .containerGifsSearch .container-img-searchGifos:hover .containerDetails .content-overlay {
+            opacity: 0.6; }
+          body main .home .containerGifsSearch .container-img-searchGifos:hover .containerDetails .content-details {
+            top: 50%;
+            opacity: 1; }
+          body main .home .containerGifsSearch .container-img-searchGifos .imgnewgifosSearch {
+            justify-self: stretch;
+            width: 20vw;
+            height: 20vw;
+            padding: 0.2em; }
+          body main .home .containerGifsSearch .container-img-searchGifos .containerDetails {
+            display: block; }
+            body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-overlay {
+              background: #572EE5;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              opacity: 0;
+              transition: all 0.4s ease-in-out 0s; }
+            body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details {
+              display: grid;
+              grid-template: repeat(4, 1fr)/repeat(3, 1fr);
+              position: absolute;
+              text-align: center;
+              width: 100%;
+              height: 100%;
+              padding: 0.8em;
+              opacity: 0;
+              transform: translate(-50%, -50%);
+              transition: all 0.3s ease-in-out 0s; }
+              body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .hoverIcons {
+                grid-area: 1 / 1 / 2 / 4;
+                display: flex;
+                justify-content: space-evenly;
+                justify-self: end;
+                width: 10vw; }
+                body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .hoverIcons a {
+                  padding: 0.2em; }
+                  body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .hoverIcons a .fa-heart, body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .hoverIcons a .fa-download, body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .hoverIcons a .fa-expand-alt {
+                    width: 3vw;
+                    height: 3vw;
+                    color: #572EE5;
+                    background: #FFFFFF;
+                    opacity: 0.7;
+                    padding: 0.2em 0 0 0;
+                    border-radius: 0.375em; }
+                    body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .hoverIcons a .fa-heart:hover, body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .hoverIcons a .fa-download:hover, body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .hoverIcons a .fa-expand-alt:hover {
+                      opacity: 1; }
+              body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .textCardimg, body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .titleCardimg {
+                grid-area: 4 / 1 / 5 / 4;
+                color: #FFFFFF; }
+              body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .textCardimg {
+                font-size: 0.9em;
+                width: max-content; }
+              body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .titleCardimg {
+                padding: 1em 0 0 0;
+                font-family: "Roboto-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+                font-size: 1em;
+                width: 15vw;
+                text-align: left; }
+            body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .fadeIn-top {
+              top: 50%; }
+            body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .fadeIn-left {
+              left: 50%; }
+        body main .home .containerGifsSearch .searchEmpty {
+          grid-area: 1 / 2 / 5 / 4;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 1em 0 2em 0em; }
+          body main .home .containerGifsSearch .searchEmpty .containerImgSearchEmpty .imgSearchEmpty {
+            padding: 1em 0 1em 0em; }
+          body main .home .containerGifsSearch .searchEmpty .newtextnotfoundsearch {
+            padding: 1em;
+            font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+            color: #5ED7C6;
+            font-size: 1.38em; }
+      body main .home .show {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 6.3em;
+        padding: 0.5em 5em;
+        width: 100%;
+        overflow: auto;
+        background-color: rgba(255, 255, 255, 0.842); }
+        body main .home .show .close-btn-modalExpand {
+          align-self: flex-end;
+          width: 3vw;
+          height: 3vw;
+          color: #572EE5;
+          background: #FFFFFF;
+          opacity: 0.7;
+          padding: 0.35em;
+          border-radius: 0.375em; }
+        body main .home .show .img-expand {
+          padding: 0.5em;
+          width: 35vw;
+          height: 35vw; }
+          body main .home .show .img-expand img {
+            width: 100%;
+            height: 100%; }
+        body main .home .show .constainerIcons {
+          align-self: flex-end;
+          display: flex; }
+          body main .home .show .constainerIcons a {
+            padding: 0.2em; }
+            body main .home .show .constainerIcons a .fa-heart, body main .home .show .constainerIcons a .fa-download, body main .home .show .constainerIcons a .fa-expand-alt {
+              width: 3vw;
+              height: 3vw;
+              color: #572EE5;
+              background: #FFFFFF;
+              opacity: 0.7;
+              padding: 0.2em;
+              border-radius: 0.375em; }
+              body main .home .show .constainerIcons a .fa-heart:hover, body main .home .show .constainerIcons a .fa-download:hover, body main .home .show .constainerIcons a .fa-expand-alt:hover {
+                opacity: 1; }
+        body main .home .show .textCardimg, body main .home .show .titleCardimg {
+          align-self: flex-start;
+          color: #000000; }
+        body main .home .show .textCardimg {
+          font-size: 0.9em;
+          width: max-content; }
+        body main .home .show .titleCardimg {
+          padding: 0.3em 0 0 0;
+          font-family: "Roboto-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+          font-size: 1em;
+          width: 22vw;
+          text-align: left; }
+      body main .home .btnSeeMoreGifos {
+        width: 15vw;
+        margin: 2em 0; } }
+  @media screen and (min-width: 1024px) {
+    body main .home {
+      padding: 3em 0; }
+      body main .home .titleprincipal {
+        margin-top: 4em;
+        width: 45vw; }
+      body main .home .imgHome {
+        margin-bottom: 1.5em;
+        width: 23.1vw;
+        height: 25.8vh; }
+        body main .home .imgHome img {
+          width: 23.1vw;
+          height: 25.8vh; }
+      body main .home .containerSearch {
+        width: 37.9vw;
+        height: max-content; }
+        body main .home .containerSearch .lineSearchSuggestions {
+          width: 35vw; }
+      body main .home .containerTitleSearch .lineSearch {
+        width: 30vw; }
+      body main .home .containerGifsSearch .fa-heart, body main .home .containerGifsSearch .fa-download, body main .home .containerGifsSearch .fa-expand-alt {
+        line-height: 1.9em; }
+      body main .home .containerGifsSearch .searchEmpty {
+        grid-area: 1 / 2 / 5 / 4; }
+      body main .home .btnSeeMoreGifos {
+        width: 10vw; } }
+  @media screen and (min-width: 1200px) {
+    body main .home .titleprincipal {
+      margin-top: 4em;
+      width: 38vw; }
+    body main .home .imgHome {
+      margin-bottom: 1em; }
+    body main .home .containerGifsSearch .fa-heart, body main .home .containerGifsSearch .fa-download, body main .home .containerGifsSearch .fa-expand-alt {
+      line-height: 1.75em;
+      font-size: 1.5em; }
+    body main .home .containerGifsSearch .searchEmpty {
+      grid-area: 1 / 2 / 5 / 4; }
+    body main .home .btnSeeMoreGifos {
+      width: 10vw; } }
+  body main .favoriteSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0 2em 0em; }
+    body main .favoriteSection .emptyFavoritesSection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1em 0 2em 0em; }
+      body main .favoriteSection .emptyFavoritesSection .textFavSection {
+        font-size: 1.25em; }
+      body main .favoriteSection .emptyFavoritesSection .containerImgFavNone .imgFav {
+        padding: 3em 0 1em 0em; }
+      body main .favoriteSection .emptyFavoritesSection .textFavNone {
+        padding: 1em;
+        font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        color: #5ED7C6;
+        font-size: 1.38em; }
+  @media screen and (min-width: 768px) {
+    body main .favoriteSection {
+      margin-top: 25vh;
+      padding: 1em 0 5em 0em; }
+      body main .favoriteSection .emptyFavoritesSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 0 2em 0em; }
+        body main .favoriteSection .emptyFavoritesSection .textFavSection {
+          font-size: 1.25em; }
+        body main .favoriteSection .emptyFavoritesSection .containerImgFavNone .imgFav {
+          padding: 3em 0 1em 0em; }
+        body main .favoriteSection .emptyFavoritesSection .textFavNone {
+          padding: 1em;
+          font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+          color: #5ED7C6;
+          font-size: 1.38em; }
+      body main .favoriteSection .containerFavorites {
+        display: grid;
+        width: 85vw;
+        grid-template: repeat(3, 1fr)/repeat(4, 1fr); }
+        body main .favoriteSection .containerFavorites .container-img-favGifos {
+          display: flex;
+          position: relative;
+          width: max-content;
+          height: max-content;
+          margin: none; }
+          body main .favoriteSection .containerFavorites .container-img-favGifos:hover .containerDetails .content-overlay {
+            opacity: 0.6; }
+          body main .favoriteSection .containerFavorites .container-img-favGifos:hover .containerDetails .content-details {
+            top: 50%;
+            opacity: 1; }
+          body main .favoriteSection .containerFavorites .container-img-favGifos .imgFavoritesGifos {
+            justify-self: stretch;
+            width: 20vw;
+            height: 20vw;
+            padding: 0.2em; }
+          body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails {
+            display: block; }
+            body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-overlay {
+              background: #572EE5;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              opacity: 0;
+              transition: all 0.4s ease-in-out 0s; }
+            body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details {
+              display: grid;
+              grid-template: repeat(4, 1fr)/repeat(3, 1fr);
+              position: absolute;
+              text-align: center;
+              width: 100%;
+              height: 100%;
+              padding: 0.8em;
+              opacity: 0;
+              transform: translate(-50%, -50%);
+              transition: all 0.3s ease-in-out 0s; }
+              body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .hoverIcons {
+                grid-area: 1 / 1 / 2 / 4;
+                display: flex;
+                justify-content: space-evenly;
+                justify-self: end;
+                width: 10vw; }
+                body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .hoverIcons a {
+                  padding: 0.2em; }
+                  body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .hoverIcons a .fa-heart, body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .hoverIcons a .fa-download, body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .hoverIcons a .fa-expand-alt {
+                    width: 3vw;
+                    height: 3vw;
+                    color: #572EE5;
+                    background: #FFFFFF;
+                    opacity: 0.7;
+                    padding: 0.2em 0 0 0;
+                    border-radius: 0.375em; }
+                    body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .hoverIcons a .fa-heart:hover, body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .hoverIcons a .fa-download:hover, body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .hoverIcons a .fa-expand-alt:hover {
+                      opacity: 1; }
+              body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .textCardimg, body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .titleCardimg {
+                grid-area: 4 / 1 / 5 / 4;
+                color: #FFFFFF; }
+              body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .textCardimg {
+                font-size: 0.9em;
+                width: max-content; }
+              body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .titleCardimg {
+                padding: 1em 0 0 0;
+                font-family: "Roboto-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+                font-size: 1em;
+                width: 15vw;
+                text-align: left; }
+            body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .fadeIn-top {
+              top: 50%; }
+            body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .fadeIn-left {
+              left: 50%; } }
+  @media screen and (min-width: 1024px) {
+    body main .favoriteSection .textFavNone {
+      width: 50%; } }
+  @media screen and (min-width: 1200px) {
+    body main .favoriteSection .textFavNone {
+      width: 40%; } }
+  body main .misgifosSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0 2em 0em; }
+    body main .misgifosSection .textMyGIFOSSection {
+      font-size: 1.25em; }
+    body main .misgifosSection .containerImgMyGIFOSNone .imgMyGIFOS {
+      padding: 3em 0 1em 0em; }
+    body main .misgifosSection .textMyGIFOSNone {
+      padding: 1em;
+      font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      color: #5ED7C6;
+      font-size: 1.38em; }
+  @media screen and (min-width: 768px) {
+    body main .misgifosSection {
+      margin-top: 25vh;
+      padding: 1em 0 5em 0em; }
+      body main .misgifosSection .textMyGIFOSSection {
+        font-size: 1.564em; } }
+  body main .contairer-create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4em 0 1em 0; }
+    body main .contairer-create .filmanimation1 {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 0.5em 0;
+      margin-left: 30vw; }
+      body main .contairer-create .filmanimation1 .cintas {
+        display: flex; }
+        body main .contairer-create .filmanimation1 .cintas .animationCinta1 {
+          width: 10vw;
+          height: 10vw;
+          margin-top: 25%;
+          animation: rotation1 2s infinite linear; }
+        body main .contairer-create .filmanimation1 .cintas .animationCinta2 {
+          width: 15vw;
+          height: 15vw;
+          margin-top: 18%;
+          animation: rotation2 2s infinite linear; }
+      body main .contairer-create .filmanimation1 .cam {
+        display: flex; }
+        body main .contairer-create .filmanimation1 .cam .animationCam {
+          width: 30vw; }
+        body main .contairer-create .filmanimation1 .cam .animationLight {
+          position: absolute;
+          width: 16vw;
+          right: 24vw;
+          top: 40.5vw;
+          animation: parpadeo 2s infinite linear; }
+    body main .contairer-create .contairer-cam {
+      display: grid;
+      grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+      align-items: center;
+      width: 95%;
+      height: 50vh;
+      border: 0.05em solid #572EE5;
+      padding: 0.5em;
+      margin-left: 2.8vw; }
+      body main .contairer-create .contairer-cam .corner1 {
+        align-self: flex-start;
+        width: 8vw;
+        height: 8vw;
+        border-top: 0.1em solid #5ED7C6;
+        border-left: 0.1em solid #5ED7C6;
+        z-index: 100; }
+      body main .contairer-create .contairer-cam .corner2 {
+        align-self: flex-start;
+        justify-self: flex-end;
+        width: 8vw;
+        height: 8vw;
+        margin-left: -0.2em;
+        border-top: 0.1em solid #5ED7C6;
+        border-right: 0.1em solid #5ED7C6;
+        z-index: 100; }
+      body main .contairer-create .contairer-cam .corner3 {
+        align-self: flex-end;
+        width: 8vw;
+        height: 8vw;
+        margin-right: -0.2em;
+        border-bottom: 0.1em solid #5ED7C6;
+        border-left: 0.1em solid #5ED7C6;
+        z-index: 100; }
+      body main .contairer-create .contairer-cam .corner4 {
+        align-self: flex-end;
+        justify-self: flex-end;
+        width: 8vw;
+        height: 8vw;
+        border-bottom: 0.1em solid #5ED7C6;
+        border-right: 0.1em solid #5ED7C6;
+        z-index: 100; }
+      body main .contairer-create .contairer-cam .titleCamSection {
+        width: 70vw;
+        font-size: 1.5625em; }
+        body main .contairer-create .contairer-cam .titleCamSection .gifosColo-camSec {
+          color: #5ED7C6; }
+      body main .contairer-create .contairer-cam .subtitleCamSection {
+        width: 70vw;
+        font-size: 1em; }
+    body main .contairer-create .info-cam {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 1em; }
+      body main .contairer-create .info-cam .bot1, body main .contairer-create .info-cam .bot2, body main .contairer-create .info-cam .bot3 {
+        width: 10vw;
+        height: 10vw;
+        line-height: 0.8em;
+        text-align: center;
+        padding: 0.5em;
+        margin: 0.3em;
+        font-family: "Roboto-Medium", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 1.125em;
+        color: #572EE5;
+        border: 0.05em solid #572EE5;
+        border-radius: 70%;
+        background: none; }
+    body main .contairer-create .line {
+      width: 90vw;
+      margin-bottom: 1em;
+      border: 0.1em solid #572EE5;
+      background: #572EE5;
+      border-radius: 1.6875em; }
+    body main .contairer-create .button-cam {
+      width: 50vw;
+      padding: 1em;
+      margin-bottom: 1em;
+      font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 0.815em;
+      color: #572EE5;
+      border: 0.1em solid #572EE5;
+      border-radius: 1.6875em;
+      background: none; }
+    body main .contairer-create .filmanimation2 .animationCinta3 {
+      width: 25vw;
+      animation: rotationY 2s infinite linear; }
+  @media screen and (min-width: 768px) {
+    body main .contairer-create {
+      margin-top: 25vh;
+      padding: 0 0 1em 0; }
+      body main .contairer-create .filmanimation1 {
+        margin-left: 35vw; }
+        body main .contairer-create .filmanimation1 .cintas .animationCinta1 {
+          width: 5vw;
+          height: 5vw;
+          margin-top: 5%; }
+        body main .contairer-create .filmanimation1 .cintas .animationCinta2 {
+          width: 8vw;
+          height: 8vw;
+          margin-top: 0; }
+        body main .contairer-create .filmanimation1 .cam .animationCam {
+          width: 15vw; }
+        body main .contairer-create .filmanimation1 .cam .animationLight {
+          width: 9vw;
+          right: 35.8vw;
+          top: 20.34vw; }
+      body main .contairer-create .contairer-cam {
+        width: 89.6vw;
+        height: 77.5vh;
+        padding: 0.5em;
+        margin-left: 0; }
+        body main .contairer-create .contairer-cam .corner1 {
+          width: 4vw;
+          height: 4vw; }
+        body main .contairer-create .contairer-cam .corner2 {
+          width: 4vw;
+          height: 4vw; }
+        body main .contairer-create .contairer-cam .corner3 {
+          width: 4vw;
+          height: 4vw; }
+        body main .contairer-create .contairer-cam .corner4 {
+          width: 4vw;
+          height: 4vw; }
+        body main .contairer-create .contairer-cam .titleCamSection {
+          justify-self: center;
+          width: 35vw; }
+        body main .contairer-create .contairer-cam .subtitleCamSection {
+          width: 33vw; }
+      body main .contairer-create .info-cam .bot1, body main .contairer-create .info-cam .bot2, body main .contairer-create .info-cam .bot3 {
+        width: 4.559vw;
+        height: 4.559vw; }
+      body main .contairer-create .line {
+        width: 95vw; }
+      body main .contairer-create .button-cam {
+        width: 16.55vw; }
+      body main .contairer-create .filmanimation2 .animationCinta3 {
+        width: 15vw; } }
+  @media screen and (min-width: 1024px) {
+    body main .contairer-create {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      body main .contairer-create .containerFlexCreateAnimation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; }
+        body main .contairer-create .containerFlexCreateAnimation .filmanimation1 {
+          margin-left: -15vw;
+          padding: 0 1em; }
+          body main .contairer-create .containerFlexCreateAnimation .filmanimation1 .cintas {
+            width: 15vw; }
+            body main .contairer-create .containerFlexCreateAnimation .filmanimation1 .cintas .animationCinta1 {
+              width: 4vw;
+              height: 4vw;
+              margin-top: 15%; }
+            body main .contairer-create .containerFlexCreateAnimation .filmanimation1 .cintas .animationCinta2 {
+              width: 6vw;
+              height: 6vw;
+              margin-top: 1.5%; }
+          body main .contairer-create .containerFlexCreateAnimation .filmanimation1 .cam {
+            width: 15vw; }
+            body main .contairer-create .containerFlexCreateAnimation .filmanimation1 .cam .animationCam {
+              width: 11vw; }
+            body main .contairer-create .containerFlexCreateAnimation .filmanimation1 .cam .animationLight {
+              position: relative;
+              width: 5vw;
+              left: 0.1vw;
+              top: -4.5vh; }
+        body main .contairer-create .containerFlexCreateAnimation .contairer-cam {
+          width: 67.19vw;
+          height: 58.1vh;
+          padding: 1.5em; }
+          body main .contairer-create .containerFlexCreateAnimation .contairer-cam .corner1 {
+            width: 2.5vw;
+            height: 2.5vw; }
+          body main .contairer-create .containerFlexCreateAnimation .contairer-cam .corner2 {
+            width: 2.5vw;
+            height: 2.5vw; }
+          body main .contairer-create .containerFlexCreateAnimation .contairer-cam .corner3 {
+            width: 2.5vw;
+            height: 2.5vw; }
+          body main .contairer-create .containerFlexCreateAnimation .contairer-cam .corner4 {
+            width: 2.5vw;
+            height: 2.5vw; }
+      body main .contairer-create .line {
+        width: 77.72vw; }
+      body main .contairer-create .button-cam {
+        width: 12.45vw; }
+      body main .contairer-create .filmanimation2 {
+        position: absolute;
+        align-self: flex-end;
+        margin-right: 2vw;
+        bottom: 5vh; }
+        body main .contairer-create .filmanimation2 .animationCinta3 {
+          width: 12vw; } }
+  @media screen and (min-width: 1200px) {
+    body main .contairer-create {
+      margin-top: 22vh; }
+      body main .contairer-create .containerFlexCreateAnimation .filmanimation1 {
+        margin-left: -20vw;
+        padding: 0 2em 0 1em; }
+        body main .contairer-create .containerFlexCreateAnimation .filmanimation1 .cintas .animationCinta1 {
+          margin-top: 20%; }
+        body main .contairer-create .containerFlexCreateAnimation .filmanimation1 .cintas .animationCinta2 {
+          margin-top: 6%; }
+        body main .contairer-create .containerFlexCreateAnimation .filmanimation1 .cam .animationLight {
+          left: 0.09vw;
+          top: -5.5vh; }
+      body main .contairer-create .containerFlexCreateAnimation .contairer-cam {
+        width: 55vw;
+        height: 65vh; }
+        body main .contairer-create .containerFlexCreateAnimation .contairer-cam .titleCamSection {
+          width: 25vw;
+          align-self: flex-end; }
+        body main .contairer-create .containerFlexCreateAnimation .contairer-cam .subtitleCamSection {
+          width: 24.5vw;
+          align-self: flex-start;
+          text-align: center;
+          padding: 1em; }
+      body main .contairer-create .info-cam .bot1, body main .contairer-create .info-cam .bot2, body main .contairer-create .info-cam .bot3 {
+        width: 2vw;
+        height: 2vw;
+        padding: 0.2em;
+        margin: 0 0.6em; }
+      body main .contairer-create .line {
+        width: 65vw;
+        height: 1vh; } }
+@keyframes rotation1 {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(300deg); } }
+@keyframes rotation2 {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(250deg); } }
+@keyframes parpadeo {
+  0% {
+    opacity: 1.0; }
+  50% {
+    opacity: 0.0; }
+  100% {
+    opacity: 1.0; } }
+@keyframes parpadeo {
+  0% {
+    opacity: 1.0; }
+  50% {
+    opacity: 0.0; }
+  100% {
+    opacity: 1.0; } }
+@keyframes parpadeo {
+  0% {
+    opacity: 1.0; }
+  50% {
+    opacity: 0.0; }
+  100% {
+    opacity: 1.0; } }
+@keyframes rotationY {
+  from {
+    transform: rotateY(0deg); }
+  to {
+    transform: rotateY(180deg); } }
+  body main .trendingSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0 3em 0;
+    background-color: #F3F5F8; }
+    body main .trendingSection .titleTrendingSection {
+      padding: 1.5em 0 0.4em 0;
+      font-size: 1.25em; }
+    body main .trendingSection .containerSubtitle {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      body main .trendingSection .containerSubtitle .subtitleTrendingSection1 {
+        width: 53vw;
+        font-size: 1em;
+        line-height: 1.5em; }
+      body main .trendingSection .containerSubtitle .subtitleTrendingSection2 {
+        width: 70vw;
+        padding: 0 0 1em 0;
+        font-size: 1em;
+        line-height: 1.5em; }
+    body main .trendingSection .gifosTrendingGallery {
+      display: flex; }
+      body main .trendingSection .gifosTrendingGallery .leftBtn, body main .trendingSection .gifosTrendingGallery .rightBtn {
+        display: none; }
+      body main .trendingSection .gifosTrendingGallery .container-slider {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        display: flex; }
+        body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos {
+          display: flex;
+          justify-content: center;
+          width: 90vw; }
+          body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .imgnewgifos {
+            width: 100vw;
+            height: 90vw;
+            padding: 0 2em; }
+          body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails {
+            display: none; }
+  @media screen and (min-width: 768px) {
+    body main .trendingSection {
+      padding: 1em 0 5em 0; }
+      body main .trendingSection .titleTrendingSection {
+        font-size: 1.568em; }
+      body main .trendingSection .containerSubtitle {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; }
+        body main .trendingSection .containerSubtitle .subtitleTrendingSection1 {
+          width: auto;
+          font-size: 1.13em;
+          padding: 0 0 3em 0; }
+        body main .trendingSection .containerSubtitle .subtitleTrendingSection2 {
+          width: auto;
+          font-size: 1.13em;
+          padding: 0 0 3em 0.2em; }
+      body main .trendingSection .gifosTrendingGallery {
+        display: flex;
+        align-items: center; }
+        body main .trendingSection .gifosTrendingGallery .leftBtn {
+          display: block;
+          padding: 1em; }
+          body main .trendingSection .gifosTrendingGallery .leftBtn img {
+            width: 5vw;
+            height: 5vw; }
+        body main .trendingSection .gifosTrendingGallery .container-slider {
+          overflow: hidden;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 0 1em; }
+          body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos {
+            display: flex;
+            position: relative;
+            width: max-content;
+            height: max-content;
+            margin: none; }
+            body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos:hover .containerDetails .content-overlay {
+              opacity: 0.6; }
+            body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos:hover .containerDetails .content-details {
+              top: 50%;
+              left: 50%;
+              opacity: 1; }
+            body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .imgnewgifos {
+              width: 25vw;
+              height: 25vw;
+              padding: 0.2em; }
+            body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails {
+              display: block; }
+              body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-overlay {
+                background: #572EE5;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                opacity: 0;
+                transition: all 0.4s ease-in-out 0s; }
+              body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details {
+                display: grid;
+                grid-template: repeat(4, 1fr)/repeat(3, 1fr);
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                padding: 0.8em;
+                opacity: 0;
+                transform: translate(-50%, -50%);
+                transition: all 0.3s ease-in-out 0s; }
+                body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons {
+                  grid-area: 1 / 1 / 2 / 4;
+                  display: flex;
+                  justify-content: space-evenly;
+                  justify-self: end;
+                  width: 10vw; }
+                  body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a {
+                    padding: 0.2em; }
+                    body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-heart, body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-download, body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-expand-alt {
+                      width: 3vw;
+                      height: 3vw;
+                      color: #572EE5;
+                      background: #FFFFFF;
+                      opacity: 0.7;
+                      padding: 0.2em 0 0 0;
+                      border-radius: 0.375em; }
+                      body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-heart:hover, body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-download:hover, body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-expand-alt:hover {
+                        opacity: 1; }
+                body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .textCardimg, body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .titleCardimg {
+                  grid-area: 4 / 1 / 5 / 4;
+                  color: #FFFFFF; }
+                body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .textCardimg {
+                  font-size: 0.65em;
+                  width: max-content; }
+                body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .titleCardimg {
+                  padding: 1em 0 0 0;
+                  font-family: "Roboto-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+                  font-size: 0.8em;
+                  width: 25vw;
+                  text-align: left; }
+              body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .fadeIn-top {
+                top: 50%; }
+              body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .fadeIn-left {
+                left: 50%; }
+        body main .trendingSection .gifosTrendingGallery .rightBtn {
+          display: block;
+          padding: 1em; }
+          body main .trendingSection .gifosTrendingGallery .rightBtn img {
+            width: 5vw;
+            height: 5vw; }
+      body main .trendingSection .show {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 6.3em;
+        padding: 0.5em 5em;
+        width: 100%;
+        overflow: auto;
+        background-color: rgba(255, 255, 255, 0.842); }
+        body main .trendingSection .show .close-btn-modalExpand {
+          align-self: flex-end;
+          width: 3vw;
+          height: 3vw;
+          color: #572EE5;
+          background: #FFFFFF;
+          opacity: 0.7;
+          padding: 0.35em;
+          border-radius: 0.375em; }
+        body main .trendingSection .show .img-expand {
+          padding: 0.5em;
+          width: 35vw;
+          height: 35vw; }
+          body main .trendingSection .show .img-expand img {
+            width: 100%;
+            height: 100%; }
+        body main .trendingSection .show .constainerIcons {
+          align-self: flex-end;
+          display: flex; }
+          body main .trendingSection .show .constainerIcons a {
+            padding: 0.2em; }
+            body main .trendingSection .show .constainerIcons a .fa-heart, body main .trendingSection .show .constainerIcons a .fa-download, body main .trendingSection .show .constainerIcons a .fa-expand-alt {
+              width: 3vw;
+              height: 3vw;
+              color: #572EE5;
+              background: #FFFFFF;
+              opacity: 0.7;
+              padding: 0.2em;
+              border-radius: 0.375em; }
+              body main .trendingSection .show .constainerIcons a .fa-heart:hover, body main .trendingSection .show .constainerIcons a .fa-download:hover, body main .trendingSection .show .constainerIcons a .fa-expand-alt:hover {
+                opacity: 1; }
+        body main .trendingSection .show .textCardimg, body main .trendingSection .show .titleCardimg {
+          align-self: flex-start;
+          color: #000000; }
+        body main .trendingSection .show .textCardimg {
+          font-size: 0.9em;
+          width: max-content; }
+        body main .trendingSection .show .titleCardimg {
+          padding: 0.3em 0 0 0;
+          font-family: "Roboto-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+          font-size: 1em;
+          width: 22vw;
+          text-align: left; } }
+  @media screen and (min-width: 1024px) {
+    body main .trendingSection .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-heart, body main .trendingSection .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-download, body main .trendingSection .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-expand-alt {
+      line-height: 1.9em; } }
+  body footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 33.16vh;
+    border-bottom: 0.3125em solid #572EE5; }
+    body footer .social-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      body footer .social-footer .textRedes {
+        padding: 2em 0 1em 0;
+        font-size: 0.95em; }
+      body footer .social-footer .containerRedes {
+        display: flex;
+        justify-content: space-between;
+        width: 28vw; }
+        body footer .social-footer .containerRedes .fa-facebook-f, body footer .social-footer .containerRedes .fa-twitter, body footer .social-footer .containerRedes .fa-instagram {
+          color: #CDD6E0; }
+  @media screen and (min-width: 768px) {
+    body footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 24vh;
+      padding: 0 3em;
+      border-bottom: 0.3125em solid #572EE5; }
+      body footer .social-footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center; }
+        body footer .social-footer .textRedes {
+          padding: 0;
+          font-size: 0.815em; }
+        body footer .social-footer .containerRedes {
+          display: flex;
+          justify-content: space-evenly;
+          width: 15vw;
+          padding: 0 0 0 0.8em; }
+          body footer .social-footer .containerRedes .fa-facebook-f:hover {
+            color: #572EE5; }
+          body footer .social-footer .containerRedes .fa-twitter:hover {
+            color: #572EE5; }
+          body footer .social-footer .containerRedes .fa-instagram:hover {
+            color: #572EE5; }
+      body footer .textDescriptionFooter {
+        font-size: 0.815em; } }
+  @media screen and (min-width: 1024px) {
+    body footer {
+      padding: 0.75em 6em; } }
+  @media screen and (min-width: 1200px) {
+    body footer .social-footer .containerRedes {
+      width: 10vw;
+      padding: 0 0 0 0.2em; } }
+
+/* Fonts ======================================================================= */
+/* ITEMS / TITLE / MSJS 1º & CAM / TITLE SECTIONS / VER MÁS */
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url(./fonts/Montserrat-Bold.ttf); }
+/* SUB TEXT DOWN TRENDING SECTION 1 */
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url(./fonts/Montserrat-Medium.ttf); }
+/* SEARCH STICKY / TEXT CARDS / NUMEROS PAG / SUB TITLES / FOOTER */
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url(./fonts/Roboto-Regular.ttf); }
+/* BOLD TEXT CARDS */
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url(./fonts/Roboto-Bold.ttf); }
+/* NUM PASOS CREAR GIFOS */
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url(./fonts/Roboto-Medium.ttf); }
+/* ======================================================================= */
+
+/*# sourceMappingURL=style.css.map */

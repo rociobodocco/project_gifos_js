@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GifOS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/brands.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css">
+</head>
+
+<body>
+    <!-- Cabecera + logo + menú -->
+    <header id="header">
+        <div class="logo">
+            <a href="./index.html"><img class="imglogo" src="./images/logo-mobile.svg" alt="GIFOS"></a>
+        </div>
+        <nav>
+            <input type="checkbox" id="menu">
+            <label for="menu" class="open"><i class="fas fa-bars mh"></i></label>
+            <label for="menu" class="close"><i class="fas fa-times x"></i></label>
+            <ul>
+                <li><a class="changeTheme lineDecorate">Modo Nocturno</a></li>
+                <li class="underline"></li>
+                <li><a class="lineDecorate" href="./favorites.html">Favoritos</a></li>
+                <hr class="underline" />
+                <li><a class="lineDecorate" href="./mygifos.html">Mis GIFOS</a></li>
+                <hr class="underline" />
+                <li><a href="./creategifos.html"><i class="fas fa-plus"></i></a></li>
+                <hr class="underline" />
+                <li><a href="./index.html"><i class="fas fa-search menusearch"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- cuerpo principal que varía según navegación -->
+    <main>
+        <section class="misgifosSection">
+            <div class="containerIconFavNone">
+                <img class="iconImgFav" src="./images/icon-mis-gifos.svg" alt="Favoritos">
+            </div>
+            <h3 class="textMyGIFOSSection">Mis GIFOS</h3>
+            <div class="containerImgMyGIFOSNone">
+                <img class="imgMyGIFOS" src="./images/icon-mis-gifos-sin-contenido.svg" alt="Crea tu primer GIFO">
+            </div>
+            <p class="textMyGIFOSNone">¡Anímate a crear tu primer GIFO!</p>
+        </section>
+        <!-- Trending section -->
+        <section class="trendingSection">
+            <h4 class="titleTrendingSection">Trending GIFOS</h4>
+            <div class="containerSubtitle">
+                <p class="subtitleTrendingSection1">Mira los últimos </p>
+                <p class="subtitleTrendingSection2">GIFOS de nuestra comunidad.</p>
+            </div>
+            <div class="gifosTrendingGallery">
+                <div class="leftBtn"><img src="./images/button-slider-left.svg" alt="sliderleft"></div>
+                <div class="container-slider"></div>
+                <div class="rightBtn"><img src="./images/button-slider-right.svg" alt="sliderright"></div>
+            </div>
+            <div class="show"></div>
+        </section>
+    </main>
+    <!-- Pié de pág + redes -->
+    <footer>
+        <div class="social-footer">
+            <p class="textRedes">Compartir en:</p>
+            <div class="containerRedes">
+                <a href="https://es-la.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/?hl=es" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <p class="textDescriptionFooter">© GIFOS 2020 All Rights Reserved.</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/trending.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/download.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100vw;
+    scroll-behavior: smooth;
+}
+
+
+.night-mode {
+    @import 'invertedvariables';
+    * {
+        background-color: $c-background;
+        color: $c-whitetexts;
+    }
+    
+    header {
+        border-top: 0.3125em solid $c-contrast;
+    }
+
+    .fa-plus, .menusearch {
+        width: 100%;
+        padding: 1em;
+        border-radius: 100%;
+        border: 0.1em solid $c-whitetexts;
+    }
+
+    .fa-plus:hover {
+        background: $c-whitetexts;
+        color: $c-background;
+    }
+
+    .fa-facebook-f, .fa-twitter, .fa-instagram:hover {
+        color: $c-whitetexts;
+    }
+
+    .home .containerSearch {
+        border: 0.1em solid $c-whitetexts;
+    }
+
+    .home .containerSearch .containerInputIcons .inputTextSearch {
+        color: $c-whitetexts;
+    }
+
+    .home .containerSearch .containerInputIcons .inputTextSearch {
+        color: $c-placeholdersactives;
+    }
+
+    .home .containerTrending .subtitleSec1 {
+        color: $c-whitetexts;
+    }
+
+    .home .containerTrending .trending {
+        color: $c-whitetexts;
+    }
+
+    main .trendingSection {
+        background-color: $c-grey-backtrending;
+    }
+
+    main .trendingSection .titleTrendingSection {
+        background-color: $c-grey-backtrending;
+    }
+
+    main .trendingSection .containerSubtitle .subtitleTrendingSection1 {
+        background-color: $c-grey-backtrending;
+    }
+
+    main .trendingSection .containerSubtitle .subtitleTrendingSection2 {
+        background-color: $c-grey-backtrending;
+    }
+
+    body main .trendingSection .container-slider {
+        background-color: $c-grey-backtrending;
+    }
+
+    .containerDetails .content-overlay {
+        background-color: $c-hovercardsgifs;
+    }
+    
+    footer {
+        border-bottom: 0.3125em solid $c-contrast;
+    }
+
+    // .fa-facebook-f, .fa-twitter, .fa-instagram:hover {
+    //     color: $c-whitetexts;
+    // }
+}
+
+body {
+    @import 'variables';
+    @import 'header';
+    @import 'index';
+    @import 'favorites';
+    @import 'mygifos';
+    @import 'creategifos';
+    @import 'trending';
+    @import 'footer';
+}
+
+/* Fonts ======================================================================= */ 
+
+/* ITEMS / TITLE / MSJS 1º & CAM / TITLE SECTIONS / VER MÁS */
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url(./fonts/Montserrat-Bold.ttf)
+}
+
+/* SUB TEXT DOWN TRENDING SECTION 1 */
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url(./fonts/Montserrat-Medium.ttf)
+}
+
+/* SEARCH STICKY / TEXT CARDS / NUMEROS PAG / SUB TITLES / FOOTER */
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(./fonts/Roboto-Regular.ttf)
+}
+
+/* BOLD TEXT CARDS */
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(./fonts/Roboto-Bold.ttf)
+}
+
+/* NUM PASOS CREAR GIFOS */
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url(./fonts/Roboto-Medium.ttf)
+}
+
+/* ======================================================================= */

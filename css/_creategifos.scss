@@ -1,0 +1,480 @@
+
+main {
+    .contairer-create {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4em 0 1em 0;
+
+        .filmanimation1 {
+            display: flex;
+            flex-direction: column;
+            padding: 0 0 0.5em 0;
+            margin-left: 30vw;
+
+            .cintas {
+                display: flex;
+
+                .animationCinta1 {
+                    width: 10vw;
+                    height: 10vw;
+                    margin-top: 25%;
+                    animation: rotation1 2s infinite linear;
+                }
+    
+               .animationCinta2 {
+                    width: 15vw;
+                    height: 15vw;
+                    margin-top: 18%;
+                    animation: rotation2 2s infinite linear;
+                }
+            }
+
+            .cam {
+                display: flex;
+
+                .animationCam {
+                    width: 30vw;
+                }
+    
+               .animationLight {
+                    position: absolute;
+                    width: 16vw;
+                    right: 24vw;
+                    top: 40.5vw;
+                    animation: parpadeo 2s infinite linear;
+                }
+            }
+        }
+
+        .contairer-cam {
+            display: grid;
+            grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+            align-items: center;
+            width: 95%;
+            height: 50vh;
+            border: 0.05em solid $c-contrast;
+            padding: 0.5em;
+            margin-left: 2.8vw;
+
+            .corner1 {
+                align-self: flex-start;
+                width: 8vw;
+                height: 8vw;
+                border-top: 0.1em solid $c-turquoise;
+                border-left: 0.1em solid $c-turquoise;
+                z-index: 100;
+            }
+            .corner2 {
+                align-self: flex-start;
+                justify-self: flex-end;
+                width: 8vw;
+                height: 8vw;
+                margin-left: -0.2em;
+                border-top: 0.1em solid $c-turquoise;
+                border-right: 0.1em solid $c-turquoise;
+                z-index: 100;
+            }
+            .corner3 {
+                align-self: flex-end;
+                width: 8vw;
+                height: 8vw;
+                margin-right: -0.2em;
+                border-bottom: 0.1em solid $c-turquoise;
+                border-left: 0.1em solid $c-turquoise;
+                z-index: 100;
+            }
+            .corner4 {
+                align-self: flex-end;
+                justify-self: flex-end;
+                width: 8vw;
+                height: 8vw;
+                border-bottom: 0.1em solid $c-turquoise;
+                border-right: 0.1em solid $c-turquoise;
+                z-index: 100;
+            }
+
+            .titleCamSection {
+                width: 70vw;
+                font-size: 1.5625em;
+
+                .gifosColo-camSec {
+                    color: $c-turquoise;
+                }
+            }
+
+            .subtitleCamSection {
+                width: 70vw;
+                font-size: 1em;
+            }
+        }
+
+        .info-cam {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 1em;
+
+            .bot1, .bot2, .bot3 {
+                width: 10vw;
+                height: 10vw;
+                line-height: 0.8em;
+                text-align: center;
+                padding: 0.5em;
+                margin: 0.3em;
+                font-family: $botnumcreate-font;
+                font-size: 1.125em;
+                color: $c-contrast;
+                border: 0.05em solid $c-contrast;
+                border-radius: 70%;
+                background: none;
+            }
+        }
+
+        .line {
+            width: 90vw;
+            margin-bottom: 1em;
+            border: 0.1em solid $c-contrast;
+            background: $c-contrast;
+            border-radius: 1.6875em;
+        }
+
+        .button-cam {
+            width: 50vw;
+            padding: 1em;
+            margin-bottom: 1em;
+            font-family: $title-font;
+            font-size: 0.815em;
+            color: $c-contrast;
+            border: 0.1em solid $c-contrast;
+            border-radius: 1.6875em;
+            background: none;
+        }
+
+        .filmanimation2 {
+            
+            .animationCinta3 {
+                width: 25vw;
+                animation: rotationY 2s infinite linear;
+
+            }
+        }
+    }
+}
+
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+   @media screen and (min-width: 768px) {
+    main {
+        .contairer-create {
+            margin-top: 25vh;
+            padding: 0 0 1em 0;
+    
+            .filmanimation1 {
+                margin-left: 35vw;
+
+                .cintas {
+    
+                    .animationCinta1 {
+                        width: 5vw;
+                        height: 5vw;
+                        margin-top: 5%;
+                    }
+        
+                   .animationCinta2 {
+                        width: 8vw;
+                        height: 8vw;
+                        margin-top: 0;
+                    }
+                }
+    
+                .cam {
+    
+                    .animationCam {
+                        width: 15vw;
+                    }
+        
+                   .animationLight {
+                        width: 9vw;
+                        right: 35.8vw;
+                        top: 20.34vw;
+                    }
+                }
+            }
+    
+            .contairer-cam {
+                width: 89.6vw;
+                height: 77.5vh;
+                padding: 0.5em;
+                margin-left: 0;
+                
+    
+                .corner1 {
+                    width: 4vw;
+                    height: 4vw;
+                }
+
+                .corner2 {
+                    width: 4vw;
+                    height: 4vw;
+                }
+
+                .corner3 {
+                    width: 4vw;
+                    height: 4vw;
+                }
+
+                .corner4 {
+                    width: 4vw;
+                    height: 4vw;
+                }
+    
+                .titleCamSection {
+                    justify-self: center;
+                    width: 35vw;
+                }
+    
+                .subtitleCamSection {
+                    width: 33vw;
+                }
+            }
+    
+            .info-cam {
+    
+                .bot1, .bot2, .bot3 {
+                    width: 4.559vw;
+                    height: 4.559vw;
+                }
+            }
+    
+            .line {
+                width: 95vw;
+            }
+    
+            .button-cam {
+                width: 16.55vw;
+            }
+    
+            .filmanimation2 {
+                
+                .animationCinta3 {
+                    width: 15vw;
+                }
+            }
+        }
+    }
+}
+
+
+/* Tablets en horizonal y escritorios normales
+    ------------------------------------------------------------------------- */
+@media screen and (min-width: 1024px) {
+    main {
+        .contairer-create {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .containerFlexCreateAnimation {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                .filmanimation1 {
+                    margin-left: -15vw;
+                    padding: 0 1em;
+
+                    .cintas {
+                        width: 15vw;
+
+                        .animationCinta1 {
+                            width: 4vw;
+                            height: 4vw;
+                            margin-top: 15%;
+                        }
+            
+                       .animationCinta2 {
+                            width: 6vw;
+                            height: 6vw;
+                            margin-top: 1.5%;
+                        }
+                    }
+    
+                    .cam {
+                        width: 15vw;
+
+                        .animationCam {
+                            width: 11vw;
+                        }
+    
+                       .animationLight {
+                            position: relative;
+                            width: 5vw;
+                            left: 0.1vw;
+                            top: -4.5vh;
+                        }
+                    }
+                }
+        
+                .contairer-cam {
+                    width: 67.19vw;
+                    height: 58.1vh;
+                    padding: 1.5em;
+        
+                    .corner1 {
+                        width: 2.5vw;
+                        height: 2.5vw;
+                    }
+    
+                    .corner2 {
+                        width: 2.5vw;
+                        height: 2.5vw;
+                    }
+    
+                    .corner3 {
+                        width: 2.5vw;
+                        height: 2.5vw;
+                    }
+    
+                    .corner4 {
+                        width: 2.5vw;
+                        height: 2.5vw;
+                    }
+                }
+            }
+    
+            .line {
+                width: 77.72vw;
+            }
+    
+            .button-cam {
+                width: 12.45vw;
+            }
+    
+            .filmanimation2 {
+                position: absolute;
+                align-self: flex-end;
+                margin-right: 2vw;
+                bottom: 5vh;
+
+                .animationCinta3 {
+                    width: 12vw;
+                }
+            }
+        }
+    }
+}
+
+// /* Escritorios muy anchos
+//     ------------------------------------------------------------------------- */
+@media screen and (min-width: 1200px) {
+    main {
+        .contairer-create {
+            margin-top: 22vh;
+
+            .containerFlexCreateAnimation {
+                .filmanimation1 {
+                    margin-left: -20vw;
+                    padding: 0 2em 0 1em;
+
+                    .cintas {
+                        .animationCinta1 {
+                            margin-top: 20%;
+                        }
+            
+                       .animationCinta2 {
+                            margin-top: 6%;
+                        }
+                    }
+    
+                    .cam {
+                       .animationLight {
+                            left: 0.09vw;
+                            top: -5.5vh;
+                        }
+                    }
+                }
+        
+                .contairer-cam {
+                    width: 55vw;
+                    height: 65vh;
+
+                    .titleCamSection {
+                        width: 25vw;
+                        align-self: flex-end;
+                    }
+        
+                    .subtitleCamSection {
+                        width: 24.5vw;
+                        align-self: flex-start;
+                        text-align: center;
+                        padding: 1em;
+                    }
+                }
+            }
+
+            .info-cam {
+                .bot1, .bot2, .bot3 {
+                    width: 2vw;
+                    height: 2vw;
+                    padding: 0.2em;
+                    margin: 0 0.6em;
+                }
+            }
+    
+            .line {
+                width: 65vw;
+                height: 1vh;
+            }
+        }
+    }
+} 
+
+
+    
+
+@keyframes rotation1 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(300deg);
+    }
+}
+
+@keyframes rotation2 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(250deg);
+    }
+}
+
+@keyframes parpadeo {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @keyframes parpadeo {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @keyframes parpadeo {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+
+@keyframes rotationY {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(180deg);
+    }
+}

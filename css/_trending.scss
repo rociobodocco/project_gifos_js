@@ -1,0 +1,398 @@
+
+main {
+    .trendingSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 0 3em 0;
+        background-color: $c-grey-backtrending;
+
+        .titleTrendingSection {
+            padding: 1.5em 0 0.4em 0;
+            font-size: 1.25em;
+        }
+
+        .containerSubtitle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .subtitleTrendingSection1 {
+                width: 53vw;
+                font-size: 1em;
+                line-height: 1.5em;
+            }
+    
+            .subtitleTrendingSection2 {
+                width: 70vw;
+                padding: 0 0 1em 0;
+                font-size: 1em;
+                line-height: 1.5em;
+            }
+        }
+
+        .gifosTrendingGallery {
+            display: flex;
+
+            .leftBtn, .rightBtn {
+                display: none;
+            }
+
+            .container-slider {
+                overflow-x: scroll;
+                scroll-snap-type: x mandatory;
+                display: flex;
+    
+                .container-img-trendinggifos {
+                    display: flex;
+                    justify-content: center;
+                    width: 90vw;
+    
+                    .imgnewgifos {
+                        width: 100vw;
+                        height: 90vw;
+                        padding: 0 2em;
+                    }
+    
+                    .containerDetails {
+                        display: none;                    
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+   @media screen and (min-width: 768px) {
+    main {
+        .trendingSection{
+            padding: 1em 0 5em 0;
+    
+            .titleTrendingSection {
+                font-size: 1.568em;
+            }
+
+            .containerSubtitle {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+    
+                .subtitleTrendingSection1 {
+                    width: auto;
+                    font-size: 1.13em;
+                    padding: 0 0 3em 0;
+                }
+        
+                .subtitleTrendingSection2 {
+                    width: auto;
+                    font-size: 1.13em;
+                    padding: 0 0 3em 0.2em;
+                }
+            }
+
+            
+            .gifosTrendingGallery {
+                display: flex;
+                align-items: center;
+
+                .leftBtn {
+                    display: block;
+                    padding: 1em;
+
+                    img{
+                        width: 5vw;
+                        height: 5vw;
+                    }
+                }
+
+                .container-slider {
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    padding: 0 1em;
+
+                    .container-img-trendinggifos {  
+                        display: flex;
+                        position: relative;
+                        width: max-content;
+                        height: max-content;
+                        margin: none;      
+
+                        &:hover .containerDetails .content-overlay {
+                            opacity: 0.6;
+                        }
+        
+                        &:hover .containerDetails .content-details {
+                            top: 50%;
+                            left: 50%;
+                            opacity: 1;
+                        }
+
+                        .imgnewgifos {
+                            width: 25vw;
+                            height: 25vw;
+                            padding: 0.2em;
+                        }
+
+                        .containerDetails {
+                            display: block;
+
+                            .content-overlay {
+                                background: $c-contrast;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                bottom: 0;
+                                right: 0;
+                                opacity: 0;
+                                transition: all 0.4s ease-in-out 0s;
+                            }
+
+                            .content-details {
+                                display: grid;
+                                grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+                                position: absolute;
+                                text-align: center;
+                                width: 100%;
+                                height: 100%;
+                                padding: 0.8em;
+                                opacity: 0;
+                                transform: translate(-50%, -50%);
+                                transition: all 0.3s ease-in-out 0s;
+        
+                                .hoverIcons {
+                                    grid-area: 1 / 1 / 2 / 4;
+                                    display: flex;
+                                    justify-content: space-evenly;
+                                    justify-self: end;
+                                    width: 10vw;
+
+                                    a {
+                                        padding: 0.2em;
+
+                                        .fa-heart, .fa-download, .fa-expand-alt {
+                                            width: 3vw;
+                                            height: 3vw;
+                                            color: $c-contrast;
+                                            background: $c-background;
+                                            opacity: 0.7;
+                                            padding: 0.2em 0 0 0;
+                                            border-radius: 0.375em;
+                                            
+
+                                            &:hover {
+                                                opacity: 1;
+                                            }
+                                        }
+                                    }
+                                }
+        
+                                .textCardimg, .titleCardimg {
+                                   grid-area: 4 / 1 / 5 / 4;
+                                   color: $c-background;
+                                }
+        
+                                .textCardimg {
+                                    font-size: 0.65em;
+                                    width: max-content;
+                                }
+        
+                                .titleCardimg {
+                                    padding: 1em 0 0 0;
+                                    font-family: $blodtext-font;
+                                    font-size: 0.8em;
+                                    width: 25vw;
+                                    text-align: left;
+                                }
+                            }
+        
+                            .fadeIn-top{
+                                top: 50%;
+                            }
+                              
+                            .fadeIn-left{
+                                left: 50%;
+                            }
+                        }
+                    }
+                }
+
+                .rightBtn {
+                    display: block;
+                    padding: 1em;
+
+                    img{
+                        width: 5vw;
+                        height: 5vw;
+                    }
+                }
+            }
+
+            .show {
+                display: none; 
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: fixed; 
+                z-index: 1;
+                left: 0;
+                top: 6.3em;
+                padding: 0.5em 5em;
+                width: 100%; 
+                overflow: auto; 
+                background-color: rgba(255, 255, 255, 0.842); 
+
+                .close-btn-modalExpand {
+                    align-self: flex-end;
+                    width: 3vw;
+                    height: 3vw;
+                    color: $c-contrast;
+                    background: $c-background;
+                    opacity: 0.7;
+                    padding: 0.35em;
+                    border-radius: 0.375em;
+                }
+
+                .img-expand {
+                    padding: 0.5em;
+                    width: 35vw;
+                    height: 35vw;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .constainerIcons {
+                    align-self: flex-end;
+                    display: flex;
+
+                    a {
+                        padding: 0.2em;
+    
+                        .fa-heart, .fa-download, .fa-expand-alt {
+                            width: 3vw;
+                            height: 3vw;
+                            color: $c-contrast;
+                            background: $c-background;
+                            opacity: 0.7;
+                            padding: 0.2em;
+                            border-radius: 0.375em;
+    
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+
+                .textCardimg, .titleCardimg {
+                    align-self: flex-start;
+                    color: $c-blacktexts;
+                }
+
+                .textCardimg {
+                    font-size: 0.9em;
+                    width: max-content;
+                }
+
+                .titleCardimg {
+                    padding: 0.3em 0 0 0 ;
+                    font-family: $blodtext-font;
+                    font-size: 1em;
+                    width: 22vw;
+                    text-align: left;
+                }
+            }    
+        }
+    }
+}
+
+
+// /* Tablets en horizonal y escritorios normales
+//     ------------------------------------------------------------------------- */
+@media screen and (min-width: 1024px) {
+    main {
+        .trendingSection{
+           
+    
+            .titleTrendingSection {
+            }
+
+            .containerSubtitle {
+    
+                .subtitleTrendingSection1 {
+                }
+        
+                .subtitleTrendingSection2 {
+                }
+            }
+
+            .container-slider {
+
+                .container-img-trendinggifos {   
+
+                    &:hover .containerDetails .content-overlay {
+                      
+                    }
+    
+                    &:hover .containerDetails .content-details {
+                        
+                    }
+
+                    .imgnewgifos {
+                    }
+
+                    .containerDetails {
+
+                        .content-overlay {
+                        }
+
+                        .content-details {
+    
+                            .hoverIcons {
+    
+                                a {
+
+                                    .fa-heart, .fa-download, .fa-expand-alt {
+                                        line-height: 1.9em;
+                                        
+                                    }
+                                }
+                            }
+    
+                            .textCardimg, .titleCardimg {
+                            }
+    
+                            .textCardimg {
+                            }
+    
+                            .titleCardimg {
+                            }
+                        }
+    
+                        .fadeIn-top{
+                        }
+                          
+                        .fadeIn-left{
+                        }
+
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Escritorios muy anchos
+    ------------------------------------------------------------------------- */
+@media screen and (min-width: 1200px) {} 
+
+   
