@@ -63,8 +63,19 @@ main {
                 height: 8vw;
                 border-top: 0.1em solid $c-turquoise;
                 border-left: 0.1em solid $c-turquoise;
-                z-index: 100;
+                z-index: 95;
             }
+
+            .containerVideoCam {
+                display: none;
+
+                #video {
+                    display: block;
+                    width: 50vw;
+                    height: 30vw;
+                }
+            }
+
             .corner2 {
                 align-self: flex-start;
                 justify-self: flex-end;
@@ -73,7 +84,7 @@ main {
                 margin-left: -0.2em;
                 border-top: 0.1em solid $c-turquoise;
                 border-right: 0.1em solid $c-turquoise;
-                z-index: 100;
+                z-index: 95;
             }
             .corner3 {
                 align-self: flex-end;
@@ -82,7 +93,7 @@ main {
                 margin-right: -0.2em;
                 border-bottom: 0.1em solid $c-turquoise;
                 border-left: 0.1em solid $c-turquoise;
-                z-index: 100;
+                z-index: 95;
             }
             .corner4 {
                 align-self: flex-end;
@@ -91,7 +102,7 @@ main {
                 height: 8vw;
                 border-bottom: 0.1em solid $c-turquoise;
                 border-right: 0.1em solid $c-turquoise;
-                z-index: 100;
+                z-index: 95;
             }
 
             .titleCamSection {
@@ -213,6 +224,16 @@ main {
                     height: 4vw;
                 }
 
+                .containerVideoCam {
+                    grid-area: 1 / 2 / 3 / 3;
+
+                    #video {
+                        display: block;
+                        width: 50vw;
+                        height: 30vw;
+                    }
+                }
+
                 .corner2 {
                     width: 4vw;
                     height: 4vw;
@@ -243,6 +264,10 @@ main {
                 .bot1, .bot2, .bot3 {
                     width: 4.559vw;
                     height: 4.559vw;
+
+                    // &:active { // ver si funciona ya que solo aplica a elementos a
+                    //     background: $c-contrast;
+                    // }
                 }
             }
     
@@ -252,6 +277,10 @@ main {
     
             .button-cam {
                 width: 16.55vw;
+                
+                &:hover {
+                    background: $c-contrast;
+                }
             }
     
             .filmanimation2 {

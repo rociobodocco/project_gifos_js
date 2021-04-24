@@ -15,8 +15,10 @@ const printFavorites = () => {
   const emptyFavSec = document.querySelector(".emptyFavoritesSection");
 
   if (localFavorites.favorites.length >= 1) {
+
     emptyFavSec.style.display = 'none';
     const containerFavorites = document.querySelector('.containerFavorites');
+
     localFavorites.favorites.forEach(fav => {
       const cardGifosFav = document.createElement("div");
       cardGifosFav.classList.add("container-img-favGifos");
@@ -38,11 +40,33 @@ const printFavorites = () => {
       containerFavorites.appendChild(cardGifosFav);
 
       // cardGifosFav.querySelector('.btnRemoveFavorites').addEventListener("click", removeFavoritesHandler);
+
+      // Modal Expand
+        const expandFavGifs = cardGifosFav.querySelector('.btnModalExpand');
+        // expand.addEventListener("touchstart", showModalExpand);
+        // expand.addEventListener("touchend", showModalExpand);
+        expandFavGifs.addEventListener("click", showModalExpand);
+        expandFavGifs.imagegif = fav.images.fixed_height.url;
+        expandFavGifs.username = fav.username;
+        expandFavGifs.title = fav.title;
+
+        const imageGifOnclickFav = cardGifosFav.querySelector('img');
+        // imageGifOnclick.addEventListener("touchstart", showModalExpand);
+        // imageGifOnclick.addEventListener("touchend", showModalExpand);
+        imageGifOnclickFav.addEventListener("click", showModalExpand);
+        imageGifOnclickFav.imagegif = fav.images.fixed_height.url;
+        imageGifOnclickFav.username = fav.username;
+        imageGifOnclickFav.title = fav.title;
+
+        // Download
+        cardGifosFav.querySelector('.btndownload').addEventListener("click", downloadGifs);
     });
   } else {
     emptyFavSec.style.display = 'flex';
   }
 };
+
+
 
 // Handler function
 const addFavoritesHandler = (ev => {
@@ -82,3 +106,4 @@ const addFavoritesHandler = (ev => {
 // 		}
 // 	}
 // };
+

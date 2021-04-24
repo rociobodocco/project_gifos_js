@@ -1,34 +1,3 @@
-// Get Gifs Search
-const getSearchGifsByKeyword = async (apiKey, keyword, offsetGifos) => {
-  const API_URL = "https://api.giphy.com/v1/gifs/search";
-  const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
-  try {
-    const tags = await fetch(
-      `${API_URL}?api_key=${API_KEY}&q=${keyword}&limit=12&offset=${offsetGifos}`
-    );
-    return tags.json();
-  } catch (error) {
-    console.log("ocurrio un error", error);
-  }
-};
-
-// Get 5 suggestions on input
-const getSearchTags = async (apiKey, query) => {
-  const API_URL = "https://api.giphy.com/v1/gifs/search/tags";
-  const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
-  try {
-    const tags = await fetch(`${API_URL}?api_key=${API_KEY}&q=${query}&limit=5`);
-    return tags.json();
-  } catch (error) {
-    console.log("ocurrio un error", error);
-  }
-};
-
-const getGifsByKeyword = async (apiKey, keyword, offset) => {
-  const gifs = await getSearchGifsByKeyword(apiKey, keyword, offset);
-  return gifs;
-}
-
 // Function close ul suggestions
 const closeModal = (ev) => {
   if (inputUserValue.value !== " ") {
@@ -77,7 +46,6 @@ let offsetGifos = 0;
 
 // Print Gifos
 const printGifs = (gifs) => {
-  
   gifs.data.forEach(gif => {
     const cardGifosSearch = document.createElement("div");
     cardGifosSearch.classList.add("container-img-searchGifos");
@@ -88,7 +56,7 @@ const printGifs = (gifs) => {
           <div class="content-details fadeIn-top fadeIn-left">
               <div class="hoverIcons">
                 <a href="#"><i data-id="${gif.id}" class="far fa-heart btnFavorites"></i></a>
-                <a href="#" class="btndownload"><i class="fas fa-download"></i></a>
+                <a href="#"><i class="fas fa-download btndownload"></i></a>
                 <a href="#"><i class="fas fa-expand-alt btnModalExpand"></i></a>
               </div>
               <p class="textCardimg">${gif.username}</p>
@@ -236,4 +204,3 @@ const newLableClose = document.createElement("label");
 newLableClose.classList.add("cross");
 newLableClose.setAttribute("for", "inputTextSearch");
 newLableClose.innerHTML = `<i class="fas fa-times xs"></i>`;
-
