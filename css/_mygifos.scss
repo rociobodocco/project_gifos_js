@@ -6,21 +6,128 @@ main {
         align-items: center;
         padding: 1em 0 2em 0em;
 
-        .textMyGIFOSSection {
-            font-size: 1.25em;
-        }
+        .emptyFavoritesSection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1em 0 2em 0em;
 
-        .containerImgMyGIFOSNone {
-            .imgMyGIFOS {
-                padding: 3em 0 1em 0em;
+            .textMyGIFOSSection {
+                font-size: 1.25em;
+            }
+    
+            .containerImgMyGIFOSNone {
+                .imgMyGIFOS {
+                    padding: 3em 0 1em 0em;
+                }
+            }
+    
+            .textMyGIFOSNone {
+                padding: 1em;
+                font-family: $title-font;
+                color: $c-turquoise;
+                font-size: 1.38em;
             }
         }
 
-        .textMyGIFOSNone {
-            padding: 1em;
-            font-family: $title-font;
-            color: $c-turquoise;
-            font-size: 1.38em;
+        .containerMyGifos {
+            display: grid;
+            width: 85vw;
+            grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+
+            .container-img-mygifos {
+                display: flex;
+                position: relative;
+                width: max-content;
+                height: max-content;
+                margin: none;    
+
+                .imgMyGifos {
+                    justify-self: stretch;
+                    width: 20vw;
+                    height: 20vw;
+                    padding: 0.2em;
+                }
+            }
+
+            // .show {
+            //     display: none; 
+            //     flex-direction: column;
+            //     align-items: center;
+            //     justify-content: center;
+            //     position: fixed; 
+            //     z-index: 1;
+            //     left: 0;
+            //     top: 6.3em;
+            //     padding: 0.5em 5em;
+            //     width: 100%; 
+            //     overflow: auto; 
+            //     background-color: rgba(255, 255, 255, 0.842); 
+
+            //     .close-btn-modalExpand {
+            //         align-self: flex-end;
+            //         width: 3vw;
+            //         height: 3vw;
+            //         color: $c-contrast;
+            //         background: $c-background;
+            //         opacity: 0.7;
+            //         padding: 0.35em;
+            //         border-radius: 0.375em;
+            //     }
+
+            //     .img-expand {
+            //         padding: 0.5em;
+            //         width: 35vw;
+            //         height: 35vw;
+
+            //         img {
+            //             width: 100%;
+            //             height: 100%;
+            //         }
+            //     }
+
+            //     .constainerIcons {
+            //         align-self: flex-end;
+            //         display: flex;
+
+            //         a {
+            //             padding: 0.2em;
+    
+            //             .fa-heart, .fa-download, .fa-expand-alt {
+            //                 width: 3vw;
+            //                 height: 3vw;
+            //                 color: $c-contrast;
+            //                 background: $c-background;
+            //                 opacity: 0.7;
+            //                 padding: 0.2em;
+            //                 border-radius: 0.375em;
+    
+            //                 &:hover {
+            //                     opacity: 1;
+            //                 }
+            //             }
+            //         }
+            //     }
+
+            //     .textCardimg, .titleCardimg {
+            //         align-self: flex-start;
+            //         color: $c-blacktexts;
+            //     }
+
+            //     .textCardimg {
+            //         font-size: 0.9em;
+            //         width: max-content;
+            //     }
+
+            //     .titleCardimg {
+            //         padding: 0.3em 0 0 0 ;
+            //         font-family: $blodtext-font;
+            //         font-size: 1em;
+            //         width: 22vw;
+            //         text-align: left;
+            //     }
+            // }
+            
         }
     }
 }
@@ -30,13 +137,226 @@ main {
    @media screen and (min-width: 768px) {
     main {
         .misgifosSection {
-            margin-top: 25vh;
+            margin-top: 19vh;
             padding: 1em 0 5em 0em;
+
+            .emptyMyGifosSection {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 1em 0 2em 0em;
     
-            .textMyGIFOSSection {
-                font-size: 1.564em;
+                .textFavSection {
+                    font-size: 1.25em;
+                }
+        
+                .containerIconMyGifosNone {
+                    .iconImgMyGifos {
+                        padding: 3em 0 1em 0em;
+                    }
+                }
+        
+                .textMyGIFOSNone {
+                    padding: 1em;
+                    font-family: $title-font;
+                    color: $c-turquoise;
+                    font-size: 1.38em;
+                }
+            }
+
+            .containerMyGifos {
+                display: grid;
+                width: 85vw;
+                grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+    
+                .container-img-mygifos {
+                    display: flex;
+                    position: relative;
+                    width: max-content;
+                    height: max-content;
+                    margin: none;    
+    
+                    &:hover .containerDetails .content-overlay {
+                        opacity: 0.6;
+                    }
+    
+                    &:hover .containerDetails .content-details {
+                        top: 50%;
+                        opacity: 1;
+                    }
+                    
+                    .imgMyGifos {
+                        justify-self: stretch;
+                        width: 20vw;
+                        height: 20vw;
+                        padding: 0.2em;
+                    }
+    
+                    .containerDetails {
+                        display: block;
+    
+                        .content-overlay {
+                            background: $c-contrast;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 0;
+                            opacity: 0;
+                            transition: all 0.4s ease-in-out 0s;
+                        }
+    
+                        .content-details {
+                            display: grid;
+                            grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+                            position: absolute;
+                            text-align: center;
+                            width: 100%;
+                            height: 100%;
+                            padding: 0.8em;
+                            opacity: 0;
+                            transform: translate(-50%, -50%);
+                            transition: all 0.3s ease-in-out 0s;
+    
+                            .hoverIcons {
+                                grid-area: 1 / 1 / 2 / 4;
+                                display: flex;
+                                justify-content: space-evenly;
+                                justify-self: end;
+                                width: 10vw;
+    
+                                a {
+                                    padding: 0.2em;
+    
+                                    .fa-heart, .fa-download, .fa-expand-alt {
+                                        width: 3vw;
+                                        height: 3vw;
+                                        color: $c-contrast;
+                                        background: $c-background;
+                                        opacity: 0.7;
+                                        padding: 0.2em 0 0 0;
+                                        border-radius: 0.375em;
+    
+                                        &:hover {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+    
+                            .textCardimg, .titleCardimg {
+                                grid-area: 4 / 1 / 5 / 4;
+                                color: $c-background;
+                            }
+    
+                            .textCardimg {
+                                font-size: 0.9em;
+                                width: max-content;
+                            }
+    
+                            .titleCardimg {
+                                
+                                padding: 1em 0 0 0;
+                                font-family: $blodtext-font;
+                                font-size: 1em;
+                                width: 15vw;
+                                text-align: left;
+                            }
+                        }
+    
+                        .fadeIn-top{
+                            top: 50%;
+                        }
+                          
+                        .fadeIn-left{
+                            left: 50%;
+                        }
+                    }
+                }
+                
+    
+                
+    
+                // .show {
+                //     display: none; 
+                //     flex-direction: column;
+                //     align-items: center;
+                //     justify-content: center;
+                //     position: fixed; 
+                //     z-index: 1;
+                //     left: 0;
+                //     top: 6.3em;
+                //     padding: 0.5em 5em;
+                //     width: 100%; 
+                //     overflow: auto; 
+                //     background-color: rgba(255, 255, 255, 0.842); 
+    
+                //     .close-btn-modalExpand {
+                //         align-self: flex-end;
+                //         width: 3vw;
+                //         height: 3vw;
+                //         color: $c-contrast;
+                //         background: $c-background;
+                //         opacity: 0.7;
+                //         padding: 0.35em;
+                //         border-radius: 0.375em;
+                //     }
+    
+                //     .img-expand {
+                //         padding: 0.5em;
+                //         width: 35vw;
+                //         height: 35vw;
+    
+                //         img {
+                //             width: 100%;
+                //             height: 100%;
+                //         }
+                //     }
+    
+                //     .constainerIcons {
+                //         align-self: flex-end;
+                //         display: flex;
+    
+                //         a {
+                //             padding: 0.2em;
+        
+                //             .fa-heart, .fa-download, .fa-expand-alt {
+                //                 width: 3vw;
+                //                 height: 3vw;
+                //                 color: $c-contrast;
+                //                 background: $c-background;
+                //                 opacity: 0.7;
+                //                 padding: 0.2em;
+                //                 border-radius: 0.375em;
+        
+                //                 &:hover {
+                //                     opacity: 1;
+                //                 }
+                //             }
+                //         }
+                //     }
+    
+                //     .textCardimg, .titleCardimg {
+                //         align-self: flex-start;
+                //         color: $c-blacktexts;
+                //     }
+    
+                //     .textCardimg {
+                //         font-size: 0.9em;
+                //         width: max-content;
+                //     }
+    
+                //     .titleCardimg {
+                //         padding: 0.3em 0 0 0 ;
+                //         font-family: $blodtext-font;
+                //         font-size: 1em;
+                //         width: 22vw;
+                //         text-align: left;
+                //     }
+                // }
+                
             }
         }
+        
     }
 }
 

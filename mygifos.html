@@ -40,14 +40,18 @@
     <!-- cuerpo principal que varía según navegación -->
     <main>
         <section class="misgifosSection">
-            <div class="containerIconFavNone">
-                <img class="iconImgFav" src="./images/icon-mis-gifos.svg" alt="Favoritos">
+            <div class="emptyMyGifosSection">
+                <div class="containerIconMyGifosNone">
+                    <img class="iconImgMyGifos" src="./images/icon-mis-gifos.svg" alt="Favoritos">
+                </div>
+                <h3 class="textMyGIFOSSection">Mis GIFOS</h3>
+                <div class="containerImgMyGIFOSNone">
+                    <img class="imgMyGIFOS" src="./images/icon-mis-gifos-sin-contenido.svg" alt="Crea tu primer GIFO">
+                </div>
+                <p class="textMyGIFOSNone">¡Anímate a crear tu primer GIFO!</p>
             </div>
-            <h3 class="textMyGIFOSSection">Mis GIFOS</h3>
-            <div class="containerImgMyGIFOSNone">
-                <img class="imgMyGIFOS" src="./images/icon-mis-gifos-sin-contenido.svg" alt="Crea tu primer GIFO">
-            </div>
-            <p class="textMyGIFOSNone">¡Anímate a crear tu primer GIFO!</p>
+             <!-- Container My Gifos -->
+             <div class="containerMyGifos"></div>
         </section>
         <!-- Trending section -->
         <section class="trendingSection">
@@ -76,13 +80,12 @@
         </div>
         <p class="textDescriptionFooter">© GIFOS 2020 All Rights Reserved.</p>
     </footer>
-    <script src="js/main.js"></script>
     <script src="js/functions.js"></script>
-    <script src="js/search.js"></script>
     <script src="js/trending.js"></script>
     <script src="js/download.js"></script>
     <script src="js/favorites.js"></script>
-    <script src="js/creategifos.js"></script>
+    <script src="js/mygifos.js"></script>
+    
 </body>
 
 </html>

@@ -21,26 +21,6 @@ const searchEmptyMsg = (ev) => {
   containerGifsSearch.appendChild(searchEmpty);
 };
 
-const showModalExpand = (ev) => {
-  const modal = document.querySelector(".show");
-  modal.style.display = 'flex';
-  modal.innerHTML = `
-  <i class="fas fa-times close-btn-modalExpand"></i>
-  <div class="img-expand"> 
-  <img src="${ev.target.imagegif}" alt="${ev.target.title}">
-  </div>
-  <div class="constainerIcons">
-    <a href="#"><i class="far fa-heart"></i></a>
-    <a href="#"><i class="fas fa-download"></i></a>
-  </div> 
-  <p class="textCardimg">${ev.target.username}</p>
-  <h6 class="titleCardimg">${ev.target.title}</h6>`;
-
-  modal.querySelector('.close-btn-modalExpand').addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-};
-
 // Initial Offset
 let offsetGifos = 0;
 
@@ -204,3 +184,7 @@ const newLableClose = document.createElement("label");
 newLableClose.classList.add("cross");
 newLableClose.setAttribute("for", "inputTextSearch");
 newLableClose.innerHTML = `<i class="fas fa-times xs"></i>`;
+
+
+inputUserValue.addEventListener("keyup", getSuggestionsHandler);
+newLableClose.addEventListener("click", closeModal);

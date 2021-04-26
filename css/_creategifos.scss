@@ -149,7 +149,7 @@ main {
             border-radius: 1.6875em;
         }
 
-        .button-cam {
+        .button-cam, .button-record, .button-stopRecord, .button-uploadRecord {
             width: 50vw;
             padding: 1em;
             margin-bottom: 1em;
@@ -159,6 +159,10 @@ main {
             border: 0.1em solid $c-contrast;
             border-radius: 1.6875em;
             background: none;
+        }
+
+        .button-record, .button-stopRecord, .button-uploadRecord {
+            display: none;
         }
 
         .filmanimation2 {
@@ -275,7 +279,7 @@ main {
                 width: 95vw;
             }
     
-            .button-cam {
+            .button-cam, .button-record, .button-stopRecord, .button-uploadRecord {
                 width: 16.55vw;
                 
                 &:hover {

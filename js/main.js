@@ -41,7 +41,7 @@ const getGifos = async (trendingGifsUrl, apikey, offsetTrendingGifos) => {
 
 
 
-let offsetTrendingGifos = 3;
+let offsetTrendingGifos = 0;
 // handler callback
 document.addEventListener('DOMContentLoaded', async () => {
 
@@ -52,15 +52,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   initFavorites(gifosData);
   printGifosSliderGallery(gifosData, sliderGallery);
 
-  inputUserValue.addEventListener("keyup", getSuggestionsHandler);
-  newLableClose.addEventListener("click", closeModal);
-
-  printFavorites();
 
 
   // Right
   const carrouselRight = (ev) => {
-    offsetTrendingGifos += 3
+    offsetTrendingGifos += 3;
     sliderGallery++;
     printGifosSliderGallery(gifosData.data, sliderGallery);
 
@@ -74,6 +70,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // document.querySelector(".leftBtn").addEventListener("click", carrouselLeft);
   document.querySelector(".rightBtn").addEventListener("click", carrouselRight);
+
+  printFavorites();
 });
 
 
