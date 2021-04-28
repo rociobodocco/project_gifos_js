@@ -39,7 +39,7 @@ const printFavorites = () => {
         </div>`;
       containerFavorites.appendChild(cardGifosFav);
 
-      // cardGifosFav.querySelector('.btnRemoveFavorites').addEventListener("click", removeFavoritesHandler);
+      
 
       // Modal Expand
         const expandFavGifs = cardGifosFav.querySelector('.btnModalExpand');
@@ -60,6 +60,9 @@ const printFavorites = () => {
 
         // Download
         cardGifosFav.querySelector('.btndownload').addEventListener("click", downloadGifs);
+
+        // Remove Favorites
+        cardGifosFav.querySelector('.btnRemoveFavorites').addEventListener("click", removeFavoritesHandler);
     });
   } else {
     emptyFavSec.style.display = 'flex';
@@ -80,31 +83,15 @@ const addFavoritesHandler = (ev => {
   printFavorites();
 });
 
-// const removeFavoritesHandler = (ev => {
-//   const btnFavPressed = ev.target;
-//   const idGifoSelected = btnFavPressed.getAttribute('data-id');
-//   const localFavorites = JSON.parse(localStorage.getItem('favorites'));
-//   const favJson = localFavorites.favorites.find(f => f.id === idGifoSelected);
-//   const localGifos = JSON.parse(localStorage.getItem('gifos'));
-//   localGifos.gifos.push(favJson);
-//   localStorage.setItem('gifos', JSON.stringify(localGifos));
-// });
-
-
-// const removeGif = (gif) => {
-// 	let arrFavoriteParsed = JSON.parse(localStorage.getItem('FavoriteGifs'));
-// 	console.log(arrFavoriteParsed);
-// 	for (let i = 0; i < arrFavoriteParsed.length; i++) {
-// 		if (arrFavoriteParsed[i].gif === gif) {
-// 			arrFavoriteParsed.splice(i, 1);
-// 			localStorage.setItem(
-// 				'FavoriteGifs',
-// 				JSON.stringify(arrFavoriteParsed)
-// 			);
-// 			displayFavoriteSection(event);
-// 			closeMaximized();
-// 		}
-// 	}
-// };
+const removeFavoritesHandler = (ev) => {
+  const btnFavPressed = ev.target;
+  const idFavSelected = btnFavPressed.getAttribute('data-id');
+  const localFav = JSON.parse(localStorage.getItem('favorites'));
+  const favJson = localFav.favorites.filter(f => f.id !== idFavSelected);
+  
+  localStorage.setItem('favorites', JSON.stringify(favJson));
+  // const newDataFav = favJson.filter(x => x.id !== 3);
+  // const localNewFav = JSON.parse(localStorage.getItem('newDataFav'));
+};
 
 
