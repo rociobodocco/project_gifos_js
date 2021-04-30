@@ -31,6 +31,7 @@ const printGifosSliderGallery =  (arr, slider) => {
         // expand.addEventListener("touchend", showModalExpand);
         expandTrendingGifs.addEventListener("click", showModalExpand);
         expandTrendingGifs.imagegif = arr.data[i].images.fixed_height.url;
+        expandTrendingGifs.idgif = arr.data[i].id;
         expandTrendingGifs.username = arr.data[i].username;
         expandTrendingGifs.title = arr.data[i].title;
 
@@ -39,6 +40,7 @@ const printGifosSliderGallery =  (arr, slider) => {
         // imageGifOnclick.addEventListener("touchend", showModalExpand);
         imageGifOnclickTrending.addEventListener("click", showModalExpand);
         imageGifOnclickTrending.imagegif = arr.data[i].images.fixed_height.url;
+        imageGifOnclickTrending.idgif = arr.data[i].id;
         imageGifOnclickTrending.username = arr.data[i].username;
         imageGifOnclickTrending.title = arr.data[i].title;
 

@@ -47,7 +47,7 @@ const showModalExpand = (ev) => {
   <img src="${ev.target.imagegif}" alt="${ev.target.title}">
   </div>
   <div class="constainerIcons">
-    <a href="#"><i class="far fa-heart btnFavorites"></i></a>
+    <a href="#"><i data-id="${ev.target.idgif}" class="far fa-heart btnFavorites"></i></a>
     <a href="#"><i class="fas fa-download btndownload"></i></a>
   </div> 
   <p class="textCardimg">${ev.target.username}</p>

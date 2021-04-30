@@ -54,6 +54,7 @@ const printGifs = (gifs) => {
     // expand.addEventListener("touchend", showModalExpand);
     expand.addEventListener("click", showModalExpand);
     expand.imagegif = gif.images.fixed_height.url;
+    expand.idgif = gif.id;
     expand.username = gif.username;
     expand.title = gif.title;
 
@@ -62,6 +63,7 @@ const printGifs = (gifs) => {
     // imageGifOnclick.addEventListener("touchend", showModalExpand);
     imageGifOnclick.addEventListener("click", showModalExpand);
     imageGifOnclick.imagegif = gif.images.fixed_height.url;
+    imageGifOnclick.idgif = gif.id;
     imageGifOnclick.username = gif.username;
     imageGifOnclick.title = gif.title;
 
