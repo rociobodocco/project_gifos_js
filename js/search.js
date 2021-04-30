@@ -3,10 +3,10 @@ const closeModal = (ev) => {
   if (inputUserValue.value !== " ") {
     inputUserValue.value = " ";
     containerSuggestions.style.display = "none";
-    containerTitleSearch.style.display = "none";
-    btnSeeMoreGifos.style.display = "none";
-    containerGifsSearch.style.display = "none";
     lineSpaceSuggestion.style.display = "none";
+    containerTitleSearch.style.display = "none";
+    containerGifsSearch.style.display = "none";
+    btnSeeMoreGifos.style.display = "none";
   };
 };
 
@@ -20,6 +20,8 @@ const searchEmptyMsg = (ev) => {
     <p class="newtextnotfoundsearch">"Intenta con otra búsqueda."</p>`;
   containerGifsSearch.appendChild(searchEmpty);
 };
+
+
 
 // Initial Offset
 let offsetGifos = 0;
@@ -104,8 +106,9 @@ const getSuggestionsHandler = async (ev) => {
     // Input Value empty:
     if (initialTagsSuggestion == "") {
       containerTitleSearch.style.display = "none";
-      // btnSeeMoreGifos.style.display = 'none';
-      lableIconSearch.style.display = "none";
+      const btnSeeMoreGifos = document.querySelector(".btnSeeMoreGifos");
+      btnSeeMoreGifos.style.display = 'none';
+      // lableIconSearch.style.display = "none";
     } else {
       // Input with value:
       containerSuggestions.style.display = "block";
@@ -122,6 +125,10 @@ const getSuggestionsHandler = async (ev) => {
           newLi.classList.add("itemSuggestions");
           newLi.innerHTML = `<i class="fas fa-search s"></i>${sug.name}`;
           containerSuggestions.appendChild(newLi);
+          newLi.addEventListener("click", (ev) => {
+            const input = inputUserValue;
+            input.value = ev.target.textContent;
+          })
         });
       };
       printSuggestionUl(suggestions);
@@ -130,6 +137,7 @@ const getSuggestionsHandler = async (ev) => {
 
   // Print Search
   if (ev.keyCode === 13 || ev.keyCode === "Enter") {
+    createButton();
     const initialKeyWord = ev.target.value;
     const initialGifs = await getGifsByKeyword(API_KEY, initialKeyWord, offsetGifos);
 
@@ -140,15 +148,15 @@ const getSuggestionsHandler = async (ev) => {
     if (ev.target.value === "") {
       searchEmptyMsg();
     } else {
-      // Input with Value + print gifos
+      // Print gifos of input Value
       newtitleSearch.textContent = inputUserValue.value;
       containerTitleSearch.appendChild(newLineSpaceSearch);
       containerTitleSearch.appendChild(newtitleSearch);
-
+      containerTitleSearch.style.display = "block";
+      containerGifsSearch.style.display = "grid";
       printGifs(initialGifs);
-      createButton();
     };
-
+    
     // Pagination
     const seeMore = async (ev) => {
       const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
@@ -161,8 +169,25 @@ const getSuggestionsHandler = async (ev) => {
     if (btnSeeMoreGifos) {
       btnSeeMoreGifos.addEventListener("click", seeMore)
     };
+
   };
+  
+  // lableIconSearch.addEventListener("click", async () => {
+  //   const initialKeyWordSug = ev.target.value;
+  //   const initialGifssug = await getGifsByKeyword( API_KEY, initialKeyWordSug, offsetGifos);
+  //   // console.log(initialGifssug)
+  //   newtitleSearch.textContent = inputUserValue.value;
+  //   containerTitleSearch.appendChild(newLineSpaceSearch);
+  //   containerTitleSearch.appendChild(newtitleSearch);
+  //   containerTitleSearch.style.display = "block";
+  //   containerGifsSearch.style.display = "grid";
+  //   console.log(initialGifssug)
+  //   printGifs(initialGifssug)
+  //   createButton();
+  // });
 };
+
+
 
 // Global const
 const containerSuggestions = document.querySelector(".containerAutocomplete");
@@ -170,6 +195,7 @@ const containerGifsSearch = document.querySelector(".containerGifsSearch");
 const lineSpaceSuggestion = document.querySelector(".lineSearchSuggestions");
 const inputUserValue = document.querySelector(".inputTextSearch");
 const lableIconSearch = document.querySelector(".search");
+
 
 // Create new Title Search
 const containerTitleSearch = document.querySelector(".containerTitleSearch");
@@ -186,5 +212,9 @@ newLableClose.setAttribute("for", "inputTextSearch");
 newLableClose.innerHTML = `<i class="fas fa-times xs"></i>`;
 
 
-inputUserValue.addEventListener("keyup", getSuggestionsHandler);
-newLableClose.addEventListener("click", closeModal);
+// const suggestionSelect = (ev) => {
+//   printSuggestionUl(suggestions);
+//   const itemSuggestionSelect = document.querySelector('.itemSuggestions');
+//   itemSuggestionSelect.value;
+// }; 
+// document.querySelector('.itemSuggestions').addEventListener('click', suggestionSelect);

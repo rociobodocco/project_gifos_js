@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   printGifosSliderGallery(gifosData, sliderGallery);
 
 
+  inputUserValue.addEventListener("keyup", getSuggestionsHandler);
+  newLableClose.addEventListener("click", closeModal);
 
   // Right
   const carrouselRight = (ev) => {

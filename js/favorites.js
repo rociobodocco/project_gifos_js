@@ -9,8 +9,10 @@ const initFavorites = () => {
   const gifosArr = localStorage.setItem('gifos', JSON.stringify({ gifos: [] }));
 };
 
+
 // Print Favorites funtion 
 const printFavorites = () => {
+
   const localFavorites = JSON.parse(localStorage.getItem('favorites'));
   const emptyFavSec = document.querySelector(".emptyFavoritesSection");
 
@@ -20,6 +22,7 @@ const printFavorites = () => {
     const containerFavorites = document.querySelector('.containerFavorites');
 
     localFavorites.favorites.forEach(fav => {
+      console.log(localFavorites.favorites)
       const cardGifosFav = document.createElement("div");
       cardGifosFav.classList.add("container-img-favGifos");
       cardGifosFav.innerHTML = `
@@ -39,37 +42,33 @@ const printFavorites = () => {
         </div>`;
       containerFavorites.appendChild(cardGifosFav);
 
-      
-
       // Modal Expand
-        const expandFavGifs = cardGifosFav.querySelector('.btnModalExpand');
-        // expand.addEventListener("touchstart", showModalExpand);
-        // expand.addEventListener("touchend", showModalExpand);
-        expandFavGifs.addEventListener("click", showModalExpand);
-        expandFavGifs.imagegif = fav.images.fixed_height.url;
-        expandFavGifs.username = fav.username;
-        expandFavGifs.title = fav.title;
+      const expandFavGifs = cardGifosFav.querySelector('.btnModalExpand');
+      // expand.addEventListener("touchstart", showModalExpand);
+      // expand.addEventListener("touchend", showModalExpand);
+      expandFavGifs.addEventListener("click", showModalExpand);
+      expandFavGifs.imagegif = fav.images.fixed_height.url;
+      expandFavGifs.username = fav.username;
+      expandFavGifs.title = fav.title;
 
-        const imageGifOnclickFav = cardGifosFav.querySelector('img');
-        // imageGifOnclick.addEventListener("touchstart", showModalExpand);
-        // imageGifOnclick.addEventListener("touchend", showModalExpand);
-        imageGifOnclickFav.addEventListener("click", showModalExpand);
-        imageGifOnclickFav.imagegif = fav.images.fixed_height.url;
-        imageGifOnclickFav.username = fav.username;
-        imageGifOnclickFav.title = fav.title;
+      const imageGifOnclickFav = cardGifosFav.querySelector('img');
+      // imageGifOnclick.addEventListener("touchstart", showModalExpand);
+      // imageGifOnclick.addEventListener("touchend", showModalExpand);
+      imageGifOnclickFav.addEventListener("click", showModalExpand);
+      imageGifOnclickFav.imagegif = fav.images.fixed_height.url;
+      imageGifOnclickFav.username = fav.username;
+      imageGifOnclickFav.title = fav.title;
 
-        // Download
-        cardGifosFav.querySelector('.btndownload').addEventListener("click", downloadGifs);
+      // Download
+      cardGifosFav.querySelector('.btndownload').addEventListener("click", downloadGifs);
 
-        // Remove Favorites
-        cardGifosFav.querySelector('.btnRemoveFavorites').addEventListener("click", removeFavoritesHandler);
+      // Remove Favorites
+      cardGifosFav.querySelector('.btnRemoveFavorites').addEventListener("click", removeFavoritesHandler);
     });
   } else {
     emptyFavSec.style.display = 'flex';
-  }
+  };
 };
-
-
 
 // Handler function
 const addFavoritesHandler = (ev => {
@@ -88,7 +87,7 @@ const removeFavoritesHandler = (ev) => {
   const idFavSelected = btnFavPressed.getAttribute('data-id');
   const localFav = JSON.parse(localStorage.getItem('favorites'));
   const favJson = localFav.favorites.filter(f => f.id !== idFavSelected);
-  
+
   localStorage.setItem('favorites', JSON.stringify(favJson));
   // const newDataFav = favJson.filter(x => x.id !== 3);
   // const localNewFav = JSON.parse(localStorage.getItem('newDataFav'));
