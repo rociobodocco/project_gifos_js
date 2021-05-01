@@ -601,15 +601,11 @@ body {
     body main .home {
       padding: 3em 0; }
       body main .home .titleprincipal {
-        margin-top: 4em;
+        margin-top: 2em;
         width: 45vw; }
-      body main .home .imgHome {
-        margin-bottom: 1.5em;
+      body main .home .imgHome img {
         width: 23.1vw;
         height: 25.8vh; }
-        body main .home .imgHome img {
-          width: 23.1vw;
-          height: 25.8vh; }
       body main .home .containerSearch {
         width: 37.9vw;
         height: max-content; }

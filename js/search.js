@@ -191,6 +191,7 @@ const getSuggestionsHandler = async (ev) => {
 
 
 
+
 // Global const
 const containerSuggestions = document.querySelector(".containerAutocomplete");
 const containerGifsSearch = document.querySelector(".containerGifsSearch");
@@ -220,3 +221,6 @@ newLableClose.innerHTML = `<i class="fas fa-times xs"></i>`;
 //   itemSuggestionSelect.value;
 // }; 
 // document.querySelector('.itemSuggestions').addEventListener('click', suggestionSelect);
+
+inputUserValue.addEventListener("keyup", getSuggestionsHandler);
+newLableClose.addEventListener("click", closeModal);

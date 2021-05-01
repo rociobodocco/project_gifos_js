@@ -27,54 +27,47 @@ const getSearchTags = async (apiKey, query) => {
 const getGifsByKeyword = async (apiKey, keyword, offset) => {
   const gifs = await getSearchGifsByKeyword(apiKey, keyword, offset);
   return gifs;
-}
+};
 
-// Trending Section
-const getGifos = async (trendingGifsUrl, apikey, offsetTrendingGifos) => {
+const trendingArray = [];
+
+// Trending Section &offset=${offsetTrendingGifos}
+const getGifos = async (trendingGifsUrl, apikey) => {
   try {
-    const gifos = await fetch(`${trendingGifsUrl}&api_key=${apikey}&offset=${offsetTrendingGifos}`);
+    const gifos = await fetch(`${trendingGifsUrl}&api_key=${apikey}`);
     return gifos.json();
   } catch (error) {
     console.log('ocurrió un error', error);
   }
+};
+
+const trendingToArr = (arr) => {
+  arr.forEach(el => {
+    trendingArray.push(el)
+  })
 }
 
-
-
-let offsetTrendingGifos = 0;
 // handler callback
 document.addEventListener('DOMContentLoaded', async () => {
 
   const API_URL = 'https://api.giphy.com/v1/gifs/trending?&random_id=e826c9fc5c929e0d6c6d423841a282aa&rating=g';
   const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
-  const gifosData = await getGifos(API_URL, API_KEY, offsetTrendingGifos);
+  const gifosData = await getGifos(API_URL, API_KEY);
 
+  trendingToArr(gifosData.data);
   initFavorites(gifosData);
-  printGifosSliderGallery(gifosData, sliderGallery);
 
+  const containerImages = document.querySelector('.container-slider');
 
-  inputUserValue.addEventListener("keyup", getSuggestionsHandler);
-  newLableClose.addEventListener("click", closeModal);
-
-  // Right
-  const carrouselRight = (ev) => {
-    offsetTrendingGifos += 3;
-    sliderGallery++;
-    printGifosSliderGallery(gifosData.data, sliderGallery);
-
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    printCarrousel(gifosData, containerImages);
+  } else {
+    showNewTrendings(gifosData, containerImages);
   };
-
-  // // Left
-  // const carrouselLeft = (ev) => {
-  //   offsetTrendingGifos -= 3
-  //   printGifosSliderGallery(getGifos(API_URL, API_KEY, offsetTrendingGifos));
-  // };
-
-  // document.querySelector(".leftBtn").addEventListener("click", carrouselLeft);
-  document.querySelector(".rightBtn").addEventListener("click", carrouselRight);
 
   printFavorites();
 });
+
 
 
 
