@@ -31,6 +31,7 @@ btnUploadRecord.addEventListener('click', function (ev) {
     document.querySelector('.bot2').style.color = '#572EE5';
     document.querySelector('.bot3').style.background = '#572EE5';
     document.querySelector('.bot3').style.color = '#FFFFFF';
+    document.querySelector('.uploadGif').style.display = 'flex';
 });
 
 async function uploadGif(formData) {
@@ -54,7 +55,7 @@ const startUpVideo = () => {
         alert('¿Nos das acceso a tu cámara? - El acceso a tu camara será válido sólo por el tiempo en el que estés creando el GIFO');
         video.srcObject = stream;
         video.play();
-        contairerCam.style.display = 'block';
+        contairerCam.style.display = 'grid';
         document.querySelector('.bot1').style.background = '#FFFFFF';
         document.querySelector('.bot1').style.color = '#572EE5';
         document.querySelector('.bot2').style.background = '#572EE5';

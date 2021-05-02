@@ -9,7 +9,6 @@ const initFavorites = () => {
   const gifosArr = localStorage.setItem('gifos', JSON.stringify({ gifos: [] }));
 };
 
-
 // Print Favorites funtion 
 const printFavorites = () => {
 
@@ -19,14 +18,13 @@ const printFavorites = () => {
   if (localFavorites.favorites.length >= 1) {
 
     emptyFavSec.style.display = 'none';
-    const containerFavorites = document.querySelector('.containerFavorites');
+
 
     localFavorites.favorites.forEach(fav => {
-      console.log(localFavorites.favorites)
       const cardGifosFav = document.createElement("div");
       cardGifosFav.classList.add("container-img-favGifos");
       cardGifosFav.innerHTML = `
-        <img class="imgFavoritesGifos" src="${fav.images.fixed_height.url}" alt="imgGifos">
+        <img class="imgFavoritesGifos" id="${fav.id}" src="${fav.images.fixed_height.url}" alt="imgGifos">
         <div class="containerDetails">
             <div class="content-overlay"></div>
             <div class="content-details fadeIn-top fadeIn-left">
@@ -62,15 +60,19 @@ const printFavorites = () => {
       // Download
       cardGifosFav.querySelector('.btndownload').addEventListener("click", downloadGifs);
 
+
       // Remove Favorites
       cardGifosFav.querySelector('.btnRemoveFavorites').addEventListener("click", removeFavoritesHandler);
+
     });
   } else {
     emptyFavSec.style.display = 'flex';
   };
 };
 
-// Handler function
+const containerFavorites = document.querySelector('.containerFavorites');
+
+// Add Favorites and print
 const addFavoritesHandler = (ev => {
   const btnFavPressed = ev.target;
   const idGifoSelected = btnFavPressed.getAttribute('data-id');
@@ -82,15 +84,16 @@ const addFavoritesHandler = (ev => {
   printFavorites();
 });
 
-const removeFavoritesHandler = (ev) => {
+// Remove Favorite and delete item of DOM 
+const removeFavoritesHandler = (ev => {
   const btnFavPressed = ev.target;
   const idFavSelected = btnFavPressed.getAttribute('data-id');
   const localFav = JSON.parse(localStorage.getItem('favorites'));
-  const favJson = localFav.favorites.filter(f => f.id !== idFavSelected);
-
-  localStorage.setItem('favorites', JSON.stringify(favJson));
-  // const newDataFav = favJson.filter(x => x.id !== 3);
-  // const localNewFav = JSON.parse(localStorage.getItem('newDataFav'));
-};
-
-
+  for (i = 0; i < localFav.favorites.length; i++) {
+    if (localFav.favorites[i].id == idFavSelected) {
+      localFav.favorites.splice(i, 1);
+    }
+  };
+  localStorage.setItem('favorites', JSON.stringify(localFav));
+  location.reload();
+});

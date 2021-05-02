@@ -2,13 +2,13 @@
 const headerFixed = document.querySelector("header");
 const headerScroll = headerFixed.offsetTop;
 
-const scrollHeaderFunction = () => { 
+const scrollHeaderFunction = () => {
   if (window.pageYOffset > headerScroll) {
     headerFixed.classList.toggle("fixedHeaderShadow");
   }
 };
 
-window.addEventListener('scroll',scrollHeaderFunction);
+window.addEventListener('scroll', scrollHeaderFunction);
 
 // ----------------------------------------------------------------------------
 // // When the user scrolls the page, execute myFunction // REVISAR FUNCIÓN SCROLL INPUT 
@@ -32,12 +32,35 @@ window.addEventListener('scroll',scrollHeaderFunction);
 // --------------------------------------------------------------------------
 // Change Theme (dark/light):
 const buttonColorMode = document.querySelector('.changeTheme');
-buttonColorMode.addEventListener("click", () => {
+
+if (localStorage.getItem("modeSelect") == null){ localStorage.setItem("modeSelect", "Diurno");}
+
+let modeSelect = localStorage.getItem("modeSelect");
+
+if (modeSelect == "Nocturno") {
   document.body.classList.toggle("night-mode");
+  buttonColorMode.textContent = 'Modo Diurno';
+} else { buttonColorMode.textContent = 'Modo Nocturno'; }
+
+
+buttonColorMode.addEventListener("click", () => {
+
+  let modeSelect = localStorage.getItem("modeSelect");
+
+  document.body.classList.toggle("night-mode");
+
+  if (modeSelect == "Diurno") {
+    localStorage.setItem("modeSelect", "Nocturno");
+    buttonColorMode.textContent = 'Modo Diurno';
+
+  } else {
+    localStorage.setItem("modeSelect", "Diurno");
+    buttonColorMode.textContent = 'Modo Nocturno';
+  }
 });
 
-
-
+// --------------------------------------------------------------------------
+// Modal expand:
 const showModalExpand = (ev) => {
   const modal = document.querySelector(".show");
   modal.style.display = 'flex';

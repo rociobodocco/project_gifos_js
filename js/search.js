@@ -21,8 +21,6 @@ const searchEmptyMsg = (ev) => {
   containerGifsSearch.appendChild(searchEmpty);
 };
 
-
-
 // Initial Offset
 let offsetGifos = 0;
 
@@ -158,7 +156,7 @@ const getSuggestionsHandler = async (ev) => {
       containerGifsSearch.style.display = "grid";
       printGifs(initialGifs);
     };
-    
+
     // Pagination
     const seeMore = async (ev) => {
       const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
@@ -173,7 +171,7 @@ const getSuggestionsHandler = async (ev) => {
     };
 
   };
-  
+
   // lableIconSearch.addEventListener("click", async () => {
   //   const initialKeyWordSug = ev.target.value;
   //   const initialGifssug = await getGifsByKeyword( API_KEY, initialKeyWordSug, offsetGifos);
@@ -188,9 +186,6 @@ const getSuggestionsHandler = async (ev) => {
   //   createButton();
   // });
 };
-
-
-
 
 // Global const
 const containerSuggestions = document.querySelector(".containerAutocomplete");
@@ -214,13 +209,7 @@ newLableClose.classList.add("cross");
 newLableClose.setAttribute("for", "inputTextSearch");
 newLableClose.innerHTML = `<i class="fas fa-times xs"></i>`;
 
-
-// const suggestionSelect = (ev) => {
-//   printSuggestionUl(suggestions);
-//   const itemSuggestionSelect = document.querySelector('.itemSuggestions');
-//   itemSuggestionSelect.value;
-// }; 
-// document.querySelector('.itemSuggestions').addEventListener('click', suggestionSelect);
-
-inputUserValue.addEventListener("keyup", getSuggestionsHandler);
-newLableClose.addEventListener("click", closeModal);
+document.addEventListener('DOMContentLoaded', async () => {
+  inputUserValue.addEventListener("keyup", getSuggestionsHandler);
+  newLableClose.addEventListener("click", closeModal);
+});

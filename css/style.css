@@ -601,7 +601,6 @@ body {
     body main .home {
       padding: 3em 0; }
       body main .home .titleprincipal {
-        margin-top: 2em;
         width: 45vw; }
       body main .home .imgHome img {
         width: 23.1vw;
@@ -926,11 +925,29 @@ body {
         border-left: 0.1em solid #5ED7C6;
         z-index: 95; }
       body main .contairer-create .contairer-cam .containerVideoCam {
-        display: none; }
+        display: none;
+        grid-area: 1 / 2 / 3 / 3; }
         body main .contairer-create .contairer-cam .containerVideoCam #video {
           display: block;
-          width: 50vw;
-          height: 30vw; }
+          width: 40vw;
+          height: 20vw; }
+      body main .contairer-create .contairer-cam .preview-gif {
+        grid-area: 1 / 2 / 3 / 3;
+        width: 40vw;
+        height: 20vw; }
+      body main .contairer-create .contairer-cam .uploadGif {
+        display: none;
+        grid-area: 1 / 2 / 3 / 3;
+        justify-content: center;
+        align-items: center;
+        width: 40vw;
+        height: 20vw;
+        opacity: 0.6;
+        background: #572EE5; }
+        body main .contairer-create .contairer-cam .uploadGif .msjUploadGif {
+          font-size: 1em;
+          width: max-content;
+          color: #FFFFFF; }
       body main .contairer-create .contairer-cam .corner2 {
         align-self: flex-start;
         justify-self: flex-end;
@@ -1036,6 +1053,18 @@ body {
             display: block;
             width: 50vw;
             height: 30vw; }
+        body main .contairer-create .contairer-cam .uploadGif {
+          display: none;
+          grid-area: 1 / 2 / 3 / 3;
+          width: 50vw;
+          height: 30vw;
+          opacity: 0.6;
+          background: #572EE5;
+          z-index: 96; }
+          body main .contairer-create .contairer-cam .uploadGif .msjUploadGif {
+            font-size: 0.65em;
+            width: max-content;
+            color: #FFFFFF; }
         body main .contairer-create .contairer-cam .corner2 {
           width: 4vw;
           height: 4vw; }

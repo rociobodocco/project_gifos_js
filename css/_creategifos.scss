@@ -68,11 +68,37 @@ main {
 
             .containerVideoCam {
                 display: none;
+                grid-area: 1 / 2 / 3 / 3;
 
                 #video {
                     display: block;
-                    width: 50vw;
-                    height: 30vw;
+                    width: 40vw;
+                    height: 20vw;
+                }
+
+                
+            }
+
+            .preview-gif {
+                grid-area: 1 / 2 / 3 / 3;
+                width: 40vw;
+                height: 20vw;
+            }
+
+            .uploadGif {
+                display: none;
+                grid-area: 1 / 2 / 3 / 3;
+                justify-content: center;
+                align-items: center;
+                width: 40vw;
+                height: 20vw;
+                opacity: 0.6;
+                background: $c-contrast;
+
+                .msjUploadGif {
+                    font-size: 1em;
+                    width: max-content;
+                    color: $c-background;
                 }
             }
 
@@ -227,6 +253,7 @@ main {
                     width: 4vw;
                     height: 4vw;
                 }
+               
 
                 .containerVideoCam {
                     grid-area: 1 / 2 / 3 / 3;
@@ -235,6 +262,22 @@ main {
                         display: block;
                         width: 50vw;
                         height: 30vw;
+                    }
+                }
+
+                .uploadGif {
+                    display: none;
+                    grid-area: 1 / 2 / 3 / 3;
+                    width: 50vw;
+                    height: 30vw;
+                    opacity: 0.6;
+                    background: $c-contrast;
+                    z-index: 96;
+    
+                    .msjUploadGif {
+                        font-size: 0.65em;
+                        width: max-content;
+                        color: $c-background;
                     }
                 }
 

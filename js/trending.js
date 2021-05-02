@@ -1,26 +1,54 @@
 //Trending section
-let slider = 3;
-const printCarrousel = (arr, container) => {
-    for (i = slider - 3; i < slider; i++) {
+const printCarrousel = (arr) => {
+    arr.data.forEach(trendGif => {
         const cardGifos = document.createElement('div');
         cardGifos.classList.add('container-img-trendinggifos');
         cardGifos.innerHTML = `
-            <img class="imgnewgifos" src="${arr.data[i].images.fixed_height.url}" alt="${arr.data[i].title}">
+            <img class="imgnewgifos" src="${trendGif.images.fixed_height.url}" alt="${trendGif.title}">
             <div class="containerDetails">
                 <div class="content-overlay"></div> 
                     <div class="content-details fadeIn-top fadeIn-left">
                         <div class="hoverIcons">
-                            <a href="#"><i data-id="${arr.data[i].id}" class="far fa-heart btnFavorites"></i></a>
+                            <a href="#"><i data-id="${trendGif.id}" class="far fa-heart btnFavorites"></i></a>
                             <a href="#"><i class="fas fa-download btndownload"></i></a>
                             <a href="#"><i class="fas fa-expand-alt btnModalExpand"></i></a>
                         </div>
-                        <p class="textCardimg">${arr.data[i].username}</p>
-                        <h6 class="titleCardimg">${arr.data[i].title}</h6>
+                        <p class="textCardimg">${trendGif.username}</p>
+                        <h6 class="titleCardimg">${trendGif.title}</h6>
                     </div>
                 </div>
             </div>`
-        container.appendChild(cardGifos);
-    };
+        containerImages.appendChild(cardGifos);
+
+        // Modal Expand
+        const expand = cardGifos.querySelector('.btnModalExpand');
+        // expand.addEventListener("touchstart", showModalExpand);
+        // expand.addEventListener("touchend", showModalExpand);
+        expand.addEventListener("click", showModalExpand);
+        expand.imagegif = trendGif.images.fixed_height.url;
+        expand.idgif = trendGif.id;
+        expand.username = trendGif.username;
+        expand.title = trendGif.title;
+
+        const imageGifOnclick = cardGifos.querySelector('img');
+        // imageGifOnclick.addEventListener("touchstart", showModalExpand);
+        // imageGifOnclick.addEventListener("touchend", showModalExpand);
+        imageGifOnclick.addEventListener("click", showModalExpand);
+        imageGifOnclick.imagegif = trendGif.images.fixed_height.url;
+        imageGifOnclick.idgif = trendGif.id;
+        imageGifOnclick.username = trendGif.username;
+        imageGifOnclick.title = trendGif.title;
+
+        // Favorites
+        const localGifos = JSON.parse(localStorage.getItem('gifos'));
+        localGifos.gifos.push(trendGif);
+        localStorage.setItem('gifos', JSON.stringify(localGifos));
+
+        cardGifos.querySelector('.btnFavorites').addEventListener("click", addFavoritesHandler);
+
+        // Download
+        cardGifos.querySelector('.btndownload').addEventListener("click", downloadGifs);
+    });
 };
 
 let count = 0;
@@ -32,7 +60,6 @@ const showNewTrendings = async (count) => {
 
     containerImages.innerHTML = '';
     newCount = count + 3;
-    const totalGifs = gifosData.data.length;
 
     for (i = count; i < newCount; i++) {
         const newCardGifos = document.createElement('div');
@@ -54,6 +81,35 @@ const showNewTrendings = async (count) => {
         </div>`;
 
         trendingList.appendChild(newCardGifos);
+
+        // Modal Expand
+        const expand = newCardGifos.querySelector('.btnModalExpand');
+        // expand.addEventListener("touchstart", showModalExpand);
+        // expand.addEventListener("touchend", showModalExpand);
+        expand.addEventListener("click", showModalExpand);
+        expand.imagegif = gifosData.data[i].images.fixed_height.url;
+        expand.idgif = gifosData.data[i].id;
+        expand.username = gifosData.data[i].username;
+        expand.title = gifosData.data[i].title;
+
+        const imageGifOnclick = newCardGifos.querySelector('img');
+        // imageGifOnclick.addEventListener("touchstart", showModalExpand);
+        // imageGifOnclick.addEventListener("touchend", showModalExpand);
+        imageGifOnclick.addEventListener("click", showModalExpand);
+        imageGifOnclick.imagegif = gifosData.data[i].images.fixed_height.url;
+        imageGifOnclick.idgif = gifosData.data[i].id;
+        imageGifOnclick.username = gifosData.data[i].username;
+        imageGifOnclick.title = gifosData.data[i].title;
+
+        // Favorites
+        const localGifos = JSON.parse(localStorage.getItem('gifos'));
+        localGifos.gifos.push(gifosData.data[i]);
+        localStorage.setItem('gifos', JSON.stringify(localGifos));
+
+        newCardGifos.querySelector('.btnFavorites').addEventListener("click", addFavoritesHandler);
+
+        // Download
+        newCardGifos.querySelector('.btndownload').addEventListener("click", downloadGifs);
     };
     count++;
 };
