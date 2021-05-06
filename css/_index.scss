@@ -8,7 +8,7 @@
 }
 
 /* SUB TEXT DOWN TRENDING SECTION 1 */
-@mixin subtitlesec1 {
+@mixin trendigTopics {
     font-family: $subtitle1-font;
     color: $c-contrast;
     letter-spacing: 0;
@@ -165,13 +165,21 @@ main {
                 @include titles;
                 font-size: 1em;
             }
-    
-            .subtitleSec1 {
-                width: 70vw;
-                @include subtitlesec1;
-                font-size: 0.88em;
-                line-height: 1.5em;
+            
+            .containerTrendingTopics {
+                display: flex;
+                justify-content: center;
+                width: 50vw;
+
+                .trendigTopics {
+                    width: max-content;
+                    padding: 0.2em;
+                    @include trendigTopics;
+                    font-size: 0.88em;
+                    line-height: 1.5em;
+                }
             }
+            
         }
 
         .containerTitleSearch {
@@ -314,7 +322,6 @@ main {
         }
 
         .btnSeeMoreGifos {
-            // display: none;
             width: 50vw;
             padding: 1em;
             margin: 1em 0;
@@ -395,7 +402,7 @@ main {
                     font-size: 1.15em;
                 }
         
-                .subtitleSec1 {
+                .trendigTopics {
                     font-size: 1em;
                 }
             }

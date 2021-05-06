@@ -24,12 +24,23 @@ const getSearchTags = async (apiKey, query) => {
   }
 };
 
+// Get 5 suggestions trendings tópics con input search
+const getSuggestionsTrendings = async (apiKey, query) => {
+  const API_URL = "https://api.giphy.com/v1/trending/searches";
+  const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
+  try {
+    const tags = await fetch(`${API_URL}?api_key=${API_KEY}&q=${query}`);
+    return tags.json();
+  } catch (error) {
+    console.log("ocurrio un error", error);
+  }
+};
+
 const getGifsByKeyword = async (apiKey, keyword, offset) => {
   const gifs = await getSearchGifsByKeyword(apiKey, keyword, offset);
   return gifs;
 };
 
-// Trending Section &offset=${offsetTrendingGifos}
 const getGifos = async (trendingGifsUrl, apikey) => {
   try {
     const gifos = await fetch(`${trendingGifsUrl}&api_key=${apikey}`);

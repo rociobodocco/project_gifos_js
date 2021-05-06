@@ -47,7 +47,25 @@ const printCarrousel = (arr) => {
         cardGifos.querySelector('.btnFavorites').addEventListener("click", addFavoritesHandler);
 
         // Download
+        const downloadGifs = async (ev) => {
+            const downloadUrl = `https://media.giphy.com/media/${trendGif.id}/giphy.gif`;
+            console.log(downloadUrl)
+            const fetchedGif = fetch(downloadUrl);
+            const blobGifos = (await fetchedGif).blob();
+            const urlGifos = URL.createObjectURL(await blobGifos);
+            const titleGif = document.querySelector('.imgnewgifos').alt;
+            const saveGifImg = document.createElement("a");
+            saveGifImg.href = urlGifos;
+            saveGifImg.download = `${titleGif}.gif`;
+            saveGifImg.style = 'display: "none"';
+            document.body.appendChild(saveGifImg);
+            saveGifImg.click();
+            document.body.removeChild(saveGifImg);
+        };
+
         cardGifos.querySelector('.btndownload').addEventListener("click", downloadGifs);
+
+        
     });
 };
 
@@ -57,7 +75,6 @@ const showNewTrendings = async (count) => {
     const API_URL = 'https://api.giphy.com/v1/gifs/trending?&random_id=e826c9fc5c929e0d6c6d423841a282aa&rating=g';
     const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
     const gifosData = await getGifos(API_URL, API_KEY);
-
     containerImages.innerHTML = '';
     newCount = count + 3;
 
@@ -109,6 +126,22 @@ const showNewTrendings = async (count) => {
         newCardGifos.querySelector('.btnFavorites').addEventListener("click", addFavoritesHandler);
 
         // Download
+        const downloadGifs = async (ev) => {
+            const downloadUrl = `https://media.giphy.com/media/${gifosData.data[i].id}/giphy.gif`;
+            console.log(downloadUrl)
+            const fetchedGif = fetch(downloadUrl);
+            const blobGifos = (await fetchedGif).blob();
+            const urlGifos = URL.createObjectURL(await blobGifos);
+            const titleGif = document.querySelector('.imgnewgifos').alt;
+            const saveGifImg = document.createElement("a");
+            saveGifImg.href = urlGifos;
+            saveGifImg.download = `${titleGif}.gif`;
+            saveGifImg.style = 'display: "none"';
+            document.body.appendChild(saveGifImg);
+            saveGifImg.click();
+            document.body.removeChild(saveGifImg);
+        };
+
         newCardGifos.querySelector('.btndownload').addEventListener("click", downloadGifs);
     };
     count++;

@@ -145,27 +145,45 @@ main {
                 font-size: 1em;
             }
         }
-
-        .info-cam {
+        .container-infoCam {
             display: flex;
-            justify-content: space-evenly;
-            padding: 1em;
+            justify-content: center;
+            width: 90vw;
 
-            .bot1, .bot2, .bot3 {
-                width: 10vw;
-                height: 10vw;
-                line-height: 0.8em;
-                text-align: center;
-                padding: 0.5em;
-                margin: 0.3em;
-                font-family: $botnumcreate-font;
-                font-size: 1.125em;
+            .info-cam {
+                display: flex;
+                justify-content: space-evenly;
+                padding: 1em;
+    
+                .bot1, .bot2, .bot3 {
+                    width: 10vw;
+                    height: 10vw;
+                    line-height: 0.8em;
+                    text-align: center;
+                    padding: 0.5em;
+                    margin: 0.3em;
+                    font-family: $botnumcreate-font;
+                    font-size: 1.125em;
+                    color: $c-contrast;
+                    border: 0.05em solid $c-contrast;
+                    border-radius: 70%;
+                    background: none;
+                }
+            }
+    
+            .btnRepeatRecord {
+                display: none;
+                justify-self: flex-end;
+                font-family: $title-font;
+                font-size: 0.93em;
+                letter-spacing: 0;
                 color: $c-contrast;
-                border: 0.05em solid $c-contrast;
-                border-radius: 70%;
+                text-decoration: none;
+                border: none;
                 background: none;
             }
         }
+        
 
         .line {
             width: 90vw;
@@ -305,19 +323,26 @@ main {
                     width: 33vw;
                 }
             }
-    
-            .info-cam {
-    
-                .bot1, .bot2, .bot3 {
-                    width: 4.559vw;
-                    height: 4.559vw;
 
-                    // &:active { // ver si funciona ya que solo aplica a elementos a
-                    //     background: $c-contrast;
-                    // }
+            .container-infoCam {
+                display: flex;
+
+                .info-cam {
+
+                    .bot1, .bot2, .bot3 {
+                        width: 4.559vw;
+                        height: 4.559vw;
+                    }
+                }
+                
+                .btnRepeatRecord {
+                    justify-content: flex-end;
+                    &:hover {
+                        border-bottom: 0.2em solid $c-turquoise;
+                    }
                 }
             }
-    
+
             .line {
                 width: 95vw;
             }
@@ -327,6 +352,7 @@ main {
                 
                 &:hover {
                     background: $c-contrast;
+                    color: $c-background;
                 }
             }
     

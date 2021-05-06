@@ -316,14 +316,19 @@ body {
       color: #572EE5;
       text-align: center;
       font-size: 1em; }
-    body main .home .containerTrending .subtitleSec1 {
-      width: 70vw;
-      font-family: "Montserrat-Medium", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-      color: #572EE5;
-      letter-spacing: 0;
-      text-align: center;
-      font-size: 0.88em;
-      line-height: 1.5em; }
+    body main .home .containerTrending .containerTrendingTopics {
+      display: flex;
+      justify-content: center;
+      width: 50vw; }
+      body main .home .containerTrending .containerTrendingTopics .trendigTopics {
+        width: max-content;
+        padding: 0.2em;
+        font-family: "Montserrat-Medium", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        color: #572EE5;
+        letter-spacing: 0;
+        text-align: center;
+        font-size: 0.88em;
+        line-height: 1.5em; }
     body main .home .containerTitleSearch .lineSearch {
       width: 50vw;
       margin: 1em 0;
@@ -445,7 +450,7 @@ body {
         padding: 3em 0; }
         body main .home .containerTrending .trending {
           font-size: 1.15em; }
-        body main .home .containerTrending .subtitleSec1 {
+        body main .home .containerTrending .trendigTopics {
           font-size: 1em; }
       body main .home .containerTitleSearch .lineSearch {
         width: 40vw; }
@@ -761,7 +766,7 @@ body {
       padding: 1em 0 2em 0em; }
       body main .misgifosSection .emptyFavoritesSection .textMyGIFOSSection {
         font-size: 1.25em; }
-      body main .misgifosSection .emptyFavoritesSection .containerImgMyGIFOSNone .imgMyGIFOS {
+      body main .misgifosSection .emptyFavoritesSection .containerimgnewgifosNone .imgmygifos {
         padding: 3em 0 1em 0em; }
       body main .misgifosSection .emptyFavoritesSection .textMyGIFOSNone {
         padding: 1em;
@@ -778,7 +783,7 @@ body {
         width: max-content;
         height: max-content;
         margin: none; }
-        body main .misgifosSection .containerMyGifos .container-img-mygifos .imgMyGifos {
+        body main .misgifosSection .containerMyGifos .container-img-mygifos .imgmygifos {
           justify-self: stretch;
           width: 20vw;
           height: 20vw;
@@ -794,7 +799,7 @@ body {
         padding: 1em 0 2em 0em; }
         body main .misgifosSection .emptyMyGifosSection .textFavSection {
           font-size: 1.25em; }
-        body main .misgifosSection .emptyMyGifosSection .containerIconMyGifosNone .iconImgMyGifos {
+        body main .misgifosSection .emptyMyGifosSection .containerIconMyGifosNone .iconimgnewgifos {
           padding: 3em 0 1em 0em; }
         body main .misgifosSection .emptyMyGifosSection .textMyGIFOSNone {
           padding: 1em;
@@ -816,7 +821,7 @@ body {
           body main .misgifosSection .containerMyGifos .container-img-mygifos:hover .containerDetails .content-details {
             top: 50%;
             opacity: 1; }
-          body main .misgifosSection .containerMyGifos .container-img-mygifos .imgMyGifos {
+          body main .misgifosSection .containerMyGifos .container-img-mygifos .imgmygifos {
             justify-self: stretch;
             width: 20vw;
             height: 20vw;
@@ -850,7 +855,7 @@ body {
                 width: 10vw; }
                 body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a {
                   padding: 0.2em; }
-                  body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a .fa-heart, body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a .fa-download, body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a .fa-expand-alt {
+                  body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a .fa-trash-alt, body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a .fa-download, body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a .fa-expand-alt {
                     width: 3vw;
                     height: 3vw;
                     color: #572EE5;
@@ -858,7 +863,7 @@ body {
                     opacity: 0.7;
                     padding: 0.2em 0 0 0;
                     border-radius: 0.375em; }
-                    body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a .fa-heart:hover, body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a .fa-download:hover, body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a .fa-expand-alt:hover {
+                    body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a .fa-trash-alt:hover, body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a .fa-download:hover, body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a .fa-expand-alt:hover {
                       opacity: 1; }
               body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .textCardimg, body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .titleCardimg {
                 grid-area: 4 / 1 / 5 / 4;
@@ -981,22 +986,36 @@ body {
       body main .contairer-create .contairer-cam .subtitleCamSection {
         width: 70vw;
         font-size: 1em; }
-    body main .contairer-create .info-cam {
+    body main .contairer-create .container-infoCam {
       display: flex;
-      justify-content: space-evenly;
-      padding: 1em; }
-      body main .contairer-create .info-cam .bot1, body main .contairer-create .info-cam .bot2, body main .contairer-create .info-cam .bot3 {
-        width: 10vw;
-        height: 10vw;
-        line-height: 0.8em;
-        text-align: center;
-        padding: 0.5em;
-        margin: 0.3em;
-        font-family: "Roboto-Medium", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-        font-size: 1.125em;
+      justify-content: center;
+      width: 90vw; }
+      body main .contairer-create .container-infoCam .info-cam {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1em; }
+        body main .contairer-create .container-infoCam .info-cam .bot1, body main .contairer-create .container-infoCam .info-cam .bot2, body main .contairer-create .container-infoCam .info-cam .bot3 {
+          width: 10vw;
+          height: 10vw;
+          line-height: 0.8em;
+          text-align: center;
+          padding: 0.5em;
+          margin: 0.3em;
+          font-family: "Roboto-Medium", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+          font-size: 1.125em;
+          color: #572EE5;
+          border: 0.05em solid #572EE5;
+          border-radius: 70%;
+          background: none; }
+      body main .contairer-create .container-infoCam .btnRepeatRecord {
+        display: none;
+        justify-self: flex-end;
+        font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 0.93em;
+        letter-spacing: 0;
         color: #572EE5;
-        border: 0.05em solid #572EE5;
-        border-radius: 70%;
+        text-decoration: none;
+        border: none;
         background: none; }
     body main .contairer-create .line {
       width: 90vw;
@@ -1079,15 +1098,22 @@ body {
           width: 35vw; }
         body main .contairer-create .contairer-cam .subtitleCamSection {
           width: 33vw; }
-      body main .contairer-create .info-cam .bot1, body main .contairer-create .info-cam .bot2, body main .contairer-create .info-cam .bot3 {
-        width: 4.559vw;
-        height: 4.559vw; }
+      body main .contairer-create .container-infoCam {
+        display: flex; }
+        body main .contairer-create .container-infoCam .info-cam .bot1, body main .contairer-create .container-infoCam .info-cam .bot2, body main .contairer-create .container-infoCam .info-cam .bot3 {
+          width: 4.559vw;
+          height: 4.559vw; }
+        body main .contairer-create .container-infoCam .btnRepeatRecord {
+          justify-content: flex-end; }
+          body main .contairer-create .container-infoCam .btnRepeatRecord:hover {
+            border-bottom: 0.2em solid #5ED7C6; }
       body main .contairer-create .line {
         width: 95vw; }
       body main .contairer-create .button-cam, body main .contairer-create .button-record, body main .contairer-create .button-stopRecord, body main .contairer-create .button-uploadRecord {
         width: 16.55vw; }
         body main .contairer-create .button-cam:hover, body main .contairer-create .button-record:hover, body main .contairer-create .button-stopRecord:hover, body main .contairer-create .button-uploadRecord:hover {
-          background: #572EE5; }
+          background: #572EE5;
+          color: #FFFFFF; }
       body main .contairer-create .filmanimation2 .animationCinta3 {
         width: 15vw; } }
   @media screen and (min-width: 1024px) {

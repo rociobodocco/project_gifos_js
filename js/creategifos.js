@@ -1,6 +1,9 @@
+let recording = false;
+
 const contairerCam = document.querySelector('.containerVideoCam');
 const btnStartCam = document.querySelector('.button-cam');
 const btnStartRecord = document.querySelector('.button-record');
+const btnRepeatRecord = document.querySelector('.btnRepeatRecord');
 const btnStopRecord = document.querySelector('.button-stopRecord');
 const btnUploadRecord = document.querySelector('.button-uploadRecord');
 
@@ -23,15 +26,18 @@ function showPreviewGif({ id }) {
 };
 
 btnUploadRecord.addEventListener('click', function (ev) {
-    const newGifoid = document.querySelector('.preview-gif').getAttribute('data-id');
+    const id = document.querySelector('.preview-gif').getAttribute('data-id');
+    const url = document.querySelector('.preview-gif').getAttribute('src');
     const localMyGifs = JSON.parse(localStorage.getItem('myGifos')) || [];
-    localMyGifs.push(newGifoid);
+    localMyGifs.push({ id, url });
     localStorage.setItem('myGifos', JSON.stringify(localMyGifs));
     document.querySelector('.bot2').style.background = '#FFFFFF';
     document.querySelector('.bot2').style.color = '#572EE5';
     document.querySelector('.bot3').style.background = '#572EE5';
     document.querySelector('.bot3').style.color = '#FFFFFF';
     document.querySelector('.uploadGif').style.display = 'flex';
+    document.querySelector('.uploadGif').style.color = '#FFFFFF';
+
 });
 
 async function uploadGif(formData) {
@@ -46,7 +52,6 @@ const startUpVideo = () => {
     createVideo();
     const video = document.querySelector('video');
     navigator.mediaDevices.getUserMedia({
-        audio: false, //cambiar a true cuando este ok 
         video: true
     }).then(stream => {
         document.querySelector('.titleCamSection').style.display = 'none';
@@ -76,8 +81,8 @@ const startUpVideo = () => {
             btnStartRecord.style.display = 'none';
             btnStopRecord.style.display = 'block';
             recorder.startRecording();
-            // const sleep = m => new Promise(r => setTimeout(r, m));
-            // sleep(3000);
+            recording = true;
+            timeRecord();
         };
 
         btnStartRecord.addEventListener('click', startRecord);
@@ -86,18 +91,47 @@ const startUpVideo = () => {
             recorder.stopRecording(async function () {
                 const blob = this.blob;
                 console.log('End record.');
+                recording = false;
                 let form = new FormData();
                 form.append('file', recorder.getBlob(), 'myGif.gif');
                 console.log(form.get('file'));
                 btnStopRecord.style.display = 'none';
                 const { data: gifData } = await uploadGif(form);
                 btnUploadRecord.style.display = 'block';
-                showPreviewGif(gifData)
+                showPreviewGif(gifData);
+                btnRepeatRecord.innerHTML = "REPETIR GRABACIÓN";
             });
         });
-
     }).catch(e => console.log(e.name + "Se detectó un error. Por favor vuelva a intentar." + e.message));
 };
 
 btnStartCam.addEventListener('click', startUpVideo);
 
+
+function timeRecord() {
+	let seconds = 0;
+	let minute = 0;
+	let timer = setInterval(() => {
+		if (recording === true) {
+			if (seconds < 60) {
+				if (seconds <= 9) {
+					seconds = '0' + seconds;
+				}
+                btnRepeatRecord.style.display = "block";
+				btnRepeatRecord.innerHTML=`00:00:0${minute}:${seconds}`;
+				seconds++;
+				} else {
+				minute++;
+				seconds = 0;
+			}
+		}
+		else {
+			clearInterval(timer)
+		}
+	}, 1000);
+} 
+
+btnRepeatRecord.addEventListener('click', (ev) => {
+    location.reload();
+    startUpVideo();
+});

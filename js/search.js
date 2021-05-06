@@ -2,11 +2,14 @@
 const closeModal = (ev) => {
   if (inputUserValue.value !== " ") {
     inputUserValue.value = " ";
-    containerSuggestions.style.display = "none";
+    inputUserValue.style.order = "0";
+    containerSuggestions.innerHTML = "";
+    newLableClose.style.display = "none";
+    lableIconSearch.style.color = "#572EE5";
     lineSpaceSuggestion.style.display = "none";
     containerTitleSearch.style.display = "none";
-    containerGifsSearch.style.display = "none";
-    btnSeeMoreGifos.style.display = "none";
+    containerGifsSearch.innerHTML = "";
+    btnSeeMoreGifos.style.display = 'none';
   };
 };
 
@@ -19,10 +22,14 @@ const searchEmptyMsg = (ev) => {
     </div>
     <p class="newtextnotfoundsearch">"Intenta con otra búsqueda."</p>`;
   containerGifsSearch.appendChild(searchEmpty);
+
 };
 
 // Initial Offset
-let offsetGifos = 0;
+let offsetGifosSuggestionsEv = 0;
+let offsetGifosEnterEv = 0;
+let offsetGifosIconSearchEv = 0;
+let offsetGifosTrendTopEv = 0;
 
 // Print Gifos
 const printGifs = (gifs) => {
@@ -73,6 +80,21 @@ const printGifs = (gifs) => {
     cardGifosSearch.querySelector('.btnFavorites').addEventListener("click", addFavoritesHandler);
 
     // Download
+    const downloadGifs = async (ev) => {
+      const downloadUrl = `https://media.giphy.com/media/${gif.id}/giphy.gif`;
+      const fetchedGif = fetch(downloadUrl);
+      const blobGifos = (await fetchedGif).blob();
+      const urlGifos = URL.createObjectURL(await blobGifos);
+      const titleGif = document.querySelector('.imgnewgifos').alt;
+      const saveGifImg = document.createElement("a");
+      saveGifImg.href = urlGifos;
+      saveGifImg.download = `${titleGif}.gif`;
+      saveGifImg.style = 'display: "none"';
+      document.body.appendChild(saveGifImg);
+      saveGifImg.click();
+      document.body.removeChild(saveGifImg);
+    };
+
     cardGifosSearch.querySelector('.btndownload').addEventListener("click", downloadGifs);
   });
 };
@@ -85,20 +107,32 @@ const createButton = () => {
   btnAddMoreGifos.textContent = "VER MÁS";
   containerHome.appendChild(btnAddMoreGifos);
 };
+createButton();
+const btnSeeMoreGifos = document.querySelector(".btnSeeMoreGifos");
+btnSeeMoreGifos.style.display = "none";
 
 // Handler suggestion and search
 const getSuggestionsHandler = async (ev) => {
   const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
 
-  // Reset HTML:
-  containerSuggestions.innerHTML = "";
-  containerGifsSearch.innerHTML = "";
-  lineSpaceSuggestion.style.display = "none";
   inputUserValue.style.order = "0";
+  containerSuggestions.innerHTML = "";
   newLableClose.style.display = "none";
   lableIconSearch.style.color = "#572EE5";
+  lineSpaceSuggestion.style.display = "none";
+  containerGifsSearch.innerHTML = "";
+  containerTitleSearch.style.display = "none";
 
-  // Print suggestions
+  // Print gifos of input Value
+  const printInputComplete = () => {
+    newtitleSearch.textContent = inputUserValue.value;
+    containerTitleSearch.appendChild(newLineSpaceSearch);
+    containerTitleSearch.appendChild(newtitleSearch);
+    containerTitleSearch.style.display = "block";
+    containerGifsSearch.style.display = "grid";
+  }
+
+  // Print Gifos Search click Event
   if ((ev.target.value >= 3 && ev.keyCode !== 13) || ev.keyCode !== "Enter") {
     const initialTagsSuggestion = ev.target.value;
     const suggestions = await getSearchTags(API_KEY, initialTagsSuggestion);
@@ -106,9 +140,7 @@ const getSuggestionsHandler = async (ev) => {
     // Input Value empty:
     if (initialTagsSuggestion == "") {
       containerTitleSearch.style.display = "none";
-      const btnSeeMoreGifos = document.querySelector(".btnSeeMoreGifos");
-      btnSeeMoreGifos.style.display = 'none';
-      // lableIconSearch.style.display = "none";
+      btnSeeMoreGifos.style.display = "none";
     } else {
       // Input with value:
       containerSuggestions.style.display = "block";
@@ -125,21 +157,44 @@ const getSuggestionsHandler = async (ev) => {
           newLi.classList.add("itemSuggestions");
           newLi.innerHTML = `<i class="fas fa-search s"></i>${sug.name}`;
           containerSuggestions.appendChild(newLi);
-          newLi.addEventListener("click", (ev) => {
+
+          newLi.addEventListener("click", async (ev) => {
             const input = inputUserValue;
             input.value = ev.target.textContent;
-          })
+            const initialGifsSuggEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosSuggestionsEv);
+            if (ev.target.value === "") {
+              searchEmptyMsg();
+              btnSeeMoreGifos.style.display = "none";
+            } else {
+              printInputComplete()
+              printGifs(initialGifsSuggEv);
+            };
+
+            // Pagination
+            const seeMore = async (ev) => {
+              const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
+              offsetGifosSuggestionsEv += 12;
+
+              const nextGiftsSuggEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosSuggestionsEv);
+              printGifs(nextGiftsSuggEv);
+            };
+
+            const btnSeeMoreGifos = document.querySelector(".btnSeeMoreGifos");
+            if (btnSeeMoreGifos) {
+              btnSeeMoreGifos.addEventListener("click", seeMore)
+            };
+            btnSeeMoreGifos.style.display = "block";
+          });
         });
       };
       printSuggestionUl(suggestions);
     };
   };
 
-  // Print Search
+  // Print Gifos Search Enter Event
   if (ev.keyCode === 13 || ev.keyCode === "Enter") {
-    createButton();
-    const initialKeyWord = ev.target.value;
-    const initialGifs = await getGifsByKeyword(API_KEY, initialKeyWord, offsetGifos);
+    const initialKeyWordEnterEv = ev.target.value;
+    const initialGifsEnterEv = await getGifsByKeyword(API_KEY, initialKeyWordEnterEv, offsetGifosEnterEv);
 
     containerSuggestions.style.display = "none";
     lineSpaceSuggestion.style.display = "none";
@@ -147,45 +202,240 @@ const getSuggestionsHandler = async (ev) => {
     // Input Value empty with msg
     if (ev.target.value === "") {
       searchEmptyMsg();
+      btnSeeMoreGifos.style.display = "none";
     } else {
-      // Print gifos of input Value
+      printInputComplete()
+      printGifs(initialGifsEnterEv);
+    }
+
+    // Pagination
+    const seeMoreEnterEv = async (ev) => {
+      const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
+      offsetGifosEnterEv += 12;
+      const nextGiftsEnterEv = await getGifsByKeyword(API_KEY, initialKeyWordEnterEv, offsetGifosEnterEv);
+      printGifs(nextGiftsEnterEv);
+    };
+
+    const btnSeeMoreGifos = document.querySelector(".btnSeeMoreGifos");
+    if (btnSeeMoreGifos) {
+      btnSeeMoreGifos.addEventListener("click", seeMoreEnterEv)
+    };
+    btnSeeMoreGifos.style.display = "block";
+  };
+
+  // Print Gifos Search click lens Event
+  lableIconSearch.addEventListener("click", async () => {
+    const initialKeyWordIconEv = inputUserValue.value;
+    const initialGifsIconEv = await getGifsByKeyword(API_KEY, initialKeyWordIconEv, offsetGifosIconSearchEv);
+    containerSuggestions.style.display = "none";
+    lineSpaceSuggestion.style.display = "none";
+
+    // Input Value empty with msg
+    if (inputUserValue.value === "") {
+      searchEmptyMsg();
+      btnSeeMoreGifos.style.display = "none";
+    } else {
+      printInputComplete()
+      printGifs(initialGifsIconEv);
+    }
+
+
+    // Pagination
+    const seeMoreIconEv = async (ev) => {
+      const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
+      offsetGifosIconSearchEv += 12;
+      const nextGiftsIconEv = await getGifsByKeyword(API_KEY, initialKeyWordIconEv, offsetGifosIconSearchEv);
+      printGifs(nextGiftsIconEv);
+    };
+
+    const btnSeeMoreGifos = document.querySelector(".btnSeeMoreGifos");
+    if (btnSeeMoreGifos) {
+      btnSeeMoreGifos.addEventListener("click", seeMoreIconEv)
+    };
+    btnSeeMoreGifos.style.display = "block";
+  });
+
+}
+// Print tags trendings topics 
+const printTagsTrendTopic = async (tags) => {
+  for (let i = 0; i <= 0; i++) {
+    const containerTrendingTopics = document.createElement("div");
+    containerTrendingTopics.classList.add("containerTrendingTopics");
+    containerTrendingTopics.innerHTML = `
+      <p class="trendigTopics tt1">${tags.data[i]}</p><p>,</p>
+      <p class="trendigTopics tt2">${tags.data[i + 1]}</p><p>,</p>
+      <p class="trendigTopics tt3">${tags.data[i + 2]}</p><p>,</p>
+      <p class="trendigTopics tt4">${tags.data[i + 3]}</p><p>,</p>
+      <p class="trendigTopics tt5">${tags.data[i + 4]}</p>`;
+    containerTrending.appendChild(containerTrendingTopics);
+  };
+
+  const tt1 = document.querySelector('.tt1');
+  tt1.addEventListener("click", async (ev) => {
+    const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
+    const input = inputUserValue;
+    input.value = ev.target.textContent;
+    const initialGifsTrendTopEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosTrendTopEv);
+    if (ev.target.value === "") {
+      searchEmptyMsg();
+      btnSeeMoreGifos.style.display = "none";
+    } else {
       newtitleSearch.textContent = inputUserValue.value;
       containerTitleSearch.appendChild(newLineSpaceSearch);
       containerTitleSearch.appendChild(newtitleSearch);
       containerTitleSearch.style.display = "block";
       containerGifsSearch.style.display = "grid";
-      printGifs(initialGifs);
+      printGifs(initialGifsTrendTopEv);
     };
 
     // Pagination
     const seeMore = async (ev) => {
       const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
-      offsetGifos += 12;
-      const nextGifts = await getGifsByKeyword(API_KEY, initialKeyWord, offsetGifos);
-      printGifs(nextGifts);
+      offsetGifosTrendTopEv += 12;
+
+      const nextGiftsTrendTopEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosTrendTopEv);
+      printGifs(nextGiftsTrendTopEv);
     };
 
     const btnSeeMoreGifos = document.querySelector(".btnSeeMoreGifos");
     if (btnSeeMoreGifos) {
       btnSeeMoreGifos.addEventListener("click", seeMore)
     };
+    btnSeeMoreGifos.style.display = "block";
+  });
+  const tt2 = document.querySelector('.tt2');
+  tt2.addEventListener("click", async (ev) => {
+    const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
+    const input = inputUserValue;
+    input.value = ev.target.textContent;
+    const initialGifsTrendTopEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosTrendTopEv);
+    if (ev.target.value === "") {
+      searchEmptyMsg();
+      btnSeeMoreGifos.style.display = "none";
+    } else {
+      newtitleSearch.textContent = inputUserValue.value;
+      containerTitleSearch.appendChild(newLineSpaceSearch);
+      containerTitleSearch.appendChild(newtitleSearch);
+      containerTitleSearch.style.display = "block";
+      containerGifsSearch.style.display = "grid";
+      printGifs(initialGifsTrendTopEv);
+    };
 
-  };
+    // Pagination
+    const seeMore = async (ev) => {
+      const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
+      offsetGifosTrendTopEv += 12;
 
-  // lableIconSearch.addEventListener("click", async () => {
-  //   const initialKeyWordSug = ev.target.value;
-  //   const initialGifssug = await getGifsByKeyword( API_KEY, initialKeyWordSug, offsetGifos);
-  //   // console.log(initialGifssug)
-  //   newtitleSearch.textContent = inputUserValue.value;
-  //   containerTitleSearch.appendChild(newLineSpaceSearch);
-  //   containerTitleSearch.appendChild(newtitleSearch);
-  //   containerTitleSearch.style.display = "block";
-  //   containerGifsSearch.style.display = "grid";
-  //   console.log(initialGifssug)
-  //   printGifs(initialGifssug)
-  //   createButton();
-  // });
-};
+      const nextGiftsTrendTopEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosTrendTopEv);
+      printGifs(nextGiftsTrendTopEv);
+    };
+
+    const btnSeeMoreGifos = document.querySelector(".btnSeeMoreGifos");
+    if (btnSeeMoreGifos) {
+      btnSeeMoreGifos.addEventListener("click", seeMore)
+    };
+    btnSeeMoreGifos.style.display = "block";
+  });
+  const tt3 = document.querySelector('.tt3');
+  tt3.addEventListener("click", async (ev) => {
+    const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
+    const input = inputUserValue;
+    input.value = ev.target.textContent;
+    const initialGifsTrendTopEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosTrendTopEv);
+    if (ev.target.value === "") {
+      searchEmptyMsg();
+      btnSeeMoreGifos.style.display = "none";
+    } else {
+      newtitleSearch.textContent = inputUserValue.value;
+      containerTitleSearch.appendChild(newLineSpaceSearch);
+      containerTitleSearch.appendChild(newtitleSearch);
+      containerTitleSearch.style.display = "block";
+      containerGifsSearch.style.display = "grid";
+      printGifs(initialGifsTrendTopEv);
+    };
+
+    // Pagination
+    const seeMore = async (ev) => {
+      const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
+      offsetGifosTrendTopEv += 12;
+
+      const nextGiftsTrendTopEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosTrendTopEv);
+      printGifs(nextGiftsTrendTopEv);
+    };
+
+    const btnSeeMoreGifos = document.querySelector(".btnSeeMoreGifos");
+    if (btnSeeMoreGifos) {
+      btnSeeMoreGifos.addEventListener("click", seeMore)
+    };
+    btnSeeMoreGifos.style.display = "block";
+  });
+  const tt4 = document.querySelector('.tt4');
+  tt4.addEventListener("click", async (ev) => {
+    const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
+    const input = inputUserValue;
+    input.value = ev.target.textContent;
+    const initialGifsTrendTopEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosTrendTopEv);
+    if (ev.target.value === "") {
+      searchEmptyMsg();
+      btnSeeMoreGifos.style.display = "none";
+    } else {
+      newtitleSearch.textContent = inputUserValue.value;
+      containerTitleSearch.appendChild(newLineSpaceSearch);
+      containerTitleSearch.appendChild(newtitleSearch);
+      containerTitleSearch.style.display = "block";
+      containerGifsSearch.style.display = "grid";
+      printGifs(initialGifsTrendTopEv);
+    };
+
+    // Pagination
+    const seeMore = async (ev) => {
+      const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
+      offsetGifosTrendTopEv += 12;
+
+      const nextGiftsTrendTopEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosTrendTopEv);
+      printGifs(nextGiftsTrendTopEv);
+    };
+
+    const btnSeeMoreGifos = document.querySelector(".btnSeeMoreGifos");
+    if (btnSeeMoreGifos) {
+      btnSeeMoreGifos.addEventListener("click", seeMore)
+    };
+    btnSeeMoreGifos.style.display = "block";
+  });
+  const tt5 = document.querySelector('.tt5');
+  tt5.addEventListener("click", async (ev) => {
+    const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
+    const input = inputUserValue;
+    input.value = ev.target.textContent;
+    const initialGifsTrendTopEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosTrendTopEv);
+    if (ev.target.value === "") {
+      searchEmptyMsg();
+      btnSeeMoreGifos.style.display = "none";
+    } else {
+      newtitleSearch.textContent = inputUserValue.value;
+      containerTitleSearch.appendChild(newLineSpaceSearch);
+      containerTitleSearch.appendChild(newtitleSearch);
+      containerTitleSearch.style.display = "block";
+      containerGifsSearch.style.display = "grid";
+      printGifs(initialGifsTrendTopEv);
+    };
+
+    // Pagination
+    const seeMore = async (ev) => {
+      const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
+      offsetGifosTrendTopEv += 12;
+
+      const nextGiftsTrendTopEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosTrendTopEv);
+      printGifs(nextGiftsTrendTopEv);
+    };
+
+    const btnSeeMoreGifos = document.querySelector(".btnSeeMoreGifos");
+    if (btnSeeMoreGifos) {
+      btnSeeMoreGifos.addEventListener("click", seeMore)
+    };
+    btnSeeMoreGifos.style.display = "block";
+  });
+}
 
 // Global const
 const containerSuggestions = document.querySelector(".containerAutocomplete");
@@ -193,6 +443,7 @@ const containerGifsSearch = document.querySelector(".containerGifsSearch");
 const lineSpaceSuggestion = document.querySelector(".lineSearchSuggestions");
 const inputUserValue = document.querySelector(".inputTextSearch");
 const lableIconSearch = document.querySelector(".search");
+const containerTrending = document.querySelector(".containerTrending");
 
 
 // Create new Title Search
@@ -209,7 +460,15 @@ newLableClose.classList.add("cross");
 newLableClose.setAttribute("for", "inputTextSearch");
 newLableClose.innerHTML = `<i class="fas fa-times xs"></i>`;
 
+
+
+
 document.addEventListener('DOMContentLoaded', async () => {
+  const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
   inputUserValue.addEventListener("keyup", getSuggestionsHandler);
   newLableClose.addEventListener("click", closeModal);
+  const suggestionsTrendTopics = await getSuggestionsTrendings(API_KEY);
+  printTagsTrendTopic(suggestionsTrendTopics);
 });
+
+
