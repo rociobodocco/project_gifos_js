@@ -72,8 +72,8 @@ main {
 
                 #video {
                     display: block;
-                    width: 40vw;
-                    height: 20vw;
+                    width: 70vw;
+                    height: 70vw;
                 }
 
                 
@@ -81,21 +81,72 @@ main {
 
             .preview-gif {
                 grid-area: 1 / 2 / 3 / 3;
-                width: 40vw;
-                height: 20vw;
+                width: 70vw;
+                height: 70vw;
             }
 
             .uploadGif {
                 display: none;
                 grid-area: 1 / 2 / 3 / 3;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                width: 40vw;
-                height: 20vw;
+                width: 70vw;
+                height: 70vw;
                 opacity: 0.6;
                 background: $c-contrast;
 
+                .loader {
+                    color: $c-turquoise;
+                }
+
                 .msjUploadGif {
+                    font-size: 1em;
+                    width: max-content;
+                    color: $c-background;
+                }
+            }
+
+            .uploadGifConfirm {
+                display: none;
+                grid-area: 1 / 2 / 3 / 3;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 70vw;
+                height: 70vw;
+                opacity: 0.6;
+                background: $c-contrast;
+
+                .containerIconsUploadOk {
+                    align-self: flex-end; //REVISAR -> ARRIBA A LA DERECHA 
+                    // justify-self: flex-start;
+                    display: flex;
+                    width: max-content;
+                    padding: 0.1em;
+
+                    a {
+                        width: max-content;
+                        padding: 0.2em;
+
+                        .btndownloadMyGifoPrev, .fa-link {
+                            width: 10vw;
+                            height: 10vw;
+                            line-height: 0.5vh;
+                            color: $c-contrast;
+                            background: $c-background;
+                            opacity: 0.7;
+                            padding: 0.2em 0 0 0;
+                            border-radius: 0.3em;
+                        }
+                    }
+                }
+
+                .check {
+                    color: $c-turquoise;
+                }
+
+                .msjUploadGifConfirm {
                     font-size: 1em;
                     width: max-content;
                     color: $c-background;
@@ -147,6 +198,7 @@ main {
         }
         .container-infoCam {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             width: 90vw;
 
@@ -160,7 +212,7 @@ main {
                     height: 10vw;
                     line-height: 0.8em;
                     text-align: center;
-                    padding: 0.5em;
+                    padding: 0.1em;
                     margin: 0.3em;
                     font-family: $botnumcreate-font;
                     font-size: 1.125em;
@@ -178,6 +230,7 @@ main {
                 font-size: 0.93em;
                 letter-spacing: 0;
                 color: $c-contrast;
+                padding: 0.3em;
                 text-decoration: none;
                 border: none;
                 background: none;
@@ -213,7 +266,7 @@ main {
             
             .animationCinta3 {
                 width: 25vw;
-                animation: rotationY 2s infinite linear;
+                animation: rotationY 2s infinite ease;
 
             }
         }
@@ -225,7 +278,7 @@ main {
    @media screen and (min-width: 768px) {
     main {
         .contairer-create {
-            margin-top: 25vh;
+            margin-top: 21.1vh;
             padding: 0 0 1em 0;
     
             .filmanimation1 {
@@ -532,9 +585,6 @@ main {
     }
 } 
 
-
-    
-
 @keyframes rotation1 {
     from {
         transform: rotate(0deg);
@@ -578,5 +628,12 @@ main {
 
     to {
         transform: rotateY(180deg);
+    }
+    from {
+        transform: rotateY(180deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
     }
 }

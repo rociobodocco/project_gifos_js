@@ -23,6 +23,8 @@ const uploadEndpoint = 'http://upload.giphy.com/v1/gifs?api_key=W7yxLc2XnPExjexS
 function showPreviewGif({ id }) {
     console.log(id);
     contairerCam.innerHTML = `<img class='preview-gif' data-id='${id}' src='https://i.giphy.com/${id}.gif'>`;
+
+
 };
 
 btnUploadRecord.addEventListener('click', function (ev) {
@@ -37,8 +39,45 @@ btnUploadRecord.addEventListener('click', function (ev) {
     document.querySelector('.bot3').style.color = '#FFFFFF';
     document.querySelector('.uploadGif').style.display = 'flex';
     document.querySelector('.uploadGif').style.color = '#FFFFFF';
+    setTimeout(() => {
+        document.querySelector('.uploadGif').style.display = 'none';
+        document.querySelector('.uploadGifConfirm').style.display = 'flex';
+        document.querySelector('.uploadGifConfirm').style.color = '#FFFFFF';
 
+        // Download
+        const downloadMyGifsPrev = async (ev) => {
+            const downloadUrlMyGifos = `https://media.giphy.com/media/${id}/giphy.gif`;
+            console.log(downloadUrlMyGifos)
+            const fetchedGif = fetch(downloadUrlMyGifos);
+            const blobGifos = (await fetchedGif).blob();
+            const urlGifos = URL.createObjectURL(await blobGifos);
+            // const titleGif = document.querySelector('.imgmygifos').alt;
+            const saveGifImg = document.createElement("a");
+            saveGifImg.href = urlGifos;
+            console.log(urlGifos)
+            // saveGifImg.download = `${titleGif}.gif`;
+            saveGifImg.style = 'display: "none"';
+            document.body.appendChild(saveGifImg);
+            saveGifImg.click();
+            document.body.removeChild(saveGifImg);
+        };
+        const btnDownload = document.querySelector('.btndownloadMyGifoPrev');
+        btnDownload.addEventListener("click", downloadMyGifsPrev);
+
+        const btnLink = document.querySelector('.btnlink');
+        btnLink.addEventListener("click", ()=> {
+            btnLink.href = url;
+            console.log(btnLink);
+            // btnLink.target = "_blank";
+        });
+
+        // setTimeout(() => {
+        //     location.reload();
+        // }, 5000);
+    }, 5000);
 });
+
+
 
 async function uploadGif(formData) {
     const response = await fetch(uploadEndpoint, {
@@ -109,27 +148,27 @@ btnStartCam.addEventListener('click', startUpVideo);
 
 
 function timeRecord() {
-	let seconds = 0;
-	let minute = 0;
-	let timer = setInterval(() => {
-		if (recording === true) {
-			if (seconds < 60) {
-				if (seconds <= 9) {
-					seconds = '0' + seconds;
-				}
+    let seconds = 0;
+    let minute = 0;
+    let timer = setInterval(() => {
+        if (recording === true) {
+            if (seconds < 60) {
+                if (seconds <= 9) {
+                    seconds = '0' + seconds;
+                }
                 btnRepeatRecord.style.display = "block";
-				btnRepeatRecord.innerHTML=`00:00:0${minute}:${seconds}`;
-				seconds++;
-				} else {
-				minute++;
-				seconds = 0;
-			}
-		}
-		else {
-			clearInterval(timer)
-		}
-	}, 1000);
-} 
+                btnRepeatRecord.innerHTML = `00:00:0${minute}:${seconds}`;
+                seconds++;
+            } else {
+                minute++;
+                seconds = 0;
+            }
+        }
+        else {
+            clearInterval(timer)
+        }
+    }, 1000);
+}
 
 btnRepeatRecord.addEventListener('click', (ev) => {
     location.reload();

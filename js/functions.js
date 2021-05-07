@@ -33,14 +33,21 @@ window.addEventListener('scroll', scrollHeaderFunction);
 // Change Theme (dark/light):
 const buttonColorMode = document.querySelector('.changeTheme');
 
-if (localStorage.getItem("modeSelect") == null){ localStorage.setItem("modeSelect", "Diurno");}
+if (localStorage.getItem("modeSelect") == null) { localStorage.setItem("modeSelect", "Diurno"); }
 
 let modeSelect = localStorage.getItem("modeSelect");
 
 if (modeSelect == "Nocturno") {
   document.body.classList.toggle("night-mode");
   buttonColorMode.textContent = 'Modo Diurno';
-} else { buttonColorMode.textContent = 'Modo Nocturno'; }
+  document.querySelector('.imglogo').src = "./css/images/Logo-modo-noc.svg";
+  document.querySelector('.animationCinta1').src = "./css/images/element_cinta1-modo-noc.svg";
+  document.querySelector('.animationCinta2').src = "./css/images/element_cinta2-modo-noc.svg";
+  // document.querySelector('.animationCam').src = "./css/images/";
+  document.querySelector('.animationCinta3').src = "./css/images/pelicula-modo-noc.svg";
+} else {
+  buttonColorMode.textContent = 'Modo Nocturno';
+}
 
 
 buttonColorMode.addEventListener("click", () => {
@@ -52,31 +59,77 @@ buttonColorMode.addEventListener("click", () => {
   if (modeSelect == "Diurno") {
     localStorage.setItem("modeSelect", "Nocturno");
     buttonColorMode.textContent = 'Modo Diurno';
+    document.querySelector('.imglogo').src = "./css/images/Logo-modo-noc.svg";
+    document.querySelector('.animationCinta1').src = "./css/images/element_cinta1-modo-noc.svg";
+    document.querySelector('.animationCinta2').src = "./css/images/element_cinta2.svg";
+    document.querySelector('.animationCinta3').src = "./css/images/pelicula.svg";
 
   } else {
     localStorage.setItem("modeSelect", "Diurno");
     buttonColorMode.textContent = 'Modo Nocturno';
+    document.querySelector('.imglogo').src = "./css/images/logo-desktop.svg";
+    document.querySelector('.animationCinta1').src = "./css/images/element_cinta1.svg";
+    document.querySelector('.animationCinta2').src = "./css/images/element_cinta2-modo-noc.svg";
+    document.querySelector('.animationCinta3').src = "./css/images/pelicula-modo-noc.svg";
   }
 });
 
 // --------------------------------------------------------------------------
 // Modal expand:
 const showModalExpand = (ev) => {
-  const modal = document.querySelector(".show");
-  modal.style.display = 'flex';
+  const modal = document.createElement('div');
+  modal.classList.add('show');
   modal.innerHTML = `
   <i class="fas fa-times close-btn-modalExpand"></i>
   <div class="img-expand"> 
-  <img src="${ev.target.imagegif}" alt="${ev.target.title}">
+  <img class="modalImg"  src="${ev.target.imagegif}" alt="${ev.target.title}">
   </div>
   <div class="constainerIcons">
     <a href="#"><i data-id="${ev.target.idgif}" class="far fa-heart btnFavorites"></i></a>
-    <a href="#"><i class="fas fa-download btndownload"></i></a>
+    <a href="#"><i data-id="${ev.target.idgif}" class="fas fa-download btndownload"></i></a>
   </div> 
   <p class="textCardimg">${ev.target.username}</p>
   <h6 class="titleCardimg">${ev.target.title}</h6>`;
 
+  if (document.querySelector('.home')) {
+    document.querySelector('.home').appendChild(modal);
+  }
+
+  if (document.querySelector('.favoriteSection')) {
+    document.querySelector('.favoriteSection').appendChild(modal);
+  }
+
+  if (document.querySelector('.misgifosSection')) {
+    document.querySelector('.misgifosSection').appendChild(modal);
+  }
+
   modal.querySelector('.close-btn-modalExpand').addEventListener("click", () => {
     modal.style.display = "none";
   });
+
+  // Favorites
+  const localGifos = JSON.parse(localStorage.getItem('gifos'));
+  localGifos.gifos.push(ev.target.idgif);
+  localStorage.setItem('gifos', JSON.stringify(localGifos));
+
+  modal.querySelector('.btnFavorites').addEventListener("click", addFavoritesHandler);
+
+  // Download
+  const downloadGifs = async () => {
+    const downloadUrl = `https://media.giphy.com/media/${ev.target.idgif}/giphy.gif`;
+    console.log(downloadUrl)
+    const fetchedGif = fetch(downloadUrl);
+    const blobGifos = (await fetchedGif).blob();
+    const urlGifos = URL.createObjectURL(await blobGifos);
+    const titleGif = document.querySelector('.modalImg').alt;
+    const saveGifImg = document.createElement("a");
+    saveGifImg.href = urlGifos;
+    saveGifImg.download = `${titleGif}.gif`;
+    saveGifImg.style = 'display: "none"';
+    document.body.appendChild(saveGifImg);
+    saveGifImg.click();
+    document.body.removeChild(saveGifImg);
+  };
+
+  modal.querySelector('.btndownload').addEventListener("click", downloadGifs);
 };

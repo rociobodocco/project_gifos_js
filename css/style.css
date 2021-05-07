@@ -12,26 +12,66 @@
 .night-mode header {
   border-top: 0.3125em solid #000000; }
 .night-mode .fa-plus, .night-mode .menusearch {
-  width: 100%;
-  padding: 1em;
-  border-radius: 100%;
   border: 0.1em solid #fffff1; }
 .night-mode .fa-plus:hover {
   background: #fffff1;
   color: #37383c; }
+.night-mode header nav input:checked ~ ul {
+  background-color: #000000; }
+.night-mode header nav ul li {
+  background-color: #000000; }
+.night-mode header nav ul li a {
+  background-color: #000000; }
 .night-mode .fa-facebook-f, .night-mode .fa-twitter, .night-mode .fa-instagram:hover {
   color: #fffff1; }
 .night-mode .home .containerSearch {
   border: 0.1em solid #fffff1; }
 .night-mode .home .containerSearch .containerInputIcons .inputTextSearch {
   color: #fffff1; }
-.night-mode .home .containerSearch .containerInputIcons .inputTextSearch {
-  color: #9CAFC3; }
-.night-mode .home .containerTrending .subtitleSec1 {
-  color: #fffff1; }
 .night-mode .home .containerTrending .trending {
   color: #fffff1; }
+.night-mode .home .containerTrending .containerTrendingTopics .trendigTopics {
+  color: #fffff1; }
+.night-mode main .home .show {
+  background-color: #37383c; }
+.night-mode main .favoriteSection .show {
+  background-color: #37383c; }
+.night-mode main .misgifosSection .show {
+  background-color: #37383c; }
+.night-mode main .home .show .containerIcons {
+  background-color: #37383c; }
+.night-mode main .home .show .constainerIcons a .fa-heart {
+  color: #fffff1; }
+.night-mode main .home .show .constainerIcons a .fa-download {
+  color: #fffff1; }
+.night-mode main .favoriteSection .show .containerIcons {
+  background-color: #37383c; }
+.night-mode main .favoriteSection .show .constainerIcons a .fa-heart {
+  color: #fffff1; }
+.night-mode main .favoriteSection .show .constainerIcons a .fa-download {
+  color: #fffff1; }
+.night-mode main .misgifosSection .show .containerIcons {
+  background-color: #37383c; }
+.night-mode main .misgifosSection .show .constainerIcons a .fa-trash-alt {
+  color: #fffff1; }
+.night-mode main .misgifosSection .show .constainerIcons a .fa-download {
+  color: #fffff1; }
+.night-mode main .home .show .textCardimg {
+  color: #fffff1; }
+.night-mode main .home .show .titleCardimg {
+  color: #fffff1; }
+.night-mode main .home .show .close-btn-modalExpand {
+  color: #fffff1; }
+.night-mode main .favoriteSection .show .close-btn-modalExpand {
+  color: #fffff1; }
+.night-mode main .misgifosSection .show .close-btn-modalExpand {
+  color: #fffff1; }
+.night-mode .home .btnSeeMoreGifos {
+  color: #fffff1;
+  border: 0.1em solid #fffff1; }
 .night-mode main .trendingSection {
+  background-color: #222326; }
+.night-mode main .trendingSection .containerSubtitle {
   background-color: #222326; }
 .night-mode main .trendingSection .titleTrendingSection {
   background-color: #222326; }
@@ -39,12 +79,43 @@
   background-color: #222326; }
 .night-mode main .trendingSection .containerSubtitle .subtitleTrendingSection2 {
   background-color: #222326; }
-.night-mode body main .trendingSection .container-slider {
+.night-mode main .trendingSection .gifosTrendingGallery {
   background-color: #222326; }
-.night-mode .containerDetails .content-overlay {
-  background-color: #572EE5; }
+.night-mode main .trendingSection .container-slider {
+  background-color: #222326; }
+.night-mode main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .imgnewgifos {
+  background-color: #222326; }
+.night-mode main .contairer-create .container-infoCam .info-cam .bot1 {
+  color: #fffff1;
+  border: 0.05em solid #fffff1; }
+.night-mode main .contairer-create .container-infoCam .info-cam .bot2 {
+  color: #fffff1;
+  border: 0.05em solid #fffff1; }
+.night-mode main .contairer-create .container-infoCam .info-cam .bot3 {
+  color: #fffff1;
+  border: 0.05em solid #fffff1; }
+.night-mode main .contairer-create .container-infoCam .btnRepeatRecord {
+  color: #fffff1; }
+.night-mode main .contairer-create .button-cam {
+  color: #fffff1;
+  border: 0.1em solid #fffff1; }
+.night-mode main .contairer-create .button-record {
+  color: #fffff1;
+  border: 0.1em solid #fffff1; }
+.night-mode main .contairer-create .button-stopRecord {
+  color: #fffff1;
+  border: 0.1em solid #fffff1; }
+.night-mode main .contairer-create .button-uploadRecord {
+  color: #fffff1;
+  border: 0.1em solid #fffff1; }
 .night-mode footer {
   border-bottom: 0.3125em solid #000000; }
+.night-mode body footer .social-footer .containerRedes .fa-facebook-f {
+  color: #fffff1; }
+.night-mode footer .social-footer .containerRedes .fa-twitter {
+  color: #fffff1; }
+.night-mode footer .social-footer .containerRedes .fa-instagram {
+  color: #fffff1; }
 
 body {
   /* Fonts ======================================================================= */
@@ -150,8 +221,15 @@ body {
           letter-spacing: 0;
           color: #fffff1;
           text-decoration: none; }
-        body header nav ul li a:active {
-          color: #9CAFC3; }
+          body header nav ul li a .fa-plus, body header nav ul li a .menusearch {
+            width: 18%;
+            padding: 1em;
+            border-radius: 100%;
+            border: 0.1em solid #572EE5; }
+            body header nav ul li a .fa-plus:hover, body header nav ul li a .menusearch:hover {
+              color: #9CAFC3; }
+          body header nav ul li a:active {
+            color: #9CAFC3; }
   @media screen and (min-width: 768px) {
     body header {
       position: fixed; }
@@ -318,17 +396,32 @@ body {
       font-size: 1em; }
     body main .home .containerTrending .containerTrendingTopics {
       display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      width: 50vw; }
-      body main .home .containerTrending .containerTrendingTopics .trendigTopics {
-        width: max-content;
-        padding: 0.2em;
-        font-family: "Montserrat-Medium", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-        color: #572EE5;
-        letter-spacing: 0;
-        text-align: center;
-        font-size: 0.88em;
-        line-height: 1.5em; }
+      width: 90vw; }
+      body main .home .containerTrending .containerTrendingTopics .firstContainerTrendTopics {
+        display: flex; }
+        body main .home .containerTrending .containerTrendingTopics .firstContainerTrendTopics .trendigTopics {
+          width: max-content;
+          padding: 0.3em;
+          font-family: "Montserrat-Medium", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+          color: #572EE5;
+          letter-spacing: 0;
+          text-align: center;
+          font-size: 0.88em;
+          line-height: 1.5em; }
+      body main .home .containerTrending .containerTrendingTopics .secondContainerTrendTopics {
+        display: flex; }
+        body main .home .containerTrending .containerTrendingTopics .secondContainerTrendTopics .trendigTopics {
+          width: max-content;
+          padding: 0.3em;
+          font-family: "Montserrat-Medium", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+          color: #572EE5;
+          letter-spacing: 0;
+          text-align: center;
+          font-size: 0.88em;
+          line-height: 1.5em; }
     body main .home .containerTitleSearch .lineSearch {
       width: 50vw;
       margin: 1em 0;
@@ -363,62 +456,6 @@ body {
           font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
           color: #5ED7C6;
           font-size: 1.38em; }
-      body main .home .containerGifsSearch .show {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 6.3em;
-        padding: 0.5em 5em;
-        width: 100%;
-        overflow: auto;
-        background-color: rgba(255, 255, 255, 0.842); }
-        body main .home .containerGifsSearch .show .close-btn-modalExpand {
-          align-self: flex-end;
-          width: 3vw;
-          height: 3vw;
-          color: #572EE5;
-          background: #FFFFFF;
-          opacity: 0.7;
-          padding: 0.35em;
-          border-radius: 0.375em; }
-        body main .home .containerGifsSearch .show .img-expand {
-          padding: 0.5em;
-          width: 35vw;
-          height: 35vw; }
-          body main .home .containerGifsSearch .show .img-expand img {
-            width: 100%;
-            height: 100%; }
-        body main .home .containerGifsSearch .show .constainerIcons {
-          align-self: flex-end;
-          display: flex; }
-          body main .home .containerGifsSearch .show .constainerIcons a {
-            padding: 0.2em; }
-            body main .home .containerGifsSearch .show .constainerIcons a .fa-heart, body main .home .containerGifsSearch .show .constainerIcons a .fa-download, body main .home .containerGifsSearch .show .constainerIcons a .fa-expand-alt {
-              width: 3vw;
-              height: 3vw;
-              color: #572EE5;
-              background: #FFFFFF;
-              opacity: 0.7;
-              padding: 0.2em;
-              border-radius: 0.375em; }
-              body main .home .containerGifsSearch .show .constainerIcons a .fa-heart:hover, body main .home .containerGifsSearch .show .constainerIcons a .fa-download:hover, body main .home .containerGifsSearch .show .constainerIcons a .fa-expand-alt:hover {
-                opacity: 1; }
-        body main .home .containerGifsSearch .show .textCardimg, body main .home .containerGifsSearch .show .titleCardimg {
-          align-self: flex-start;
-          color: #000000; }
-        body main .home .containerGifsSearch .show .textCardimg {
-          font-size: 0.9em;
-          width: max-content; }
-        body main .home .containerGifsSearch .show .titleCardimg {
-          padding: 0.3em 0 0 0;
-          font-family: "Roboto-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-          font-size: 1em;
-          width: 22vw;
-          text-align: left; }
     body main .home .btnSeeMoreGifos {
       width: 50vw;
       padding: 1em;
@@ -429,6 +466,61 @@ body {
       border: 0.1em solid #572EE5;
       border-radius: 1.6875em;
       background: none; }
+    body main .home .show {
+      display: flex;
+      position: fixed;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      left: 0;
+      top: 6.3em;
+      padding: 0.5em 1.5em;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(255, 255, 255, 0.842);
+      z-index: 100; }
+      body main .home .show .close-btn-modalExpand {
+        align-self: flex-end;
+        width: 3vw;
+        height: 3vw;
+        color: #572EE5;
+        opacity: 0.7;
+        padding: 0.5em 1em 1em 0; }
+      body main .home .show .img-expand {
+        padding: 0.5em;
+        width: 85vw;
+        height: 85vw; }
+        body main .home .show .img-expand .modalImg {
+          width: 98%;
+          height: 98%; }
+      body main .home .show .constainerIcons {
+        align-self: flex-end;
+        display: flex;
+        width: max-content;
+        padding: 0.1em; }
+        body main .home .show .constainerIcons a {
+          width: max-content;
+          padding: 0.2em; }
+          body main .home .show .constainerIcons a .fa-heart, body main .home .show .constainerIcons a .fa-download {
+            width: 3vw;
+            height: 3vw;
+            color: #572EE5;
+            background: #572EE5;
+            opacity: 0.7;
+            padding: 1em; }
+      body main .home .show .textCardimg, body main .home .show .titleCardimg {
+        align-self: flex-start;
+        color: #000000; }
+      body main .home .show .textCardimg {
+        font-size: 0.9em;
+        width: max-content; }
+      body main .home .show .titleCardimg {
+        padding: 0.3em 0 0 0;
+        font-family: "Roboto-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 1em;
+        width: max-content;
+        text-align: left; }
   @media screen and (min-width: 768px) {
     body main .home {
       padding: 2em 0; }
@@ -469,7 +561,7 @@ body {
             opacity: 0.6; }
           body main .home .containerGifsSearch .container-img-searchGifos:hover .containerDetails .content-details {
             top: 50%;
-            opacity: 1; }
+            opacity: 0.6; }
           body main .home .containerGifsSearch .container-img-searchGifos .imgnewgifosSearch {
             justify-self: stretch;
             width: 20vw;
@@ -478,7 +570,7 @@ body {
           body main .home .containerGifsSearch .container-img-searchGifos .containerDetails {
             display: block; }
             body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-overlay {
-              background: #572EE5;
+              background-color: #572EE5;
               position: absolute;
               top: 0;
               bottom: 0;
@@ -494,6 +586,7 @@ body {
               height: 100%;
               padding: 0.8em;
               opacity: 0;
+              background-color: #572EE5;
               transform: translate(-50%, -50%);
               transition: all 0.3s ease-in-out 0s; }
               body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .hoverIcons {
@@ -543,62 +636,6 @@ body {
             font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
             color: #5ED7C6;
             font-size: 1.38em; }
-      body main .home .show {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 6.3em;
-        padding: 0.5em 5em;
-        width: 100%;
-        overflow: auto;
-        background-color: rgba(255, 255, 255, 0.842); }
-        body main .home .show .close-btn-modalExpand {
-          align-self: flex-end;
-          width: 3vw;
-          height: 3vw;
-          color: #572EE5;
-          background: #FFFFFF;
-          opacity: 0.7;
-          padding: 0.35em;
-          border-radius: 0.375em; }
-        body main .home .show .img-expand {
-          padding: 0.5em;
-          width: 35vw;
-          height: 35vw; }
-          body main .home .show .img-expand img {
-            width: 100%;
-            height: 100%; }
-        body main .home .show .constainerIcons {
-          align-self: flex-end;
-          display: flex; }
-          body main .home .show .constainerIcons a {
-            padding: 0.2em; }
-            body main .home .show .constainerIcons a .fa-heart, body main .home .show .constainerIcons a .fa-download, body main .home .show .constainerIcons a .fa-expand-alt {
-              width: 3vw;
-              height: 3vw;
-              color: #572EE5;
-              background: #FFFFFF;
-              opacity: 0.7;
-              padding: 0.2em;
-              border-radius: 0.375em; }
-              body main .home .show .constainerIcons a .fa-heart:hover, body main .home .show .constainerIcons a .fa-download:hover, body main .home .show .constainerIcons a .fa-expand-alt:hover {
-                opacity: 1; }
-        body main .home .show .textCardimg, body main .home .show .titleCardimg {
-          align-self: flex-start;
-          color: #000000; }
-        body main .home .show .textCardimg {
-          font-size: 0.9em;
-          width: max-content; }
-        body main .home .show .titleCardimg {
-          padding: 0.3em 0 0 0;
-          font-family: "Roboto-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-          font-size: 1em;
-          width: 22vw;
-          text-align: left; }
       body main .home .btnSeeMoreGifos {
         width: 15vw;
         margin: 2em 0; } }
@@ -640,6 +677,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 16vh;
     padding: 1em 0 2em 0em; }
     body main .favoriteSection .emptyFavoritesSection {
       display: flex;
@@ -649,12 +687,88 @@ body {
       body main .favoriteSection .emptyFavoritesSection .textFavSection {
         font-size: 1.25em; }
       body main .favoriteSection .emptyFavoritesSection .containerImgFavNone .imgFav {
-        padding: 3em 0 1em 0em; }
+        padding: 1em 0 1em 0em; }
       body main .favoriteSection .emptyFavoritesSection .textFavNone {
         padding: 1em;
         font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
         color: #5ED7C6;
         font-size: 1.38em; }
+    body main .favoriteSection .containerFavorites {
+      display: grid;
+      grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+      align-items: center;
+      width: 95%;
+      height: 100%;
+      padding: 1em; }
+      body main .favoriteSection .containerFavorites .container-img-favGifos .imgFavoritesGifos {
+        width: 95%;
+        padding: 0.5em 0; }
+      body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails {
+        display: none; }
+    body main .favoriteSection .btnSeeMoreGifos {
+      width: 50vw;
+      padding: 1em;
+      margin: 1em 0;
+      font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 0.815em;
+      color: #572EE5;
+      border: 0.1em solid #572EE5;
+      border-radius: 1.6875em;
+      background: none; }
+    body main .favoriteSection .show {
+      display: flex;
+      position: fixed;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      left: 0;
+      top: 6.3em;
+      padding: 0.5em 1.5em;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(255, 255, 255, 0.842);
+      z-index: 100; }
+      body main .favoriteSection .show .close-btn-modalExpand {
+        align-self: flex-end;
+        width: 3vw;
+        height: 3vw;
+        color: #572EE5;
+        opacity: 0.7;
+        padding: 0.5em 1em 1em 0; }
+      body main .favoriteSection .show .img-expand {
+        padding: 0.5em;
+        width: 85vw;
+        height: 85vw; }
+        body main .favoriteSection .show .img-expand .modalImg {
+          width: 98%;
+          height: 98%; }
+      body main .favoriteSection .show .constainerIcons {
+        align-self: flex-end;
+        display: flex;
+        width: max-content;
+        padding: 0.1em; }
+        body main .favoriteSection .show .constainerIcons a {
+          width: max-content;
+          padding: 0.2em; }
+          body main .favoriteSection .show .constainerIcons a .fa-heart, body main .favoriteSection .show .constainerIcons a .fa-download {
+            width: 3vw;
+            height: 3vw;
+            color: #572EE5;
+            opacity: 0.7;
+            padding: 1em; }
+      body main .favoriteSection .show .textCardimg, body main .favoriteSection .show .titleCardimg {
+        align-self: flex-start;
+        color: #000000; }
+      body main .favoriteSection .show .textCardimg {
+        font-size: 0.9em;
+        width: max-content; }
+      body main .favoriteSection .show .titleCardimg {
+        padding: 0.3em 0 0 0;
+        font-family: "Roboto-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 1em;
+        width: max-content;
+        text-align: left; }
   @media screen and (min-width: 768px) {
     body main .favoriteSection {
       margin-top: 19vh;
@@ -758,36 +872,98 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 16vh;
     padding: 1em 0 2em 0em; }
-    body main .misgifosSection .emptyFavoritesSection {
+    body main .misgifosSection .emptyMyGifosSection {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 1em 0 2em 0em; }
-      body main .misgifosSection .emptyFavoritesSection .textMyGIFOSSection {
+      body main .misgifosSection .emptyMyGifosSection .textMyGIFOSSection {
         font-size: 1.25em; }
-      body main .misgifosSection .emptyFavoritesSection .containerimgnewgifosNone .imgmygifos {
-        padding: 3em 0 1em 0em; }
-      body main .misgifosSection .emptyFavoritesSection .textMyGIFOSNone {
+      body main .misgifosSection .emptyMyGifosSection .containerImgMyGIFOSNone .imgMyGIFOS {
+        padding: 1em 0 1em 0em; }
+      body main .misgifosSection .emptyMyGifosSection .textMyGIFOSNone {
         padding: 1em;
         font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
         color: #5ED7C6;
         font-size: 1.38em; }
     body main .misgifosSection .containerMyGifos {
       display: grid;
-      width: 85vw;
-      grid-template: repeat(3, 1fr)/repeat(4, 1fr); }
-      body main .misgifosSection .containerMyGifos .container-img-mygifos {
+      grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+      align-items: center;
+      width: 95%;
+      height: 100%;
+      padding: 1em; }
+      body main .misgifosSection .containerMyGifos .container-img-mygifos .imgmygifos {
+        width: 95%;
+        padding: 0.5em 0; }
+      body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails {
+        display: none; }
+    body main .misgifosSection .btnSeeMoreGifos {
+      width: 50vw;
+      padding: 1em;
+      margin: 1em 0;
+      font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 0.815em;
+      color: #572EE5;
+      border: 0.1em solid #572EE5;
+      border-radius: 1.6875em;
+      background: none; }
+    body main .misgifosSection .show {
+      display: flex;
+      position: fixed;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      left: 0;
+      top: 6.3em;
+      padding: 0.5em 1.5em;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(255, 255, 255, 0.842);
+      z-index: 100; }
+      body main .misgifosSection .show .close-btn-modalExpand {
+        align-self: flex-end;
+        width: 3vw;
+        height: 3vw;
+        color: #572EE5;
+        opacity: 0.7;
+        padding: 0.5em 1em 1em 0; }
+      body main .misgifosSection .show .img-expand {
+        padding: 0.5em;
+        width: 85vw;
+        height: 85vw; }
+        body main .misgifosSection .show .img-expand .modalImg {
+          width: 98%;
+          height: 98%; }
+      body main .misgifosSection .show .constainerIcons {
+        align-self: flex-end;
         display: flex;
-        position: relative;
         width: max-content;
-        height: max-content;
-        margin: none; }
-        body main .misgifosSection .containerMyGifos .container-img-mygifos .imgmygifos {
-          justify-self: stretch;
-          width: 20vw;
-          height: 20vw;
+        padding: 0.1em; }
+        body main .misgifosSection .show .constainerIcons a {
+          width: max-content;
           padding: 0.2em; }
+          body main .misgifosSection .show .constainerIcons a .fa-trash-alt, body main .misgifosSection .show .constainerIcons a .fa-download {
+            width: 3vw;
+            height: 3vw;
+            color: #572EE5;
+            opacity: 0.7;
+            padding: 1em; }
+      body main .misgifosSection .show .textCardimg, body main .misgifosSection .show .titleCardimg {
+        align-self: flex-start;
+        color: #000000; }
+      body main .misgifosSection .show .textCardimg {
+        font-size: 0.9em;
+        width: max-content; }
+      body main .misgifosSection .show .titleCardimg {
+        padding: 0.3em 0 0 0;
+        font-family: "Roboto-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 1em;
+        width: max-content;
+        text-align: left; }
   @media screen and (min-width: 768px) {
     body main .misgifosSection {
       margin-top: 19vh;
@@ -934,22 +1110,58 @@ body {
         grid-area: 1 / 2 / 3 / 3; }
         body main .contairer-create .contairer-cam .containerVideoCam #video {
           display: block;
-          width: 40vw;
-          height: 20vw; }
+          width: 70vw;
+          height: 70vw; }
       body main .contairer-create .contairer-cam .preview-gif {
         grid-area: 1 / 2 / 3 / 3;
-        width: 40vw;
-        height: 20vw; }
+        width: 70vw;
+        height: 70vw; }
       body main .contairer-create .contairer-cam .uploadGif {
         display: none;
         grid-area: 1 / 2 / 3 / 3;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 40vw;
-        height: 20vw;
+        width: 70vw;
+        height: 70vw;
         opacity: 0.6;
         background: #572EE5; }
+        body main .contairer-create .contairer-cam .uploadGif .loader {
+          color: #5ED7C6; }
         body main .contairer-create .contairer-cam .uploadGif .msjUploadGif {
+          font-size: 1em;
+          width: max-content;
+          color: #FFFFFF; }
+      body main .contairer-create .contairer-cam .uploadGifConfirm {
+        display: none;
+        grid-area: 1 / 2 / 3 / 3;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70vw;
+        height: 70vw;
+        opacity: 0.6;
+        background: #572EE5; }
+        body main .contairer-create .contairer-cam .uploadGifConfirm .containerIconsUploadOk {
+          align-self: flex-end;
+          display: flex;
+          width: max-content;
+          padding: 0.1em; }
+          body main .contairer-create .contairer-cam .uploadGifConfirm .containerIconsUploadOk a {
+            width: max-content;
+            padding: 0.2em; }
+            body main .contairer-create .contairer-cam .uploadGifConfirm .containerIconsUploadOk a .btndownloadMyGifoPrev, body main .contairer-create .contairer-cam .uploadGifConfirm .containerIconsUploadOk a .fa-link {
+              width: 10vw;
+              height: 10vw;
+              line-height: 0.5vh;
+              color: #572EE5;
+              background: #FFFFFF;
+              opacity: 0.7;
+              padding: 0.2em 0 0 0;
+              border-radius: 0.3em; }
+        body main .contairer-create .contairer-cam .uploadGifConfirm .check {
+          color: #5ED7C6; }
+        body main .contairer-create .contairer-cam .uploadGifConfirm .msjUploadGifConfirm {
           font-size: 1em;
           width: max-content;
           color: #FFFFFF; }
@@ -988,6 +1200,7 @@ body {
         font-size: 1em; }
     body main .contairer-create .container-infoCam {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       width: 90vw; }
       body main .contairer-create .container-infoCam .info-cam {
@@ -999,7 +1212,7 @@ body {
           height: 10vw;
           line-height: 0.8em;
           text-align: center;
-          padding: 0.5em;
+          padding: 0.1em;
           margin: 0.3em;
           font-family: "Roboto-Medium", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
           font-size: 1.125em;
@@ -1014,6 +1227,7 @@ body {
         font-size: 0.93em;
         letter-spacing: 0;
         color: #572EE5;
+        padding: 0.3em;
         text-decoration: none;
         border: none;
         background: none; }
@@ -1037,10 +1251,10 @@ body {
       display: none; }
     body main .contairer-create .filmanimation2 .animationCinta3 {
       width: 25vw;
-      animation: rotationY 2s infinite linear; }
+      animation: rotationY 2s infinite ease; }
   @media screen and (min-width: 768px) {
     body main .contairer-create {
-      margin-top: 25vh;
+      margin-top: 21.1vh;
       padding: 0 0 1em 0; }
       body main .contairer-create .filmanimation1 {
         margin-left: 35vw; }
@@ -1242,7 +1456,11 @@ body {
   from {
     transform: rotateY(0deg); }
   to {
-    transform: rotateY(180deg); } }
+    transform: rotateY(180deg); }
+  from {
+    transform: rotateY(180deg); }
+  to {
+    transform: rotateY(0deg); } }
   body main .trendingSection {
     display: flex;
     flex-direction: column;
@@ -1326,8 +1544,7 @@ body {
               opacity: 0.6; }
             body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos:hover .containerDetails .content-details {
               top: 50%;
-              left: 50%;
-              opacity: 1; }
+              opacity: 0.6; }
             body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .imgnewgifos {
               width: 25vw;
               height: 25vw;
@@ -1335,9 +1552,8 @@ body {
             body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails {
               display: block; }
               body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-overlay {
-                background: #572EE5;
+                background-color: #572EE5;
                 position: absolute;
-                left: 0;
                 top: 0;
                 bottom: 0;
                 right: 0;
@@ -1352,6 +1568,7 @@ body {
                 height: 100%;
                 padding: 0.8em;
                 opacity: 0;
+                background-color: #572EE5;
                 transform: translate(-50%, -50%);
                 transition: all 0.3s ease-in-out 0s; }
                 body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons {
@@ -1393,63 +1610,7 @@ body {
           padding: 1em; }
           body main .trendingSection .gifosTrendingGallery .rightBtn img {
             width: 5vw;
-            height: 5vw; }
-      body main .trendingSection .show {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 6.3em;
-        padding: 0.5em 5em;
-        width: 100%;
-        overflow: auto;
-        background-color: rgba(255, 255, 255, 0.842); }
-        body main .trendingSection .show .close-btn-modalExpand {
-          align-self: flex-end;
-          width: 3vw;
-          height: 3vw;
-          color: #572EE5;
-          background: #FFFFFF;
-          opacity: 0.7;
-          padding: 0.35em;
-          border-radius: 0.375em; }
-        body main .trendingSection .show .img-expand {
-          padding: 0.5em;
-          width: 35vw;
-          height: 35vw; }
-          body main .trendingSection .show .img-expand img {
-            width: 100%;
-            height: 100%; }
-        body main .trendingSection .show .constainerIcons {
-          align-self: flex-end;
-          display: flex; }
-          body main .trendingSection .show .constainerIcons a {
-            padding: 0.2em; }
-            body main .trendingSection .show .constainerIcons a .fa-heart, body main .trendingSection .show .constainerIcons a .fa-download, body main .trendingSection .show .constainerIcons a .fa-expand-alt {
-              width: 3vw;
-              height: 3vw;
-              color: #572EE5;
-              background: #FFFFFF;
-              opacity: 0.7;
-              padding: 0.2em;
-              border-radius: 0.375em; }
-              body main .trendingSection .show .constainerIcons a .fa-heart:hover, body main .trendingSection .show .constainerIcons a .fa-download:hover, body main .trendingSection .show .constainerIcons a .fa-expand-alt:hover {
-                opacity: 1; }
-        body main .trendingSection .show .textCardimg, body main .trendingSection .show .titleCardimg {
-          align-self: flex-start;
-          color: #000000; }
-        body main .trendingSection .show .textCardimg {
-          font-size: 0.9em;
-          width: max-content; }
-        body main .trendingSection .show .titleCardimg {
-          padding: 0.3em 0 0 0;
-          font-family: "Roboto-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-          font-size: 1em;
-          width: 22vw;
-          text-align: left; } }
+            height: 5vw; } }
   @media screen and (min-width: 1024px) {
     body main .trendingSection .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-heart, body main .trendingSection .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-download, body main .trendingSection .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-expand-alt {
       line-height: 1.9em; } }

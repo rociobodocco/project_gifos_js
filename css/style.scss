@@ -19,15 +19,24 @@
     }
 
     .fa-plus, .menusearch {
-        width: 100%;
-        padding: 1em;
-        border-radius: 100%;
         border: 0.1em solid $c-whitetexts;
     }
 
     .fa-plus:hover {
         background: $c-whitetexts;
         color: $c-background;
+    }
+
+    header nav input:checked ~ ul {
+        background-color: $c-contrast;
+    }
+
+    header nav ul li {
+        background-color: $c-contrast;
+    }
+
+    header nav ul li a {
+        background-color: $c-contrast;
     }
 
     .fa-facebook-f, .fa-twitter, .fa-instagram:hover {
@@ -42,19 +51,92 @@
         color: $c-whitetexts;
     }
 
-    .home .containerSearch .containerInputIcons .inputTextSearch {
-        color: $c-placeholdersactives;
-    }
-
-    .home .containerTrending .subtitleSec1 {
-        color: $c-whitetexts;
-    }
-
     .home .containerTrending .trending {
         color: $c-whitetexts;
+    } 
+
+    .home .containerTrending .containerTrendingTopics .trendigTopics {
+        color: $c-whitetexts;
+    }
+
+    main .home .show {
+        background-color: $c-background;
+    }
+
+    main .favoriteSection .show {
+        background-color: $c-background;
+    }
+    
+    main .misgifosSection .show {
+        background-color: $c-background;
+    }
+
+    main .home .show .containerIcons {
+        background-color: $c-background;
+    }
+
+    main .home .show .constainerIcons a .fa-heart {
+        color: $c-whitetexts;
+    }
+
+    main .home .show .constainerIcons a .fa-download {
+        color: $c-whitetexts;
+    }
+
+    main .favoriteSection .show .containerIcons {
+        background-color: $c-background;
+    }
+
+    main .favoriteSection .show .constainerIcons a .fa-heart {
+        color: $c-whitetexts;
+    }
+
+    main .favoriteSection .show .constainerIcons a .fa-download {
+        color: $c-whitetexts;
+    }
+
+    main .misgifosSection .show .containerIcons {
+        background-color: $c-background;
+    }
+
+    main .misgifosSection .show .constainerIcons a .fa-trash-alt {
+        color: $c-whitetexts;
+    }
+
+    main .misgifosSection .show .constainerIcons a .fa-download {
+        color: $c-whitetexts;
+    }
+    
+    main .home .show .textCardimg {
+        color: $c-whitetexts;
+    }
+
+    main .home .show .titleCardimg {
+        color: $c-whitetexts;
+    }
+
+    main .home .show .close-btn-modalExpand {
+        color: $c-whitetexts;
+    }
+
+    main .favoriteSection .show .close-btn-modalExpand {
+        color: $c-whitetexts;
+    }
+
+    main .misgifosSection .show .close-btn-modalExpand {
+        color: $c-whitetexts;
+    }
+
+    .home .btnSeeMoreGifos {
+        color: $c-whitetexts;
+        border: 0.1em solid $c-whitetexts;
     }
 
     main .trendingSection {
+        background-color: $c-grey-backtrending;
+    } 
+
+    main .trendingSection .containerSubtitle {
         background-color: $c-grey-backtrending;
     }
 
@@ -70,21 +152,65 @@
         background-color: $c-grey-backtrending;
     }
 
-    body main .trendingSection .container-slider {
+    main .trendingSection .gifosTrendingGallery {
         background-color: $c-grey-backtrending;
     }
 
-    .containerDetails .content-overlay {
-        background-color: $c-hovercardsgifs;
+    main .trendingSection .container-slider {
+        background-color: $c-grey-backtrending;
+    }
+    
+    main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .imgnewgifos {
+        background-color: $c-grey-backtrending;
+    }
+
+    main .contairer-create .container-infoCam .info-cam .bot1 {
+        color: $c-whitetexts;
+        border: 0.05em solid $c-whitetexts;
+    }
+    main .contairer-create .container-infoCam .info-cam .bot2 {
+        color: $c-whitetexts;
+        border: 0.05em solid $c-whitetexts;
+    }
+    main .contairer-create .container-infoCam .info-cam .bot3 {
+        color: $c-whitetexts;
+        border: 0.05em solid $c-whitetexts;
+    }
+
+    main .contairer-create .container-infoCam .btnRepeatRecord {
+        color: $c-whitetexts;
+    }
+
+    main .contairer-create .button-cam {
+        color: $c-whitetexts;
+        border: 0.1em solid $c-whitetexts;
+    }
+    main .contairer-create .button-record {
+        color: $c-whitetexts;
+        border: 0.1em solid $c-whitetexts;
+    }
+    main .contairer-create .button-stopRecord {
+        color: $c-whitetexts;
+        border: 0.1em solid $c-whitetexts;
+    }
+    main .contairer-create .button-uploadRecord {
+        color: $c-whitetexts;
+        border: 0.1em solid $c-whitetexts;
     }
     
     footer {
         border-bottom: 0.3125em solid $c-contrast;
     }
 
-    // .fa-facebook-f, .fa-twitter, .fa-instagram:hover {
-    //     color: $c-whitetexts;
-    // }
+    body footer .social-footer .containerRedes .fa-facebook-f {
+        color: $c-whitetexts;
+    }
+    footer .social-footer .containerRedes .fa-twitter {
+        color: $c-whitetexts;
+    }
+    footer .social-footer .containerRedes .fa-instagram {
+        color: $c-whitetexts;
+    }
 }
 
 body {

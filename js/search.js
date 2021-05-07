@@ -18,7 +18,7 @@ const searchEmptyMsg = (ev) => {
   const searchEmpty = document.createElement("div");
   searchEmpty.classList.add("searchEmpty");
   searchEmpty.innerHTML = `<div class="containerImgSearchEmpty">
-    <img class="imgSearchEmpty" src="./images/icon-busqueda-sin-resultado.svg" alt="Busqueda sin resultados">
+    <img class="imgSearchEmpty" src="./css/images/icon-busqueda-sin-resultado.svg" alt="Busqueda sin resultados">
     </div>
     <p class="newtextnotfoundsearch">"Intenta con otra búsqueda."</p>`;
   containerGifsSearch.appendChild(searchEmpty);
@@ -78,6 +78,7 @@ const printGifs = (gifs) => {
     localStorage.setItem('gifos', JSON.stringify(localGifos));
 
     cardGifosSearch.querySelector('.btnFavorites').addEventListener("click", addFavoritesHandler);
+
 
     // Download
     const downloadGifs = async (ev) => {
@@ -161,6 +162,10 @@ const getSuggestionsHandler = async (ev) => {
           newLi.addEventListener("click", async (ev) => {
             const input = inputUserValue;
             input.value = ev.target.textContent;
+            lableIconSearch.style.color = "#9CAFC3";
+            newLableClose.style.display = "inline";
+            newLableClose.style.order = "2";
+            inputUserValue.style.order = "1";
             const initialGifsSuggEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosSuggestionsEv);
             if (ev.target.value === "") {
               searchEmptyMsg();
@@ -226,6 +231,10 @@ const getSuggestionsHandler = async (ev) => {
   // Print Gifos Search click lens Event
   lableIconSearch.addEventListener("click", async () => {
     const initialKeyWordIconEv = inputUserValue.value;
+    lableIconSearch.style.color = "#9CAFC3";
+    newLableClose.style.display = "inline";
+    newLableClose.style.order = "2";
+    inputUserValue.style.order = "1";
     const initialGifsIconEv = await getGifsByKeyword(API_KEY, initialKeyWordIconEv, offsetGifosIconSearchEv);
     containerSuggestions.style.display = "none";
     lineSpaceSuggestion.style.display = "none";
@@ -262,11 +271,15 @@ const printTagsTrendTopic = async (tags) => {
     const containerTrendingTopics = document.createElement("div");
     containerTrendingTopics.classList.add("containerTrendingTopics");
     containerTrendingTopics.innerHTML = `
-      <p class="trendigTopics tt1">${tags.data[i]}</p><p>,</p>
-      <p class="trendigTopics tt2">${tags.data[i + 1]}</p><p>,</p>
-      <p class="trendigTopics tt3">${tags.data[i + 2]}</p><p>,</p>
-      <p class="trendigTopics tt4">${tags.data[i + 3]}</p><p>,</p>
-      <p class="trendigTopics tt5">${tags.data[i + 4]}</p>`;
+    <div class="firstContainerTrendTopics">
+      <p class="trendigTopics tt1">${tags.data[i].charAt(0).toUpperCase() + tags.data[i].slice(1)}</p><p>,</p>
+      <p class="trendigTopics tt2">${tags.data[i + 1].charAt(0).toUpperCase() + tags.data[i + 1].slice(1)}</p><p>,</p>
+    </div>
+    <div class="secondContainerTrendTopics">
+      <p class="trendigTopics tt3">${tags.data[i + 2].charAt(0).toUpperCase() + tags.data[i + 2].slice(1)}</p><p>,</p>
+      <p class="trendigTopics tt4">${tags.data[i + 3].charAt(0).toUpperCase() + tags.data[i + 3].slice(1)}</p><p>,</p>
+      <p class="trendigTopics tt5">${tags.data[i + 4].charAt(0).toUpperCase() + tags.data[i + 4].slice(1)}</p>
+    </div>`;
     containerTrending.appendChild(containerTrendingTopics);
   };
 
@@ -275,6 +288,10 @@ const printTagsTrendTopic = async (tags) => {
     const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
     const input = inputUserValue;
     input.value = ev.target.textContent;
+    lableIconSearch.style.color = "#9CAFC3";
+    newLableClose.style.display = "inline";
+    newLableClose.style.order = "2";
+    inputUserValue.style.order = "1";
     const initialGifsTrendTopEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosTrendTopEv);
     if (ev.target.value === "") {
       searchEmptyMsg();
@@ -308,6 +325,10 @@ const printTagsTrendTopic = async (tags) => {
     const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
     const input = inputUserValue;
     input.value = ev.target.textContent;
+    lableIconSearch.style.color = "#9CAFC3";
+    newLableClose.style.display = "inline";
+    newLableClose.style.order = "2";
+    inputUserValue.style.order = "1";
     const initialGifsTrendTopEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosTrendTopEv);
     if (ev.target.value === "") {
       searchEmptyMsg();
@@ -341,6 +362,10 @@ const printTagsTrendTopic = async (tags) => {
     const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
     const input = inputUserValue;
     input.value = ev.target.textContent;
+    lableIconSearch.style.color = "#9CAFC3";
+    newLableClose.style.display = "inline";
+    newLableClose.style.order = "2";
+    inputUserValue.style.order = "1";
     const initialGifsTrendTopEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosTrendTopEv);
     if (ev.target.value === "") {
       searchEmptyMsg();
@@ -374,6 +399,10 @@ const printTagsTrendTopic = async (tags) => {
     const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
     const input = inputUserValue;
     input.value = ev.target.textContent;
+    lableIconSearch.style.color = "#9CAFC3";
+    newLableClose.style.display = "inline";
+    newLableClose.style.order = "2";
+    inputUserValue.style.order = "1";
     const initialGifsTrendTopEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosTrendTopEv);
     if (ev.target.value === "") {
       searchEmptyMsg();
@@ -407,6 +436,10 @@ const printTagsTrendTopic = async (tags) => {
     const API_KEY = "W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I";
     const input = inputUserValue;
     input.value = ev.target.textContent;
+    lableIconSearch.style.color = "#9CAFC3";
+    newLableClose.style.display = "inline";
+    newLableClose.style.order = "2";
+    inputUserValue.style.order = "1";
     const initialGifsTrendTopEv = await getGifsByKeyword(API_KEY, input.value, offsetGifosTrendTopEv);
     if (ev.target.value === "") {
       searchEmptyMsg();

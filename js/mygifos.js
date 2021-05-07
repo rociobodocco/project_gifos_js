@@ -24,19 +24,80 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>`;
                 containerMyGifos.appendChild(cardMyGifos);
 
+                // Modal expand Fav
+                const showModalExpandMyGifsMobile = () => {
+                    const modal = document.createElement('div');
+                    modal.classList.add('show');
+                    modal.innerHTML = `
+                        <i class="fas fa-times close-btn-modalExpand"></i>
+                        <div class="img-expand"> 
+                        <img class="modalImg"  src="${mygifos[i].url}" alt="myGifo">
+                        </div>
+                        <div class="constainerIcons">
+                            <a href="#"><i data-id="${mygifos[i].id}" <i class="far fa-trash-alt btnDeleteMyGifo"></i></a>
+                            <a href="#"><i data-id="${mygifos[i].id}" class="fas fa-download btndownload"></i></a>
+                        </div> 
+                        <p class="textCardimg"></p>
+                        <h6 class="titleCardimg"></h6>`;
 
-                // Modal Expand
-                const expandMyGifs = cardMyGifos.querySelector('.btnModalExpand');
-                // expand.addEventListener("touchstart", showModalExpand);
-                // expand.addEventListener("touchend", showModalExpand);
-                expandMyGifs.addEventListener("click", showModalExpand);
-                expandMyGifs.imagegif = mygifos[i].url;
 
-                const imageMyGifOnclick = cardMyGifos.querySelector('img');
-                // imageGifOnclick.addEventListener("touchstart", showModalExpand);
-                // imageGifOnclick.addEventListener("touchend", showModalExpand);
-                imageMyGifOnclick.addEventListener("click", showModalExpand);
-                imageMyGifOnclick.imagegif = mygifos[i].url;
+                    document.querySelector('.misgifosSection').appendChild(modal);
+
+                    modal.querySelector('.close-btn-modalExpand').addEventListener("click", () => {
+                        modal.style.display = "none";
+                    });
+
+                    // Remove My Gifos Modal
+                    modal.querySelector('.btnDeleteMyGifo').addEventListener("click", deleteMyGifosHandler);
+
+                    // Download
+                    const downloadGifs = async () => {
+                        const downloadUrl = `https://media.giphy.com/media/${mygifos[i].id}/giphy.gif`;
+                        console.log(downloadUrl)
+                        const fetchedGif = fetch(downloadUrl);
+                        const blobGifos = (await fetchedGif).blob();
+                        const urlGifos = URL.createObjectURL(await blobGifos);
+                        const titleGif = document.querySelector('.modalImg').alt;
+                        const saveGifImg = document.createElement("a");
+                        saveGifImg.href = urlGifos;
+                        saveGifImg.download = `${titleGif}.gif`;
+                        saveGifImg.style = 'display: "none"';
+                        document.body.appendChild(saveGifImg);
+                        saveGifImg.click();
+                        document.body.removeChild(saveGifImg);
+                    };
+
+                    modal.querySelector('.btndownload').addEventListener("click", downloadGifs);
+                };
+
+                // Modal mobile and desktop 
+                if (window.matchMedia("(min-width: 768px)").matches) {
+                    // Modal Expand
+                    const expandMyGifs = cardMyGifos.querySelector('.btnModalExpand');
+                    // expand.addEventListener("touchstart", showModalExpand);
+                    // expand.addEventListener("touchend", showModalExpand);
+                    expandMyGifs.addEventListener("click", showModalExpand);
+                    expandMyGifs.imagegif = mygifos[i].url;
+
+                    const imageMyGifOnclick = cardMyGifos.querySelector('img');
+                    // imageGifOnclick.addEventListener("touchstart", showModalExpand);
+                    // imageGifOnclick.addEventListener("touchend", showModalExpand);
+                    imageMyGifOnclick.addEventListener("click", showModalExpand);
+                    imageMyGifOnclick.imagegif = mygifos[i].url;
+                } else {
+                    // Modal Expand
+                    const expandMyGifs = cardMyGifos.querySelector('.btnModalExpand');
+                    // expand.addEventListener("touchstart", showModalExpand);
+                    // expand.addEventListener("touchend", showModalExpand);
+                    expandMyGifs.addEventListener("click", showModalExpandMyGifsMobile);
+                    expandMyGifs.imagegif = mygifos[i].url;
+
+                    const imageMyGifOnclick = cardMyGifos.querySelector('img');
+                    // imageGifOnclick.addEventListener("touchstart", showModalExpand);
+                    // imageGifOnclick.addEventListener("touchend", showModalExpand);
+                    imageMyGifOnclick.addEventListener("click", showModalExpandMyGifsMobile);
+                    imageMyGifOnclick.imagegif = mygifos[i].url;
+                };
 
                 // Remove My Gifos
                 cardMyGifos.querySelector('.btnDeleteMyGifo').addEventListener("click", deleteMyGifosHandler);
@@ -61,10 +122,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 cardMyGifos.querySelector('.btndownload').addEventListener("click", downloadMyGifs);
             };
-            
+
         };
         gifosElements(localMyGifs)
-        
+
     } else {
         document.querySelector('.emptyMyGifosSection').style.display = 'flex';
     }

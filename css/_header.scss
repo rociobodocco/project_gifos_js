@@ -2,8 +2,6 @@
     box-shadow: 0 2px 4px 1px $c-placeholdersactives;
 }
 
-
-
 header {
     position: fixed;
     top: 0;
@@ -82,11 +80,24 @@ header {
                     letter-spacing: 0;
                     color: $c-whitetexts;
                     text-decoration: none;
+
+                    .fa-plus, .menusearch {
+                        width: 18%;
+                        padding: 1em;
+                        border-radius: 100%;
+                        border: 0.1em solid $c-contrast;
+
+                        &:hover {
+                            color: $c-placeholdersactives;
+                        }
+                    }
+
+                    &:active {
+                        color: $c-placeholdersactives;
+                    }
                 }
                 
-                a:active {
-                    color: $c-placeholdersactives;
-                }
+                
             }
         }
     }

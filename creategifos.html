@@ -16,7 +16,7 @@
     <!-- Cabecera + logo + menú -->
     <header id="header">
         <div class="logo">
-            <a href="./index.html"><img class="imglogo" src="./images/logo-mobile.svg" alt="GIFOS"></a>
+            <a href="./index.html"><img class="imglogo" src="./css/images/logo-desktop.svg" alt="GIFOS"></a>
         </div>
         <nav>
             <input type="checkbox" id="menu">
@@ -42,12 +42,12 @@
                 <!-- Animación cámara -->
                 <div class="filmanimation1">
                     <div class="cintas">
-                        <img class="animationCinta1" src="./images/element_cinta1.svg" alt="filmanimation">
-                        <img class="animationCinta2" src="./images/element_cinta2.svg" alt="filmanimation">
+                        <img class="animationCinta1" src="./css/images/element_cinta1.svg" alt="filmanimation">
+                        <img class="animationCinta2" src="./css/images/element_cinta2.svg" alt="filmanimation">
                     </div>
                     <div class="cam">
-                        <img class="animationCam" src="./images/element-camara.svg" alt="filmanimation">
-                        <img class="animationLight" src="./images/element-luz-camara.svg" alt="filmanimation">
+                        <img class="animationCam" src="./css/images/element-camara.svg" alt="filmanimation">
+                        <img class="animationLight" src="./css/images/element-luz-camara.svg" alt="filmanimation">
                     </div>
                 </div>
                 <!-- Container cámara -->
@@ -57,7 +57,16 @@
                             class="gifosColo-camSec">GIFOS</span></h2>
                     <div class="containerVideoCam"></div>
                     <div class="uploadGif">
+                        <i class="loader"><img src="./css/images/loader.svg" alt="Uploading"></i>
                         <p class="msjUploadGif">Estamos subiendo tu GIFO.</p>
+                    </div>
+                    <div class="uploadGifConfirm">
+                        <div class="containerIconsUploadOk">
+                            <a href="#"><i class="fas fa-download btndownloadMyGifoPrev"></i></a>
+                            <a href="#" class="btnlink"><i class="fas fa-link"></i></a>
+                        </div>
+                        <i class="check"><img src="./css/images/ok.svg" alt="UploadOK"></i>
+                        <p class="msjUploadGifConfirm">GIFO subido con éxito!</p>
                     </div>
                     <div class="corner2"></div>
                     <div class="corner3"></div>
@@ -83,7 +92,7 @@
             <button class="button-stopRecord">FINALIZAR</button>
             <button class="button-uploadRecord">SUBIR GIFO</button>
             <div class="filmanimation2">
-                <img class="animationCinta3" src="./images/pelicula.svg" alt="filmanimation">
+                <img class="animationCinta3" src="./css/images/pelicula.svg" alt="filmanimation">
             </div>
         </div>
     </main>
