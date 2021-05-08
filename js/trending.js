@@ -20,24 +20,100 @@ const printCarrousel = (arr) => {
             </div>`
         containerImages.appendChild(cardGifos);
 
-        // Modal Expand
-        const expand = cardGifos.querySelector('.btnModalExpand');
-        // expand.addEventListener("touchstart", showModalExpand);
-        // expand.addEventListener("touchend", showModalExpand);
-        expand.addEventListener("click", showModalExpand);
-        expand.imagegif = trendGif.images.fixed_height.url;
-        expand.idgif = trendGif.id;
-        expand.username = trendGif.username;
-        expand.title = trendGif.title;
+        // Modal expand Fav
+        const showModalExpandTrendMobile = () => {
+            const modal = document.createElement('div');
+            modal.classList.add('show');
+            modal.innerHTML = `
+                <i class="fas fa-times close-btn-modalExpand"></i>
+                <div class="img-expand"> 
+                <img class="modalImg"  src="${trendGif.images.fixed_height.url}" alt="${trendGif.title}">
+                </div>
+                <div class="constainerIcons">
+                    <a href="#"><i data-id="${trendGif.id}" class="far fa-heart btnFavorites"></i></a>
+                    <a href="#"><i data-id="${trendGif.id}" class="fas fa-download btndownload"></i></a>
+                </div> 
+                <p class="textCardimg">${trendGif.username}</p>
+                <h6 class="titleCardimg">${trendGif.title}</h6>`;
 
-        const imageGifOnclick = cardGifos.querySelector('img');
-        // imageGifOnclick.addEventListener("touchstart", showModalExpand);
-        // imageGifOnclick.addEventListener("touchend", showModalExpand);
-        imageGifOnclick.addEventListener("click", showModalExpand);
-        imageGifOnclick.imagegif = trendGif.images.fixed_height.url;
-        imageGifOnclick.idgif = trendGif.id;
-        imageGifOnclick.username = trendGif.username;
-        imageGifOnclick.title = trendGif.title;
+          if (document.querySelector('.home')) {
+            document.querySelector('.home').appendChild(modal);
+          }
+        
+          if (document.querySelector('.favoriteSection')) {
+            document.querySelector('.favoriteSection').appendChild(modal);
+          }
+        
+          if (document.querySelector('.misgifosSection')) {
+            document.querySelector('.misgifosSection').appendChild(modal);
+          }
+
+            modal.querySelector('.close-btn-modalExpand').addEventListener("click", () => {
+                modal.style.display = "none";
+            });
+
+            modal.querySelector('.btnFavorites').addEventListener("click", addFavoritesHandler);
+            
+
+            // Download
+            const downloadGifs = async () => {
+                const downloadUrl = `https://media.giphy.com/media/${trendGif.id}/giphy.gif`;
+                console.log(downloadUrl)
+                const fetchedGif = fetch(downloadUrl);
+                const blobGifos = (await fetchedGif).blob();
+                const urlGifos = URL.createObjectURL(await blobGifos);
+                const titleGif = document.querySelector('.modalImg').alt;
+                const saveGifImg = document.createElement("a");
+                saveGifImg.href = urlGifos;
+                saveGifImg.download = `${titleGif}.gif`;
+                saveGifImg.style = 'display: "none"';
+                document.body.appendChild(saveGifImg);
+                saveGifImg.click();
+                document.body.removeChild(saveGifImg);
+            };
+
+            modal.querySelector('.btndownload').addEventListener("click", downloadGifs);
+        };
+        // Modal mobile and desktop 
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            // Modal Expand
+            const expand = cardGifos.querySelector('.btnModalExpand');
+            // expandFavGifs.addEventListener("touchstart", showModalExpand);
+            // expandFavGifs.addEventListener("touchend", showModalExpand);
+            expand.addEventListener("click", showModalExpand);
+            expand.imagegif = trendGif.images.fixed_height.url;
+            expand.idgif = trendGif.id;
+            expand.username = trendGif.username;
+            expand.title = trendGif.title;
+
+            const imageGifOnclick = cardGifos.querySelector('img');
+            // imageGifOnclickFav.addEventListener("touchstart", showModalExpand);
+            // imageGifOnclickFav.addEventListener("touchend", showModalExpand);
+            imageGifOnclick.addEventListener("click", showModalExpand);
+            imageGifOnclick.imagegif = trendGif.images.fixed_height.url;
+            imageGifOnclick.idgif = trendGif.id;
+            imageGifOnclick.username = trendGif.username;
+            imageGifOnclick.title = trendGif.title;
+        } else {
+            // Modal Expand
+            const expand = cardGifos.querySelector('.btnModalExpand');
+            // expandFavGifs.addEventListener("touchstart", showModalExpand);
+            // expandFavGifs.addEventListener("touchend", showModalExpand);
+            expand.addEventListener("click", showModalExpandTrendMobile);
+            expand.imagegif = trendGif.images.fixed_height.url;
+            expand.idgif = trendGif.id;
+            expand.username = trendGif.username;
+            expand.title = trendGif.title;
+
+            const imageGifOnclick = cardGifos.querySelector('img');
+            // imageGifOnclickFav.addEventListener("touchstart", showModalExpand);
+            // imageGifOnclickFav.addEventListener("touchend", showModalExpand);
+            imageGifOnclick.addEventListener("click", showModalExpandTrendMobile);
+            imageGifOnclick.imagegif = trendGif.images.fixed_height.url;
+            imageGifOnclick.idgif = trendGif.id;
+            imageGifOnclick.username = trendGif.username;
+            imageGifOnclick.title = trendGif.title;
+        };
 
         // Favorites
         const localGifos = JSON.parse(localStorage.getItem('gifos'));
@@ -65,7 +141,7 @@ const printCarrousel = (arr) => {
 
         cardGifos.querySelector('.btndownload').addEventListener("click", downloadGifs);
 
-        
+
     });
 };
 
@@ -99,24 +175,99 @@ const showNewTrendings = async (count) => {
 
         trendingList.appendChild(newCardGifos);
 
-        // Modal Expand
-        const expand = newCardGifos.querySelector('.btnModalExpand');
-        // expand.addEventListener("touchstart", showModalExpand);
-        // expand.addEventListener("touchend", showModalExpand);
-        expand.addEventListener("click", showModalExpand);
-        expand.imagegif = gifosData.data[i].images.fixed_height.url;
-        expand.idgif = gifosData.data[i].id;
-        expand.username = gifosData.data[i].username;
-        expand.title = gifosData.data[i].title;
+         // Modal expand Fav
+         const showModalExpandTrendMobile = () => {
+            const modal = document.createElement('div');
+            modal.classList.add('show');
+            modal.innerHTML = `
+          <i class="fas fa-times close-btn-modalExpand"></i>
+          <div class="img-expand"> 
+          <img class="modalImg"  src="${gifosData.data[i].images.fixed_height.url}" alt="${gifosData.data[i].title}">
+          </div>
+          <div class="constainerIcons">
+            <a href="#"><i data-id="${gifosData.data[i].id}" class="far fa-heart btnFavorites"></i></a>
+            <a href="#"><i data-id="${gifosData.data[i].id}" class="fas fa-download btndownload"></i></a>
+          </div> 
+          <p class="textCardimg">${gifosData.data[i].username}</p>
+          <h6 class="titleCardimg">${gifosData.data[i].title}</h6>`;
 
-        const imageGifOnclick = newCardGifos.querySelector('img');
-        // imageGifOnclick.addEventListener("touchstart", showModalExpand);
-        // imageGifOnclick.addEventListener("touchend", showModalExpand);
-        imageGifOnclick.addEventListener("click", showModalExpand);
-        imageGifOnclick.imagegif = gifosData.data[i].images.fixed_height.url;
-        imageGifOnclick.idgif = gifosData.data[i].id;
-        imageGifOnclick.username = gifosData.data[i].username;
-        imageGifOnclick.title = gifosData.data[i].title;
+          if (document.querySelector('.home')) {
+            document.querySelector('.home').appendChild(modal);
+          }
+        
+          if (document.querySelector('.favoriteSection')) {
+            document.querySelector('.favoriteSection').appendChild(modal);
+          }
+        
+          if (document.querySelector('.misgifosSection')) {
+            document.querySelector('.misgifosSection').appendChild(modal);
+          }
+
+            modal.querySelector('.close-btn-modalExpand').addEventListener("click", () => {
+                modal.style.display = "none";
+            });
+
+            modal.querySelector('.btnFavorites').addEventListener("click", addFavoritesHandler);
+
+            // Download
+            const downloadGifs = async () => {
+                const downloadUrl = `https://media.giphy.com/media/${gifosData.data[i].id}/giphy.gif`;
+                console.log(downloadUrl)
+                const fetchedGif = fetch(downloadUrl);
+                const blobGifos = (await fetchedGif).blob();
+                const urlGifos = URL.createObjectURL(await blobGifos);
+                const titleGif = document.querySelector('.modalImg').alt;
+                const saveGifImg = document.createElement("a");
+                saveGifImg.href = urlGifos;
+                saveGifImg.download = `${titleGif}.gif`;
+                saveGifImg.style = 'display: "none"';
+                document.body.appendChild(saveGifImg);
+                saveGifImg.click();
+                document.body.removeChild(saveGifImg);
+            };
+
+            modal.querySelector('.btndownload').addEventListener("click", downloadGifs);
+        };
+        // Modal mobile and desktop 
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            // Modal Expand
+            const expand = newCardGifos.querySelector('.btnModalExpand');
+            // expandFavGifs.addEventListener("touchstart", showModalExpand);
+            // expandFavGifs.addEventListener("touchend", showModalExpand);
+            expand.addEventListener("click", showModalExpand);
+            expand.imagegif = gifosData.data[i].images.fixed_height.url;
+            expand.idgif = gifosData.data[i].id;
+            expand.username = gifosData.data[i].username;
+            expand.title = gifosData.data[i].title;
+
+            const imageGifOnclick = newCardGifos.querySelector('img');
+            // imageGifOnclickFav.addEventListener("touchstart", showModalExpand);
+            // imageGifOnclickFav.addEventListener("touchend", showModalExpand);
+            imageGifOnclick.addEventListener("click", showModalExpand);
+            imageGifOnclick.imagegif = gifosData.data[i].images.fixed_height.url;
+            imageGifOnclick.idgif = gifosData.data[i].id;
+            imageGifOnclick.username = gifosData.data[i].username;
+            imageGifOnclick.title = gifosData.data[i].title;
+        } else {
+            // Modal Expand
+            const expand = newCardGifos.querySelector('.btnModalExpand');
+            // expandFavGifs.addEventListener("touchstart", showModalExpand);
+            // expandFavGifs.addEventListener("touchend", showModalExpand);
+            expand.addEventListener("click", showModalExpandTrendMobile);
+            expand.imagegif = gifosData.data[i].images.fixed_height.url;
+            expand.idgif = gifosData.data[i].id;
+            expand.username = gifosData.data[i].username;
+            expand.title = gifosData.data[i].title;
+
+            const imageGifOnclick = newCardGifos.querySelector('img');
+            // imageGifOnclickFav.addEventListener("touchstart", showModalExpand);
+            // imageGifOnclickFav.addEventListener("touchend", showModalExpand);
+            imageGifOnclick.addEventListener("click", showModalExpandTrendMobile);
+            imageGifOnclick.imagegif = gifosData.data[i].images.fixed_height.url;
+            imageGifOnclick.idgif = gifosData.data[i].id;
+            imageGifOnclick.username = gifosData.data[i].username;
+            imageGifOnclick.title = gifosData.data[i].title;
+        };
 
         // Favorites
         const localGifos = JSON.parse(localStorage.getItem('gifos'));

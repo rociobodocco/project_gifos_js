@@ -7,15 +7,19 @@ main {
         margin-top: 16vh;
         padding: 1em 0 2em 0em;
 
+        .containerIconMyGifosNone {
+            padding: 1em 0 0 0;
+        }
+
+        .textMyGIFOSSection {
+            font-size: 1.25em;
+        }
+
         .emptyMyGifosSection {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 1em 0 2em 0em;
-
-            .textMyGIFOSSection {
-                font-size: 1.25em;
-            }
     
             .containerImgMyGIFOSNone {
                 .imgMyGIFOS {
@@ -109,7 +113,7 @@ main {
                     width: max-content;
                     padding: 0.2em;
 
-                    .fa-trash-alt, .fa-download {
+                    .fa-heart, .fa-trash-alt, .fa-download {
                         width: 3vw;
                         height: 3vw;
                         color: $c-contrast; 
@@ -145,30 +149,14 @@ main {
    @media screen and (min-width: 768px) {
     main {
         .misgifosSection {
-            margin-top: 19vh;
+            margin-top: 17vh;
             padding: 1em 0 5em 0em;
 
             .emptyMyGifosSection {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 1em 0 2em 0em;
-    
-                .textFavSection {
-                    font-size: 1.25em;
-                }
-        
-                .containerIconMyGifosNone {
-                    .iconimgnewgifos {
+                .containerImgMyGIFOSNone {
+                    .imgMyGIFOS {
                         padding: 3em 0 1em 0em;
                     }
-                }
-        
-                .textMyGIFOSNone {
-                    padding: 1em;
-                    font-family: $title-font;
-                    color: $c-turquoise;
-                    font-size: 1.38em;
                 }
             }
 
@@ -190,7 +178,7 @@ main {
     
                     &:hover .containerDetails .content-details {
                         top: 50%;
-                        opacity: 1;
+                        opacity: 0.6;
                     }
                     
                     .imgmygifos {
@@ -204,7 +192,7 @@ main {
                         display: block;
     
                         .content-overlay {
-                            background: $c-contrast;
+                            background-color: $c-hovercardsgifs;
                             position: absolute;
                             top: 0;
                             bottom: 0;
@@ -214,6 +202,7 @@ main {
                         }
     
                         .content-details {
+                            background-color: $c-hovercardsgifs;
                             display: grid;
                             grid-template: repeat(4, 1fr) / repeat(3, 1fr);
                             position: absolute;
@@ -281,6 +270,41 @@ main {
                     }
                 }
             }
+
+            .btnSeeMoreGifos {
+                width: 15vw;
+                margin: 2em 0;
+
+                &:hover {
+                    background-color: $c-whitetexts;
+                }
+            }
+
+            .show {
+                .img-expand {
+                    padding: 0.5em;
+                    width: 60vw;
+                    height: 45vw;
+                }
+    
+                .constainerIcons {
+                    a {
+                        .fa-heart, .fa-trash-alt, .fa-download {
+                            width: 3.5vw;
+                            height: 3.5vw;
+                            color: $c-contrast;
+                            border: 0.1em solid $c-placeholdersactives;
+                            opacity: 0.7; 
+                            padding: 0.2em;
+                            border-radius: 0.375em;
+
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
         }
         
     }
@@ -289,9 +313,72 @@ main {
 
 /* Tablets en horizonal y escritorios normales
     ------------------------------------------------------------------------- */
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+    main {
+        .misgifosSection {
+            margin-top: 18vh;
+    
+            .hoverIcons {
+                a {
+                    .fa-trash-alt, .fa-download, .fa-expand-alt {
+                        width: 2.5vw;
+                        height: 2.5vw;
+                        font-size: 0.9em;
+                    }
+                }
+            }
+
+            .show {
+                .img-expand {
+                    width: 50vw;
+                    height: 35vw;
+                }
+    
+                .constainerIcons {
+                    a {
+                        .fa-heart, .fa-trash-alt, .fa-download {
+                            width: 2.5vw;
+                            height: 2.5vw;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
 
 /* Escritorios muy anchos
     ------------------------------------------------------------------------- */
-@media screen and (min-width: 1200px) {} 
+@media screen and (min-width: 1200px) {
+    main {
+        .misgifosSection {
+    
+            .hoverIcons {
+                a {
+                    .fa-trash-alt, .fa-download, .fa-expand-alt {
+                        font-size: 1.2em;
+                    }
+                }
+            }
+
+            .show {
+                .img-expand {
+                    width: 40vw;
+                    height: 25vw;
+                }
+    
+                .constainerIcons {
+                    a {
+                        .fa-heart, .fa-trash-alt, .fa-download {
+                            width: 2vw;
+                            height: 2vw;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+} 
 

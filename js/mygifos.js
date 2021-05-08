@@ -76,13 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     const expandMyGifs = cardMyGifos.querySelector('.btnModalExpand');
                     // expand.addEventListener("touchstart", showModalExpand);
                     // expand.addEventListener("touchend", showModalExpand);
-                    expandMyGifs.addEventListener("click", showModalExpand);
+                    expandMyGifs.addEventListener("click", showModalExpandMyGifsMobile);
                     expandMyGifs.imagegif = mygifos[i].url;
 
                     const imageMyGifOnclick = cardMyGifos.querySelector('img');
                     // imageGifOnclick.addEventListener("touchstart", showModalExpand);
                     // imageGifOnclick.addEventListener("touchend", showModalExpand);
-                    imageMyGifOnclick.addEventListener("click", showModalExpand);
+                    imageMyGifOnclick.addEventListener("click", showModalExpandMyGifsMobile);
                     imageMyGifOnclick.imagegif = mygifos[i].url;
                 } else {
                     // Modal Expand

@@ -4,7 +4,6 @@
     letter-spacing: 0;
     color: $c-contrast;
     text-align: center;
-    
 }
 
 /* SUB TEXT DOWN TRENDING SECTION 1 */
@@ -37,7 +36,6 @@ h2, h3, h4 {
 h6, p {
     @include subtitles;
 }
-
 
 main {
     .home {
@@ -75,22 +73,22 @@ main {
             border-radius: 1.6875em;
             width: 90vw;
 
-            &.sticky {
-                position: fixed;
-                display: block;
-                top: 5vh;
-                left: 25vw;
-                width: 60vw;
-                z-index: 250;
+            // &.sticky {
+            //     position: fixed;
+            //     display: block;
+            //     top: 5vh;
+            //     left: 25vw;
+            //     width: 60vw;
+            //     z-index: 250;
 
-                .containerInputIcons {
-                    .inputTextSearch {
-                        width: 42vw;
-                        border: none;
-                        font-size: 0.8em;
-                    }
-                }    
-            }   
+            //     .containerInputIcons {
+            //         .inputTextSearch {
+            //             width: 42vw;
+            //             border: none;
+            //             font-size: 0.8em;
+            //         }
+            //     }    
+            // }   
             
             .containerInputIcons {
                 display: flex;
@@ -325,7 +323,6 @@ main {
                         width: 3vw;
                         height: 3vw;
                         color: $c-contrast;
-                        background: $c-contrast;   
                         opacity: 0.7; 
                         padding: 1em;
                     }
@@ -358,7 +355,8 @@ main {
 @media screen and (min-width: 768px) {
     main {
         .home {
-            padding: 2em 0;
+            margin-top: 6vh;
+            padding: 1em 0 2em 0em;
     
             .titleprincipal {
                 margin-top: 2.5em;
@@ -367,6 +365,8 @@ main {
             }
     
             .imgHome {
+                padding: 0.8em;
+
                 img {
                     width: 51.99vw;
                     height: 37.7vh;
@@ -374,39 +374,17 @@ main {
             }
     
             .containerSearch {
-                width: 63.2vw;
+                margin: -5vh;
+                width: 68vw;
                 height: max-content;
-    
-                &.sticky {
-                   
-    
-                    .containerInputIcons {
-                        .inputTextSearch {
-                           
-                        }
-                    }    
-                }   
-                
-                .containerInputIcons {
-                   
-                    .inputTextSearch {
-                    }
-        
-                    
-                    .search {
-                        
-                    }
-    
-                    .cross {
-                       
-                    }
-                }
     
                 .lineSearchSuggestions {
                     width: 59vw;
                 }
     
                 .containerAutocomplete {
+                    width: 65vw;
+
                     .itemSuggestions {
                         width: max-content;
                     }
@@ -414,14 +392,18 @@ main {
             }
     
             .containerTrending {
-                padding: 3em 0 ;
+                margin-top: 5vh;
+                padding: 1em 0 ;
 
                 .trending {
                     font-size: 1.15em;
                 }
-        
-                .trendigTopics {
-                    font-size: 1em;
+                
+                .containerTrendingTopics { 
+                    flex-direction: row;
+                    .trendigTopics {
+                        font-size: 1em;
+                    }
                 }
             }
     
@@ -439,7 +421,6 @@ main {
             .containerGifsSearch {
                 width: 85vw;
                 grid-template: repeat(3, 1fr) / repeat(4, 1fr);
-              
 
                 .container-img-searchGifos {
                     display: flex;
@@ -572,93 +553,44 @@ main {
                 
                 
             }
-
-            // .show {
-            //     display: none; 
-            //     flex-direction: column;
-            //     align-items: center;
-            //     justify-content: center;
-            //     position: fixed; 
-            //     z-index: 1;
-            //     left: 0;
-            //     top: 6.3em;
-            //     padding: 0.5em 5em;
-            //     width: 100%; 
-            //     overflow: auto; 
-            //     background-color: rgba(255, 255, 255, 0.842); 
-
-            //     .close-btn-modalExpand {
-            //         align-self: flex-end;
-            //         width: 3vw;
-            //         height: 3vw;
-            //         color: $c-contrast;
-            //         background: $c-background;
-            //         opacity: 0.7;
-            //         padding: 0.35em;
-            //         border-radius: 0.375em;
-            //     }
-
-            //     .img-expand {
-            //         padding: 0.5em;
-            //         width: 35vw;
-            //         height: 35vw;
-
-            //         img {
-            //             width: 100%;
-            //             height: 100%;
-            //         }
-            //     }
-
-            //     .constainerIcons {
-            //         align-self: flex-end;
-            //         display: flex;
-
-            //         a {
-            //             padding: 0.2em;
-    
-            //             .fa-heart, .fa-download, .fa-expand-alt {
-            //                 width: 3vw;
-            //                 height: 3vw;
-            //                 color: $c-contrast;
-            //                 background: $c-background;
-            //                 opacity: 0.7;
-            //                 padding: 0.2em;
-            //                 border-radius: 0.375em;
-    
-            //                 &:hover {
-            //                     opacity: 1;
-            //                 }
-            //             }
-            //         }
-            //     }
-
-            //     .textCardimg, .titleCardimg {
-            //         align-self: flex-start;
-            //         color: $c-blacktexts;
-            //     }
-
-            //     .textCardimg {
-            //         font-size: 0.9em;
-            //         width: max-content;
-            //     }
-
-            //     .titleCardimg {
-            //         padding: 0.3em 0 0 0 ;
-            //         font-family: $blodtext-font;
-            //         font-size: 1em;
-            //         width: 22vw;
-            //         text-align: left;
-            //     }
-            // }    
     
             .btnSeeMoreGifos {
                 width: 15vw;
                 margin: 2em 0;
+
+                &:hover {
+                    background-color: $c-whitetexts;
+                }
+            }
+
+            .show {
+                .img-expand {
+                    padding: 0.5em;
+                    width: 60vw;
+                    height: 45vw;
+                }
+    
+                .constainerIcons {
+                    a {
+                        .fa-heart, .fa-download {
+                            width: 3.5vw;
+                            height: 3.5vw;
+                            color: $c-contrast;
+                            border: 0.1em solid $c-placeholdersactives;
+                            opacity: 0.7; 
+                            padding: 0.2em;
+                            border-radius: 0.375em;
+
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
-
 
 /* Tablets en horizonal y escritorios normales
     ------------------------------------------------------------------------- */
@@ -668,53 +600,28 @@ main {
             padding: 3em 0;
     
             .titleprincipal {
-                // margin-top: 1em;
-                width: 45vw;
+                width: 60vw;
             }
     
             .imgHome {
-                // margin-bottom: 1.5em;
-                // width: 23.1vw;
-                // height: 25.8vh;
-                
                 img {
-                    width: 23.1vw;
-                    height: 25.8vh;
+                    width: 39vw;
+                    height: 32.2vh;
                 }
             }
     
             .containerSearch {
-                width: 37.9vw;
+                margin-top: -2.5vh;                
+                width: 54vw;
                 height: max-content;
     
-                &.sticky {
-                   
-    
-                    .containerInputIcons {
-                        .inputTextSearch {
-                           
-                        }
-                    }    
-                }   
-                
-                .containerInputIcons {
-                   
-                    .inputTextSearch {
-                    }
-        
-                    
-                    .search {
-                        
-                    }
-    
-                    .cross {
-                       
-                    }
-                }
-    
                 .lineSearchSuggestions {
-                    width: 35vw;
+                    width: 50vw;
                 }
+
+                .containerAutocomplete {
+                    width: 52.5vw;
+                }    
             }
     
             .containerTitleSearch {
@@ -725,7 +632,9 @@ main {
     
             .containerGifsSearch {
                 .fa-heart, .fa-download, .fa-expand-alt {
-                    line-height: 1.9em;
+                    width: 2.5vw;
+                    height: 2.5vw;
+                    padding: 0.2em;
                 }
     
                 .searchEmpty {
@@ -735,6 +644,22 @@ main {
     
             .btnSeeMoreGifos {
                 width: 10vw;
+            }
+
+            .show {
+                .img-expand {
+                    width: 45vw;
+                    height: 30vw;
+                }
+    
+                .constainerIcons {
+                    a {
+                        .fa-heart, .fa-download {
+                            width: 2.5vw;
+                            height: 2.5vw;
+                        }
+                    }
+                }
             }
         }
     }
@@ -745,53 +670,40 @@ main {
 @media screen and (min-width: 1200px) {
     main {
         .home {
+
             .titleprincipal {
-                margin-top: 4em;
-                width: 38vw;
-            }
-    
-            .imgHome {
-                margin-bottom: 1em;
+                margin-top: 1em;
+                width: 48vw;
             }
     
             .containerSearch {
-                &.sticky {
-                    .containerInputIcons {
-                        .inputTextSearch {
-                           
-                        }
-                    }    
-                }   
-                
-                .containerInputIcons {
-                   
-                    .inputTextSearch {
-                    }
-        
-                    
-                    .search {
-                        
-                    }
-    
-                    .cross {
-                       
-                    }
-                }
+                margin-top: -2.5vh;  
+                width: 48vw;
             }
     
             .containerGifsSearch {
                 .fa-heart, .fa-download, .fa-expand-alt {
-                    line-height: 1.75em;
-                    font-size: 1.5em;
-                }
-    
-                .searchEmpty {
-                    grid-area: 1 / 2 / 5 / 4;
+                    width: 0.5vw;
+                    height: 0.5vw;
+                    padding: 0.5em;
+                    font-size: 1.2em;
                 }
             }
+
+            .show {
+                .img-expand {
+                    width: 40vw;
+                    height: 25vw;
+                }
     
-            .btnSeeMoreGifos {
-                width: 10vw;
+                .constainerIcons {
+                    a {
+                        .fa-heart, .fa-download {
+                            width: 2vw;
+                            height: 2vw;
+                        }
+                    }
+                }
             }
         }
     }

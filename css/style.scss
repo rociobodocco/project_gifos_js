@@ -55,7 +55,11 @@
         color: $c-whitetexts;
     } 
 
-    .home .containerTrending .containerTrendingTopics .trendigTopics {
+    main .home .containerTrending .containerTrendingTopics .firstContainerTrendTopics .trendigTopics {
+        color: $c-whitetexts;
+    }
+
+    main .home .containerTrending .containerTrendingTopics .secondContainerTrendTopics .trendigTopics {
         color: $c-whitetexts;
     }
 
@@ -99,6 +103,10 @@
         background-color: $c-background;
     }
 
+    main .misgifosSection .show .constainerIcons a .fa-heart {
+        color: $c-whitetexts;
+    }
+
     main .misgifosSection .show .constainerIcons a .fa-trash-alt {
         color: $c-whitetexts;
     }
@@ -127,7 +135,7 @@
         color: $c-whitetexts;
     }
 
-    .home .btnSeeMoreGifos {
+    main .home .btnSeeMoreGifos {
         color: $c-whitetexts;
         border: 0.1em solid $c-whitetexts;
     }
@@ -202,14 +210,109 @@
         border-bottom: 0.3125em solid $c-contrast;
     }
 
-    body footer .social-footer .containerRedes .fa-facebook-f {
-        color: $c-whitetexts;
-    }
-    footer .social-footer .containerRedes .fa-twitter {
-        color: $c-whitetexts;
-    }
-    footer .social-footer .containerRedes .fa-instagram {
-        color: $c-whitetexts;
+    /* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+    @media screen and (min-width: 768px) {
+        header nav ul li {
+            background-color:  $c-background;
+        }
+
+        header nav ul li a {
+            background-color:  $c-background;
+        }
+
+        main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .hoverIcons a {
+            background: $c-hovercardsgifs;
+        }
+
+        main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .textCardimg {
+            background: $c-hovercardsgifs;
+        }
+        
+        main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .titleCardimg {
+            background: $c-hovercardsgifs;
+        }
+
+        main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .hoverIcons {
+            background: $c-hovercardsgifs;
+        }
+
+        main .home .btnSeeMoreGifos:hover {
+            color: $c-contrast; 
+        }
+
+        main .trendingSection .gifosTrendingGallery .leftBtn  {
+            background-color: $c-grey-backtrending;
+        }
+
+        main .trendingSection .gifosTrendingGallery .rightBtn  {
+            background-color: $c-grey-backtrending;
+        }
+
+        main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a {
+            background: $c-hovercardsgifs;
+        }
+
+        main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .textCardimg {
+            background: $c-hovercardsgifs;
+        }
+
+        main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .titleCardimg {
+            background: $c-hovercardsgifs;
+        }
+
+        main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .hoverIcons a {
+            background: $c-hovercardsgifs;
+        }
+
+        main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .textCardimg {
+            background: $c-hovercardsgifs;
+        }
+
+        main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .titleCardimg {
+            background: $c-hovercardsgifs;
+        }
+
+        main .contairer-create .button-cam:hover {
+            color: $c-contrast;
+            background-color: $c-whitetexts;
+        }
+        main .contairer-create .button-record:hover {
+            color: $c-contrast;
+            background-color: $c-whitetexts;
+        }
+        main .contairer-create .button-stopRecord:hover {
+            color: $c-contrast;
+            background-color: $c-whitetexts;
+        }
+        main .contairer-create .button-uploadRecord:hover {
+            color: $c-contrast;
+            background-color: $c-whitetexts;
+        }
+
+        main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a {
+            background: $c-hovercardsgifs;
+        }
+
+        main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .textCardimg {
+            background: $c-hovercardsgifs;
+        }
+
+        main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .titleCardimg {
+            background: $c-hovercardsgifs;
+        }
+
+        footer .social-footer .containerRedes .fa-facebook-f:hover {
+            color: $c-whitetexts;
+        }
+
+        footer .social-footer .containerRedes .fa-twitter:hover {
+            color: $c-whitetexts;
+        }
+
+        footer .social-footer .containerRedes .fa-instagram:hover {
+            color: $c-whitetexts;
+        }
     }
 }
 

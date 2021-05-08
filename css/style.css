@@ -6,116 +6,172 @@
   max-width: 100vw;
   scroll-behavior: smooth; }
 
-.night-mode * {
-  background-color: #37383c;
-  color: #fffff1; }
-.night-mode header {
-  border-top: 0.3125em solid #000000; }
-.night-mode .fa-plus, .night-mode .menusearch {
-  border: 0.1em solid #fffff1; }
-.night-mode .fa-plus:hover {
-  background: #fffff1;
-  color: #37383c; }
-.night-mode header nav input:checked ~ ul {
-  background-color: #000000; }
-.night-mode header nav ul li {
-  background-color: #000000; }
-.night-mode header nav ul li a {
-  background-color: #000000; }
-.night-mode .fa-facebook-f, .night-mode .fa-twitter, .night-mode .fa-instagram:hover {
-  color: #fffff1; }
-.night-mode .home .containerSearch {
-  border: 0.1em solid #fffff1; }
-.night-mode .home .containerSearch .containerInputIcons .inputTextSearch {
-  color: #fffff1; }
-.night-mode .home .containerTrending .trending {
-  color: #fffff1; }
-.night-mode .home .containerTrending .containerTrendingTopics .trendigTopics {
-  color: #fffff1; }
-.night-mode main .home .show {
-  background-color: #37383c; }
-.night-mode main .favoriteSection .show {
-  background-color: #37383c; }
-.night-mode main .misgifosSection .show {
-  background-color: #37383c; }
-.night-mode main .home .show .containerIcons {
-  background-color: #37383c; }
-.night-mode main .home .show .constainerIcons a .fa-heart {
-  color: #fffff1; }
-.night-mode main .home .show .constainerIcons a .fa-download {
-  color: #fffff1; }
-.night-mode main .favoriteSection .show .containerIcons {
-  background-color: #37383c; }
-.night-mode main .favoriteSection .show .constainerIcons a .fa-heart {
-  color: #fffff1; }
-.night-mode main .favoriteSection .show .constainerIcons a .fa-download {
-  color: #fffff1; }
-.night-mode main .misgifosSection .show .containerIcons {
-  background-color: #37383c; }
-.night-mode main .misgifosSection .show .constainerIcons a .fa-trash-alt {
-  color: #fffff1; }
-.night-mode main .misgifosSection .show .constainerIcons a .fa-download {
-  color: #fffff1; }
-.night-mode main .home .show .textCardimg {
-  color: #fffff1; }
-.night-mode main .home .show .titleCardimg {
-  color: #fffff1; }
-.night-mode main .home .show .close-btn-modalExpand {
-  color: #fffff1; }
-.night-mode main .favoriteSection .show .close-btn-modalExpand {
-  color: #fffff1; }
-.night-mode main .misgifosSection .show .close-btn-modalExpand {
-  color: #fffff1; }
-.night-mode .home .btnSeeMoreGifos {
-  color: #fffff1;
-  border: 0.1em solid #fffff1; }
-.night-mode main .trendingSection {
-  background-color: #222326; }
-.night-mode main .trendingSection .containerSubtitle {
-  background-color: #222326; }
-.night-mode main .trendingSection .titleTrendingSection {
-  background-color: #222326; }
-.night-mode main .trendingSection .containerSubtitle .subtitleTrendingSection1 {
-  background-color: #222326; }
-.night-mode main .trendingSection .containerSubtitle .subtitleTrendingSection2 {
-  background-color: #222326; }
-.night-mode main .trendingSection .gifosTrendingGallery {
-  background-color: #222326; }
-.night-mode main .trendingSection .container-slider {
-  background-color: #222326; }
-.night-mode main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .imgnewgifos {
-  background-color: #222326; }
-.night-mode main .contairer-create .container-infoCam .info-cam .bot1 {
-  color: #fffff1;
-  border: 0.05em solid #fffff1; }
-.night-mode main .contairer-create .container-infoCam .info-cam .bot2 {
-  color: #fffff1;
-  border: 0.05em solid #fffff1; }
-.night-mode main .contairer-create .container-infoCam .info-cam .bot3 {
-  color: #fffff1;
-  border: 0.05em solid #fffff1; }
-.night-mode main .contairer-create .container-infoCam .btnRepeatRecord {
-  color: #fffff1; }
-.night-mode main .contairer-create .button-cam {
-  color: #fffff1;
-  border: 0.1em solid #fffff1; }
-.night-mode main .contairer-create .button-record {
-  color: #fffff1;
-  border: 0.1em solid #fffff1; }
-.night-mode main .contairer-create .button-stopRecord {
-  color: #fffff1;
-  border: 0.1em solid #fffff1; }
-.night-mode main .contairer-create .button-uploadRecord {
-  color: #fffff1;
-  border: 0.1em solid #fffff1; }
-.night-mode footer {
-  border-bottom: 0.3125em solid #000000; }
-.night-mode body footer .social-footer .containerRedes .fa-facebook-f {
-  color: #fffff1; }
-.night-mode footer .social-footer .containerRedes .fa-twitter {
-  color: #fffff1; }
-.night-mode footer .social-footer .containerRedes .fa-instagram {
-  color: #fffff1; }
+.night-mode {
+ /* Móviles en horizontal o tablets en vertical
+------------------------------------------------------------------------- */ }
+  .night-mode * {
+    background-color: #37383c;
+    color: #fffff1; }
+  .night-mode header {
+    border-top: 0.3125em solid #000000; }
+  .night-mode .fa-plus, .night-mode .menusearch {
+    border: 0.1em solid #fffff1; }
+  .night-mode .fa-plus:hover {
+    background: #fffff1;
+    color: #37383c; }
+  .night-mode header nav input:checked ~ ul {
+    background-color: #000000; }
+  .night-mode header nav ul li {
+    background-color: #000000; }
+  .night-mode header nav ul li a {
+    background-color: #000000; }
+  .night-mode .fa-facebook-f, .night-mode .fa-twitter, .night-mode .fa-instagram:hover {
+    color: #fffff1; }
+  .night-mode .home .containerSearch {
+    border: 0.1em solid #fffff1; }
+  .night-mode .home .containerSearch .containerInputIcons .inputTextSearch {
+    color: #fffff1; }
+  .night-mode .home .containerTrending .trending {
+    color: #fffff1; }
+  .night-mode main .home .containerTrending .containerTrendingTopics .firstContainerTrendTopics .trendigTopics {
+    color: #fffff1; }
+  .night-mode main .home .containerTrending .containerTrendingTopics .secondContainerTrendTopics .trendigTopics {
+    color: #fffff1; }
+  .night-mode main .home .show {
+    background-color: #37383c; }
+  .night-mode main .favoriteSection .show {
+    background-color: #37383c; }
+  .night-mode main .misgifosSection .show {
+    background-color: #37383c; }
+  .night-mode main .home .show .containerIcons {
+    background-color: #37383c; }
+  .night-mode main .home .show .constainerIcons a .fa-heart {
+    color: #fffff1; }
+  .night-mode main .home .show .constainerIcons a .fa-download {
+    color: #fffff1; }
+  .night-mode main .favoriteSection .show .containerIcons {
+    background-color: #37383c; }
+  .night-mode main .favoriteSection .show .constainerIcons a .fa-heart {
+    color: #fffff1; }
+  .night-mode main .favoriteSection .show .constainerIcons a .fa-download {
+    color: #fffff1; }
+  .night-mode main .misgifosSection .show .containerIcons {
+    background-color: #37383c; }
+  .night-mode main .misgifosSection .show .constainerIcons a .fa-heart {
+    color: #fffff1; }
+  .night-mode main .misgifosSection .show .constainerIcons a .fa-trash-alt {
+    color: #fffff1; }
+  .night-mode main .misgifosSection .show .constainerIcons a .fa-download {
+    color: #fffff1; }
+  .night-mode main .home .show .textCardimg {
+    color: #fffff1; }
+  .night-mode main .home .show .titleCardimg {
+    color: #fffff1; }
+  .night-mode main .home .show .close-btn-modalExpand {
+    color: #fffff1; }
+  .night-mode main .favoriteSection .show .close-btn-modalExpand {
+    color: #fffff1; }
+  .night-mode main .misgifosSection .show .close-btn-modalExpand {
+    color: #fffff1; }
+  .night-mode main .home .btnSeeMoreGifos {
+    color: #fffff1;
+    border: 0.1em solid #fffff1; }
+  .night-mode main .trendingSection {
+    background-color: #222326; }
+  .night-mode main .trendingSection .containerSubtitle {
+    background-color: #222326; }
+  .night-mode main .trendingSection .titleTrendingSection {
+    background-color: #222326; }
+  .night-mode main .trendingSection .containerSubtitle .subtitleTrendingSection1 {
+    background-color: #222326; }
+  .night-mode main .trendingSection .containerSubtitle .subtitleTrendingSection2 {
+    background-color: #222326; }
+  .night-mode main .trendingSection .gifosTrendingGallery {
+    background-color: #222326; }
+  .night-mode main .trendingSection .container-slider {
+    background-color: #222326; }
+  .night-mode main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .imgnewgifos {
+    background-color: #222326; }
+  .night-mode main .contairer-create .container-infoCam .info-cam .bot1 {
+    color: #fffff1;
+    border: 0.05em solid #fffff1; }
+  .night-mode main .contairer-create .container-infoCam .info-cam .bot2 {
+    color: #fffff1;
+    border: 0.05em solid #fffff1; }
+  .night-mode main .contairer-create .container-infoCam .info-cam .bot3 {
+    color: #fffff1;
+    border: 0.05em solid #fffff1; }
+  .night-mode main .contairer-create .container-infoCam .btnRepeatRecord {
+    color: #fffff1; }
+  .night-mode main .contairer-create .button-cam {
+    color: #fffff1;
+    border: 0.1em solid #fffff1; }
+  .night-mode main .contairer-create .button-record {
+    color: #fffff1;
+    border: 0.1em solid #fffff1; }
+  .night-mode main .contairer-create .button-stopRecord {
+    color: #fffff1;
+    border: 0.1em solid #fffff1; }
+  .night-mode main .contairer-create .button-uploadRecord {
+    color: #fffff1;
+    border: 0.1em solid #fffff1; }
+  .night-mode footer {
+    border-bottom: 0.3125em solid #000000; }
+  @media screen and (min-width: 768px) {
+    .night-mode header nav ul li {
+      background-color: #37383c; }
+    .night-mode header nav ul li a {
+      background-color: #37383c; }
+    .night-mode main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .hoverIcons a {
+      background: #572EE5; }
+    .night-mode main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .textCardimg {
+      background: #572EE5; }
+    .night-mode main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .titleCardimg {
+      background: #572EE5; }
+    .night-mode main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .hoverIcons {
+      background: #572EE5; }
+    .night-mode main .home .btnSeeMoreGifos:hover {
+      color: #000000; }
+    .night-mode main .trendingSection .gifosTrendingGallery .leftBtn {
+      background-color: #222326; }
+    .night-mode main .trendingSection .gifosTrendingGallery .rightBtn {
+      background-color: #222326; }
+    .night-mode main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a {
+      background: #572EE5; }
+    .night-mode main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .textCardimg {
+      background: #572EE5; }
+    .night-mode main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .titleCardimg {
+      background: #572EE5; }
+    .night-mode main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .hoverIcons a {
+      background: #572EE5; }
+    .night-mode main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .textCardimg {
+      background: #572EE5; }
+    .night-mode main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .titleCardimg {
+      background: #572EE5; }
+    .night-mode main .contairer-create .button-cam:hover {
+      color: #000000;
+      background-color: #fffff1; }
+    .night-mode main .contairer-create .button-record:hover {
+      color: #000000;
+      background-color: #fffff1; }
+    .night-mode main .contairer-create .button-stopRecord:hover {
+      color: #000000;
+      background-color: #fffff1; }
+    .night-mode main .contairer-create .button-uploadRecord:hover {
+      color: #000000;
+      background-color: #fffff1; }
+    .night-mode main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a {
+      background: #572EE5; }
+    .night-mode main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .textCardimg {
+      background: #572EE5; }
+    .night-mode main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .titleCardimg {
+      background: #572EE5; }
+    .night-mode footer .social-footer .containerRedes .fa-facebook-f:hover {
+      color: #fffff1; }
+    .night-mode footer .social-footer .containerRedes .fa-twitter:hover {
+      color: #fffff1; }
+    .night-mode footer .social-footer .containerRedes .fa-instagram:hover {
+      color: #fffff1; } }
 
 body {
   /* Fonts ======================================================================= */
@@ -129,6 +185,8 @@ body {
      ------------------------------------------------------------------------- */
   /* Tablets en horizonal y escritorios normales   
       ------------------------------------------------------------------------- */
+  /* Escritorios muy anchos
+     ------------------------------------------------------------------------- */
   /* ITEMS / TITLE / MSJS 1º & CAM / TITLE SECTIONS / BOT VER MÁS */
   /* SUB TEXT DOWN TRENDING SECTION 1 */
   /* SEARCH / TEXT CARDS / NUMEROS PAG / SUB TITLES / FOOTER */
@@ -232,7 +290,8 @@ body {
             color: #9CAFC3; }
   @media screen and (min-width: 768px) {
     body header {
-      position: fixed; }
+      position: fixed;
+      height: 18vh; }
       body header nav .mh, body header nav .x {
         display: none; }
       body header nav ul {
@@ -267,10 +326,7 @@ body {
               color: #9CAFC3;
               text-decoration: none; }
             body header nav ul li a .fa-plus, body header nav ul li a .menusearch {
-              width: 100%;
-              padding: 1em;
-              border-radius: 100%;
-              border: 0.1em solid #572EE5; }
+              width: 100%; }
             body header nav ul li a .fa-plus:hover {
               background: #572EE5;
               color: #fffff1; }
@@ -286,6 +342,9 @@ body {
   @media screen and (min-width: 1024px) {
     body header {
       padding: 0.75em 6em; } }
+  @media screen and (min-width: 1200px) {
+    body header {
+      height: 15vh; } }
   body h2, body h3, body h4 {
     font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     letter-spacing: 0;
@@ -320,17 +379,6 @@ body {
       border: 0.1em solid #572EE5;
       border-radius: 1.6875em;
       width: 90vw; }
-      body main .home .containerSearch.sticky {
-        position: fixed;
-        display: block;
-        top: 5vh;
-        left: 25vw;
-        width: 60vw;
-        z-index: 250; }
-        body main .home .containerSearch.sticky .containerInputIcons .inputTextSearch {
-          width: 42vw;
-          border: none;
-          font-size: 0.8em; }
       body main .home .containerSearch .containerInputIcons {
         display: flex;
         justify-content: space-between;
@@ -506,7 +554,6 @@ body {
             width: 3vw;
             height: 3vw;
             color: #572EE5;
-            background: #572EE5;
             opacity: 0.7;
             padding: 1em; }
       body main .home .show .textCardimg, body main .home .show .titleCardimg {
@@ -523,27 +570,36 @@ body {
         text-align: left; }
   @media screen and (min-width: 768px) {
     body main .home {
-      padding: 2em 0; }
+      margin-top: 6vh;
+      padding: 1em 0 2em 0em; }
       body main .home .titleprincipal {
         margin-top: 2.5em;
         width: 78vw;
         font-size: 2.189em; }
-      body main .home .imgHome img {
-        width: 51.99vw;
-        height: 37.7vh; }
+      body main .home .imgHome {
+        padding: 0.8em; }
+        body main .home .imgHome img {
+          width: 51.99vw;
+          height: 37.7vh; }
       body main .home .containerSearch {
-        width: 63.2vw;
+        margin: -5vh;
+        width: 68vw;
         height: max-content; }
         body main .home .containerSearch .lineSearchSuggestions {
           width: 59vw; }
-        body main .home .containerSearch .containerAutocomplete .itemSuggestions {
-          width: max-content; }
+        body main .home .containerSearch .containerAutocomplete {
+          width: 65vw; }
+          body main .home .containerSearch .containerAutocomplete .itemSuggestions {
+            width: max-content; }
       body main .home .containerTrending {
-        padding: 3em 0; }
+        margin-top: 5vh;
+        padding: 1em 0; }
         body main .home .containerTrending .trending {
           font-size: 1.15em; }
-        body main .home .containerTrending .trendigTopics {
-          font-size: 1em; }
+        body main .home .containerTrending .containerTrendingTopics {
+          flex-direction: row; }
+          body main .home .containerTrending .containerTrendingTopics .trendigTopics {
+            font-size: 1em; }
       body main .home .containerTitleSearch .lineSearch {
         width: 40vw; }
       body main .home .containerTitleSearch .newtitleSearch {
@@ -638,54 +694,88 @@ body {
             font-size: 1.38em; }
       body main .home .btnSeeMoreGifos {
         width: 15vw;
-        margin: 2em 0; } }
+        margin: 2em 0; }
+        body main .home .btnSeeMoreGifos:hover {
+          background-color: #fffff1; }
+      body main .home .show .img-expand {
+        padding: 0.5em;
+        width: 60vw;
+        height: 45vw; }
+      body main .home .show .constainerIcons a .fa-heart, body main .home .show .constainerIcons a .fa-download {
+        width: 3.5vw;
+        height: 3.5vw;
+        color: #572EE5;
+        border: 0.1em solid #9CAFC3;
+        opacity: 0.7;
+        padding: 0.2em;
+        border-radius: 0.375em; }
+        body main .home .show .constainerIcons a .fa-heart:hover, body main .home .show .constainerIcons a .fa-download:hover {
+          opacity: 1; } }
   @media screen and (min-width: 1024px) {
     body main .home {
       padding: 3em 0; }
       body main .home .titleprincipal {
-        width: 45vw; }
+        width: 60vw; }
       body main .home .imgHome img {
-        width: 23.1vw;
-        height: 25.8vh; }
+        width: 39vw;
+        height: 32.2vh; }
       body main .home .containerSearch {
-        width: 37.9vw;
+        margin-top: -2.5vh;
+        width: 54vw;
         height: max-content; }
         body main .home .containerSearch .lineSearchSuggestions {
-          width: 35vw; }
+          width: 50vw; }
+        body main .home .containerSearch .containerAutocomplete {
+          width: 52.5vw; }
       body main .home .containerTitleSearch .lineSearch {
         width: 30vw; }
       body main .home .containerGifsSearch .fa-heart, body main .home .containerGifsSearch .fa-download, body main .home .containerGifsSearch .fa-expand-alt {
-        line-height: 1.9em; }
+        width: 2.5vw;
+        height: 2.5vw;
+        padding: 0.2em; }
       body main .home .containerGifsSearch .searchEmpty {
         grid-area: 1 / 2 / 5 / 4; }
       body main .home .btnSeeMoreGifos {
-        width: 10vw; } }
+        width: 10vw; }
+      body main .home .show .img-expand {
+        width: 45vw;
+        height: 30vw; }
+      body main .home .show .constainerIcons a .fa-heart, body main .home .show .constainerIcons a .fa-download {
+        width: 2.5vw;
+        height: 2.5vw; } }
   @media screen and (min-width: 1200px) {
     body main .home .titleprincipal {
-      margin-top: 4em;
-      width: 38vw; }
-    body main .home .imgHome {
-      margin-bottom: 1em; }
+      margin-top: 1em;
+      width: 48vw; }
+    body main .home .containerSearch {
+      margin-top: -2.5vh;
+      width: 48vw; }
     body main .home .containerGifsSearch .fa-heart, body main .home .containerGifsSearch .fa-download, body main .home .containerGifsSearch .fa-expand-alt {
-      line-height: 1.75em;
-      font-size: 1.5em; }
-    body main .home .containerGifsSearch .searchEmpty {
-      grid-area: 1 / 2 / 5 / 4; }
-    body main .home .btnSeeMoreGifos {
-      width: 10vw; } }
+      width: 0.5vw;
+      height: 0.5vw;
+      padding: 0.5em;
+      font-size: 1.2em; }
+    body main .home .show .img-expand {
+      width: 40vw;
+      height: 25vw; }
+    body main .home .show .constainerIcons a .fa-heart, body main .home .show .constainerIcons a .fa-download {
+      width: 2vw;
+      height: 2vw; } }
   body main .favoriteSection {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 16vh;
     padding: 1em 0 2em 0em; }
+    body main .favoriteSection .containerIconFavNone {
+      padding: 1em 0 0 0; }
+    body main .favoriteSection .textFavSection {
+      font-size: 1.25em; }
     body main .favoriteSection .emptyFavoritesSection {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 1em 0 2em 0em; }
-      body main .favoriteSection .emptyFavoritesSection .textFavSection {
-        font-size: 1.25em; }
       body main .favoriteSection .emptyFavoritesSection .containerImgFavNone .imgFav {
         padding: 1em 0 1em 0em; }
       body main .favoriteSection .emptyFavoritesSection .textFavNone {
@@ -705,6 +795,16 @@ body {
         padding: 0.5em 0; }
       body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails {
         display: none; }
+    body main .favoriteSection .btnSeeMoreGifos {
+      width: 50vw;
+      padding: 1em;
+      margin: 1em 0;
+      font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 0.815em;
+      color: #572EE5;
+      border: 0.1em solid #572EE5;
+      border-radius: 1.6875em;
+      background: none; }
     body main .favoriteSection .btnSeeMoreGifos {
       width: 50vw;
       padding: 1em;
@@ -771,22 +871,12 @@ body {
         text-align: left; }
   @media screen and (min-width: 768px) {
     body main .favoriteSection {
-      margin-top: 19vh;
+      margin-top: 17vh;
       padding: 1em 0 5em 0em; }
-      body main .favoriteSection .emptyFavoritesSection {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1em 0 2em 0em; }
-        body main .favoriteSection .emptyFavoritesSection .textFavSection {
-          font-size: 1.25em; }
-        body main .favoriteSection .emptyFavoritesSection .containerImgFavNone .imgFav {
-          padding: 3em 0 1em 0em; }
-        body main .favoriteSection .emptyFavoritesSection .textFavNone {
-          padding: 1em;
-          font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-          color: #5ED7C6;
-          font-size: 1.38em; }
+      body main .favoriteSection .emptyFavoritesSection .containerImgFavNone .imgFav {
+        padding: 3em 0 1em 0em; }
+      body main .favoriteSection .emptyFavoritesSection .textFavNone {
+        width: 67vw; }
       body main .favoriteSection .containerFavorites {
         display: grid;
         width: 85vw;
@@ -801,7 +891,7 @@ body {
             opacity: 0.6; }
           body main .favoriteSection .containerFavorites .container-img-favGifos:hover .containerDetails .content-details {
             top: 50%;
-            opacity: 1; }
+            opacity: 0.6; }
           body main .favoriteSection .containerFavorites .container-img-favGifos .imgFavoritesGifos {
             justify-self: stretch;
             width: 20vw;
@@ -810,7 +900,7 @@ body {
           body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails {
             display: block; }
             body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-overlay {
-              background: #572EE5;
+              background-color: #572EE5;
               position: absolute;
               top: 0;
               bottom: 0;
@@ -818,6 +908,7 @@ body {
               opacity: 0;
               transition: all 0.4s ease-in-out 0s; }
             body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details {
+              background-color: #572EE5;
               display: grid;
               grid-template: repeat(4, 1fr)/repeat(3, 1fr);
               position: absolute;
@@ -861,26 +952,60 @@ body {
             body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .fadeIn-top {
               top: 50%; }
             body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .fadeIn-left {
-              left: 50%; } }
+              left: 50%; }
+      body main .favoriteSection .btnSeeMoreGifos {
+        width: 15vw;
+        margin: 2em 0; }
+        body main .favoriteSection .btnSeeMoreGifos:hover {
+          background-color: #fffff1; }
+      body main .favoriteSection .show .img-expand {
+        width: 60vw;
+        height: 45vw; }
+      body main .favoriteSection .show .constainerIcons a .fa-heart, body main .favoriteSection .show .constainerIcons a .fa-download {
+        width: 3.5vw;
+        height: 3.5vw;
+        color: #572EE5;
+        border: 0.1em solid #9CAFC3;
+        opacity: 0.7;
+        padding: 0.2em;
+        border-radius: 0.375em; }
+        body main .favoriteSection .show .constainerIcons a .fa-heart:hover, body main .favoriteSection .show .constainerIcons a .fa-download:hover {
+          opacity: 1; } }
   @media screen and (min-width: 1024px) {
-    body main .favoriteSection .textFavNone {
-      width: 50%; } }
+    body main .favoriteSection {
+      margin-top: 18vh; }
+      body main .favoriteSection .textFavNone {
+        width: 50%; }
+      body main .favoriteSection .show .img-expand {
+        width: 50vw;
+        height: 35vw; }
+      body main .favoriteSection .show .constainerIcons a .fa-heart, body main .favoriteSection .show .constainerIcons a .fa-download {
+        width: 2.5vw;
+        height: 2.5vw; } }
   @media screen and (min-width: 1200px) {
     body main .favoriteSection .textFavNone {
-      width: 40%; } }
+      width: 40%; }
+    body main .favoriteSection .show .img-expand {
+      width: 40vw;
+      height: 25vw; }
+    body main .favoriteSection .show .constainerIcons a .fa-heart, body main .favoriteSection .show .constainerIcons a .fa-download {
+      width: 2vw;
+      height: 2vw; } }
   body main .misgifosSection {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 16vh;
     padding: 1em 0 2em 0em; }
+    body main .misgifosSection .containerIconMyGifosNone {
+      padding: 1em 0 0 0; }
+    body main .misgifosSection .textMyGIFOSSection {
+      font-size: 1.25em; }
     body main .misgifosSection .emptyMyGifosSection {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 1em 0 2em 0em; }
-      body main .misgifosSection .emptyMyGifosSection .textMyGIFOSSection {
-        font-size: 1.25em; }
       body main .misgifosSection .emptyMyGifosSection .containerImgMyGIFOSNone .imgMyGIFOS {
         padding: 1em 0 1em 0em; }
       body main .misgifosSection .emptyMyGifosSection .textMyGIFOSNone {
@@ -946,7 +1071,7 @@ body {
         body main .misgifosSection .show .constainerIcons a {
           width: max-content;
           padding: 0.2em; }
-          body main .misgifosSection .show .constainerIcons a .fa-trash-alt, body main .misgifosSection .show .constainerIcons a .fa-download {
+          body main .misgifosSection .show .constainerIcons a .fa-heart, body main .misgifosSection .show .constainerIcons a .fa-trash-alt, body main .misgifosSection .show .constainerIcons a .fa-download {
             width: 3vw;
             height: 3vw;
             color: #572EE5;
@@ -966,22 +1091,10 @@ body {
         text-align: left; }
   @media screen and (min-width: 768px) {
     body main .misgifosSection {
-      margin-top: 19vh;
+      margin-top: 17vh;
       padding: 1em 0 5em 0em; }
-      body main .misgifosSection .emptyMyGifosSection {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1em 0 2em 0em; }
-        body main .misgifosSection .emptyMyGifosSection .textFavSection {
-          font-size: 1.25em; }
-        body main .misgifosSection .emptyMyGifosSection .containerIconMyGifosNone .iconimgnewgifos {
-          padding: 3em 0 1em 0em; }
-        body main .misgifosSection .emptyMyGifosSection .textMyGIFOSNone {
-          padding: 1em;
-          font-family: "Montserrat-Bold", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-          color: #5ED7C6;
-          font-size: 1.38em; }
+      body main .misgifosSection .emptyMyGifosSection .containerImgMyGIFOSNone .imgMyGIFOS {
+        padding: 3em 0 1em 0em; }
       body main .misgifosSection .containerMyGifos {
         display: grid;
         width: 85vw;
@@ -996,7 +1109,7 @@ body {
             opacity: 0.6; }
           body main .misgifosSection .containerMyGifos .container-img-mygifos:hover .containerDetails .content-details {
             top: 50%;
-            opacity: 1; }
+            opacity: 0.6; }
           body main .misgifosSection .containerMyGifos .container-img-mygifos .imgmygifos {
             justify-self: stretch;
             width: 20vw;
@@ -1005,7 +1118,7 @@ body {
           body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails {
             display: block; }
             body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-overlay {
-              background: #572EE5;
+              background-color: #572EE5;
               position: absolute;
               top: 0;
               bottom: 0;
@@ -1013,6 +1126,7 @@ body {
               opacity: 0;
               transition: all 0.4s ease-in-out 0s; }
             body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details {
+              background-color: #572EE5;
               display: grid;
               grid-template: repeat(4, 1fr)/repeat(3, 1fr);
               position: absolute;
@@ -1056,7 +1170,48 @@ body {
             body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .fadeIn-top {
               top: 50%; }
             body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .fadeIn-left {
-              left: 50%; } }
+              left: 50%; }
+      body main .misgifosSection .btnSeeMoreGifos {
+        width: 15vw;
+        margin: 2em 0; }
+        body main .misgifosSection .btnSeeMoreGifos:hover {
+          background-color: #fffff1; }
+      body main .misgifosSection .show .img-expand {
+        padding: 0.5em;
+        width: 60vw;
+        height: 45vw; }
+      body main .misgifosSection .show .constainerIcons a .fa-heart, body main .misgifosSection .show .constainerIcons a .fa-trash-alt, body main .misgifosSection .show .constainerIcons a .fa-download {
+        width: 3.5vw;
+        height: 3.5vw;
+        color: #572EE5;
+        border: 0.1em solid #9CAFC3;
+        opacity: 0.7;
+        padding: 0.2em;
+        border-radius: 0.375em; }
+        body main .misgifosSection .show .constainerIcons a .fa-heart:hover, body main .misgifosSection .show .constainerIcons a .fa-trash-alt:hover, body main .misgifosSection .show .constainerIcons a .fa-download:hover {
+          opacity: 1; } }
+  @media screen and (min-width: 1024px) {
+    body main .misgifosSection {
+      margin-top: 18vh; }
+      body main .misgifosSection .hoverIcons a .fa-trash-alt, body main .misgifosSection .hoverIcons a .fa-download, body main .misgifosSection .hoverIcons a .fa-expand-alt {
+        width: 2.5vw;
+        height: 2.5vw;
+        font-size: 0.9em; }
+      body main .misgifosSection .show .img-expand {
+        width: 50vw;
+        height: 35vw; }
+      body main .misgifosSection .show .constainerIcons a .fa-heart, body main .misgifosSection .show .constainerIcons a .fa-trash-alt, body main .misgifosSection .show .constainerIcons a .fa-download {
+        width: 2.5vw;
+        height: 2.5vw; } }
+  @media screen and (min-width: 1200px) {
+    body main .misgifosSection .hoverIcons a .fa-trash-alt, body main .misgifosSection .hoverIcons a .fa-download, body main .misgifosSection .hoverIcons a .fa-expand-alt {
+      font-size: 1.2em; }
+    body main .misgifosSection .show .img-expand {
+      width: 40vw;
+      height: 25vw; }
+    body main .misgifosSection .show .constainerIcons a .fa-heart, body main .misgifosSection .show .constainerIcons a .fa-trash-alt, body main .misgifosSection .show .constainerIcons a .fa-download {
+      width: 2vw;
+      height: 2vw; } }
   body main .contairer-create {
     display: flex;
     flex-direction: column;
@@ -1127,11 +1282,15 @@ body {
         opacity: 0.6;
         background: #572EE5; }
         body main .contairer-create .contairer-cam .uploadGif .loader {
-          color: #5ED7C6; }
+          color: #5ED7C6;
+          background: #572EE5; }
+          body main .contairer-create .contairer-cam .uploadGif .loader img {
+            background: #572EE5; }
         body main .contairer-create .contairer-cam .uploadGif .msjUploadGif {
-          font-size: 1em;
+          font-size: 0.938em;
           width: max-content;
-          color: #FFFFFF; }
+          color: #FFFFFF;
+          background: #572EE5; }
       body main .contairer-create .contairer-cam .uploadGifConfirm {
         display: none;
         grid-area: 1 / 2 / 3 / 3;
@@ -1143,28 +1302,35 @@ body {
         opacity: 0.6;
         background: #572EE5; }
         body main .contairer-create .contairer-cam .uploadGifConfirm .containerIconsUploadOk {
-          align-self: flex-end;
           display: flex;
           width: max-content;
-          padding: 0.1em; }
+          padding: 0.1em;
+          background: #572EE5; }
           body main .contairer-create .contairer-cam .uploadGifConfirm .containerIconsUploadOk a {
             width: max-content;
-            padding: 0.2em; }
+            padding: 0.2em;
+            background: #572EE5; }
             body main .contairer-create .contairer-cam .uploadGifConfirm .containerIconsUploadOk a .btndownloadMyGifoPrev, body main .contairer-create .contairer-cam .uploadGifConfirm .containerIconsUploadOk a .fa-link {
-              width: 10vw;
-              height: 10vw;
-              line-height: 0.5vh;
+              width: 8vw;
+              height: 8vw;
+              line-height: -2vh;
               color: #572EE5;
               background: #FFFFFF;
               opacity: 0.7;
-              padding: 0.2em 0 0 0;
+              padding: 0.2em;
               border-radius: 0.3em; }
         body main .contairer-create .contairer-cam .uploadGifConfirm .check {
-          color: #5ED7C6; }
+          justify-self: center;
+          color: #5ED7C6;
+          background: #572EE5; }
+          body main .contairer-create .contairer-cam .uploadGifConfirm .check img {
+            background: #572EE5; }
         body main .contairer-create .contairer-cam .uploadGifConfirm .msjUploadGifConfirm {
-          font-size: 1em;
+          justify-self: center;
+          font-size: 0.938em;
           width: max-content;
-          color: #FFFFFF; }
+          color: #FFFFFF;
+          background: #572EE5; }
       body main .contairer-create .contairer-cam .corner2 {
         align-self: flex-start;
         justify-self: flex-end;
@@ -1254,8 +1420,8 @@ body {
       animation: rotationY 2s infinite ease; }
   @media screen and (min-width: 768px) {
     body main .contairer-create {
-      margin-top: 21.1vh;
-      padding: 0 0 1em 0; }
+      margin-top: 17vh;
+      padding: 1em 0 5em 0em; }
       body main .contairer-create .filmanimation1 {
         margin-left: 35vw; }
         body main .contairer-create .filmanimation1 .cintas .animationCinta1 {
@@ -1270,34 +1436,40 @@ body {
           width: 15vw; }
         body main .contairer-create .filmanimation1 .cam .animationLight {
           width: 9vw;
-          right: 35.8vw;
-          top: 20.34vw; }
+          right: 35vw;
+          top: 19vw; }
       body main .contairer-create .contairer-cam {
         width: 89.6vw;
         height: 77.5vh;
-        padding: 0.5em;
         margin-left: 0; }
         body main .contairer-create .contairer-cam .corner1 {
           width: 4vw;
           height: 4vw; }
-        body main .contairer-create .contairer-cam .containerVideoCam {
-          grid-area: 1 / 2 / 3 / 3; }
-          body main .contairer-create .contairer-cam .containerVideoCam #video {
-            display: block;
-            width: 50vw;
-            height: 30vw; }
+        body main .contairer-create .contairer-cam .containerVideoCam #video {
+          width: 60vw;
+          height: 60vh; }
+        body main .contairer-create .contairer-cam .preview-gif {
+          width: 60vw;
+          height: 60vh; }
         body main .contairer-create .contairer-cam .uploadGif {
-          display: none;
-          grid-area: 1 / 2 / 3 / 3;
-          width: 50vw;
-          height: 30vw;
-          opacity: 0.6;
-          background: #572EE5;
-          z-index: 96; }
-          body main .contairer-create .contairer-cam .uploadGif .msjUploadGif {
-            font-size: 0.65em;
+          width: 60vw;
+          height: 60vh; }
+        body main .contairer-create .contairer-cam .uploadGifConfirm {
+          width: 60vw;
+          height: 60vh; }
+          body main .contairer-create .contairer-cam .uploadGifConfirm .containerIconsUploadOk a {
             width: max-content;
-            color: #FFFFFF; }
+            padding: 0.2em;
+            background: #572EE5; }
+            body main .contairer-create .contairer-cam .uploadGifConfirm .containerIconsUploadOk a .btndownloadMyGifoPrev, body main .contairer-create .contairer-cam .uploadGifConfirm .containerIconsUploadOk a .fa-link {
+              width: 3vw;
+              height: 3vw;
+              line-height: -2vh;
+              color: #572EE5;
+              background: #FFFFFF;
+              opacity: 0.7;
+              padding: 0.2em;
+              border-radius: 0.3em; }
         body main .contairer-create .contairer-cam .corner2 {
           width: 4vw;
           height: 4vw; }
@@ -1309,9 +1481,9 @@ body {
           height: 4vw; }
         body main .contairer-create .contairer-cam .titleCamSection {
           justify-self: center;
-          width: 35vw; }
+          width: 40vw; }
         body main .contairer-create .contairer-cam .subtitleCamSection {
-          width: 33vw; }
+          width: 50vw; }
       body main .contairer-create .container-infoCam {
         display: flex; }
         body main .contairer-create .container-infoCam .info-cam .bot1, body main .contairer-create .container-infoCam .info-cam .bot2, body main .contairer-create .container-infoCam .info-cam .bot3 {
@@ -1369,6 +1541,31 @@ body {
           body main .contairer-create .containerFlexCreateAnimation .contairer-cam .corner1 {
             width: 2.5vw;
             height: 2.5vw; }
+          body main .contairer-create .containerFlexCreateAnimation .contairer-cam .containerVideoCam #video {
+            width: 52vw;
+            height: 48vh; }
+          body main .contairer-create .containerFlexCreateAnimation .contairer-cam .preview-gif {
+            width: 45vw;
+            height: 45vh; }
+          body main .contairer-create .containerFlexCreateAnimation .contairer-cam .uploadGif {
+            width: 45vw;
+            height: 45vh; }
+          body main .contairer-create .containerFlexCreateAnimation .contairer-cam .uploadGifConfirm {
+            width: 45vw;
+            height: 45vh; }
+            body main .contairer-create .containerFlexCreateAnimation .contairer-cam .uploadGifConfirm .containerIconsUploadOk a {
+              width: max-content;
+              padding: 0.2em;
+              background: #572EE5; }
+              body main .contairer-create .containerFlexCreateAnimation .contairer-cam .uploadGifConfirm .containerIconsUploadOk a .btndownloadMyGifoPrev, body main .contairer-create .containerFlexCreateAnimation .contairer-cam .uploadGifConfirm .containerIconsUploadOk a .fa-link {
+                width: 2.5vw;
+                height: 2.5vw;
+                line-height: -2vh;
+                color: #572EE5;
+                background: #FFFFFF;
+                opacity: 0.7;
+                padding: 0.2em;
+                border-radius: 0.3em; }
           body main .contairer-create .containerFlexCreateAnimation .contairer-cam .corner2 {
             width: 2.5vw;
             height: 2.5vw; }
@@ -1378,10 +1575,24 @@ body {
           body main .contairer-create .containerFlexCreateAnimation .contairer-cam .corner4 {
             width: 2.5vw;
             height: 2.5vw; }
+          body main .contairer-create .containerFlexCreateAnimation .contairer-cam .subtitleCamSection {
+            width: 40vw; }
+      body main .contairer-create .container-infoCam {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 68vw; }
+        body main .contairer-create .container-infoCam .info-cam {
+          width: 30vw; }
+          body main .contairer-create .container-infoCam .info-cam .bot1, body main .contairer-create .container-infoCam .info-cam .bot2, body main .contairer-create .container-infoCam .info-cam .bot3 {
+            width: 3.5vw;
+            height: 3.5vw; }
+        body main .contairer-create .container-infoCam .btnRepeatRecord {
+          justify-content: flex-end; }
       body main .contairer-create .line {
         width: 77.72vw; }
-      body main .contairer-create .button-cam {
-        width: 12.45vw; }
+      body main .contairer-create .button-cam, body main .contairer-create .button-record, body main .contairer-create .button-stopRecord, body main .contairer-create .button-uploadRecord {
+        width: 16.55vw; }
       body main .contairer-create .filmanimation2 {
         position: absolute;
         align-self: flex-end;
@@ -1391,7 +1602,7 @@ body {
           width: 12vw; } }
   @media screen and (min-width: 1200px) {
     body main .contairer-create {
-      margin-top: 22vh; }
+      margin-top: 15vh; }
       body main .contairer-create .containerFlexCreateAnimation .filmanimation1 {
         margin-left: -20vw;
         padding: 0 2em 0 1em; }
@@ -1405,6 +1616,21 @@ body {
       body main .contairer-create .containerFlexCreateAnimation .contairer-cam {
         width: 55vw;
         height: 65vh; }
+        body main .contairer-create .containerFlexCreateAnimation .contairer-cam .containerVideoCam #video {
+          width: 45vw;
+          height: 45vh; }
+        body main .contairer-create .containerFlexCreateAnimation .contairer-cam .preview-gif {
+          width: 45vw;
+          height: 45vh; }
+        body main .contairer-create .containerFlexCreateAnimation .contairer-cam .uploadGif {
+          width: 45vw;
+          height: 45vh; }
+        body main .contairer-create .containerFlexCreateAnimation .contairer-cam .uploadGifConfirm {
+          width: 45vw;
+          height: 45vh; }
+          body main .contairer-create .containerFlexCreateAnimation .contairer-cam .uploadGifConfirm .containerIconsUploadOk a .btndownloadMyGifoPrev, body main .contairer-create .containerFlexCreateAnimation .contairer-cam .uploadGifConfirm .containerIconsUploadOk a .fa-link {
+            width: 2vw;
+            height: 2vw; }
         body main .contairer-create .containerFlexCreateAnimation .contairer-cam .titleCamSection {
           width: 25vw;
           align-self: flex-end; }
@@ -1414,10 +1640,8 @@ body {
           text-align: center;
           padding: 1em; }
       body main .contairer-create .info-cam .bot1, body main .contairer-create .info-cam .bot2, body main .contairer-create .info-cam .bot3 {
-        width: 2vw;
-        height: 2vw;
-        padding: 0.2em;
-        margin: 0 0.6em; }
+        width: 1vw;
+        height: 1vw; }
       body main .contairer-create .line {
         width: 65vw;
         height: 1vh; } }
@@ -1612,8 +1836,14 @@ body {
             width: 5vw;
             height: 5vw; } }
   @media screen and (min-width: 1024px) {
-    body main .trendingSection .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-heart, body main .trendingSection .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-download, body main .trendingSection .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-expand-alt {
-      line-height: 1.9em; } }
+    body main .hoverIcons a .fa-heart, body main .hoverIcons a .fa-download, body main .hoverIcons a .fa-expand-alt {
+      line-height: 1.5em; } }
+  @media screen and (min-width: 1200px) {
+    body main .hoverIcons a .fa-heart, body main .hoverIcons a .fa-download, body main .hoverIcons a .fa-expand-alt {
+      width: 0.5vw;
+      height: 0.5vw;
+      padding: 0.5em;
+      font-size: 1.2em; } }
   body footer {
     display: flex;
     flex-direction: column;
@@ -1633,7 +1863,7 @@ body {
         justify-content: space-between;
         width: 28vw; }
         body footer .social-footer .containerRedes .fa-facebook-f, body footer .social-footer .containerRedes .fa-twitter, body footer .social-footer .containerRedes .fa-instagram {
-          color: #CDD6E0; }
+          color: #9CAFC3; }
   @media screen and (min-width: 768px) {
     body footer {
       display: flex;

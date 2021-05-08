@@ -232,159 +232,20 @@ main {
                     }
                 }
             }
-
-            // .show {
-            //     display: none; 
-            //     flex-direction: column;
-            //     align-items: center;
-            //     justify-content: center;
-            //     position: fixed; 
-            //     z-index: 1;
-            //     left: 0;
-            //     top: 6.3em;
-            //     padding: 0.5em 5em;
-            //     width: 100%; 
-            //     overflow: auto; 
-            //     background-color: rgba(255, 255, 255, 0.842); 
-
-            //     .close-btn-modalExpand {
-            //         align-self: flex-end;
-            //         width: 3vw;
-            //         height: 3vw;
-            //         color: $c-contrast;
-            //         background: $c-background;
-            //         opacity: 0.7;
-            //         padding: 0.35em;
-            //         border-radius: 0.375em;
-            //     }
-
-            //     .img-expand {
-            //         padding: 0.5em;
-            //         width: 35vw;
-            //         height: 35vw;
-
-            //         img {
-            //             width: 100%;
-            //             height: 100%;
-            //         }
-            //     }
-
-            //     .constainerIcons {
-            //         align-self: flex-end;
-            //         display: flex;
-
-            //         a {
-            //             padding: 0.2em;
-    
-            //             .fa-heart, .fa-download, .fa-expand-alt {
-            //                 width: 3vw;
-            //                 height: 3vw;
-            //                 color: $c-contrast;
-            //                 background: $c-background;
-            //                 opacity: 0.7;
-            //                 padding: 0.2em;
-            //                 border-radius: 0.375em;
-    
-            //                 &:hover {
-            //                     opacity: 1;
-            //                 }
-            //             }
-            //         }
-            //     }
-
-            //     .textCardimg, .titleCardimg {
-            //         align-self: flex-start;
-            //         color: $c-blacktexts;
-            //     }
-
-            //     .textCardimg {
-            //         font-size: 0.9em;
-            //         width: max-content;
-            //     }
-
-            //     .titleCardimg {
-            //         padding: 0.3em 0 0 0 ;
-            //         font-family: $blodtext-font;
-            //         font-size: 1em;
-            //         width: 22vw;
-            //         text-align: left;
-            //     }
-            // }    
         }
     }
 }
-
 
 // /* Tablets en horizonal y escritorios normales
 //     ------------------------------------------------------------------------- */
 @media screen and (min-width: 1024px) {
     main {
-        .trendingSection{
-           
     
-            .titleTrendingSection {
-            }
-
-            .containerSubtitle {
-    
-                .subtitleTrendingSection1 {
-                }
-        
-                .subtitleTrendingSection2 {
-                }
-            }
-
-            .container-slider {
-
-                .container-img-trendinggifos {   
-
-                    &:hover .containerDetails .content-overlay {
-                      
-                    }
-    
-                    &:hover .containerDetails .content-details {
-                        
-                    }
-
-                    .imgnewgifos {
-                    }
-
-                    .containerDetails {
-
-                        .content-overlay {
-                        }
-
-                        .content-details {
-    
-                            .hoverIcons {
-    
-                                a {
-
-                                    .fa-heart, .fa-download, .fa-expand-alt {
-                                        line-height: 1.9em;
-                                        
-                                    }
-                                }
-                            }
-    
-                            .textCardimg, .titleCardimg {
-                            }
-    
-                            .textCardimg {
-                            }
-    
-                            .titleCardimg {
-                            }
-                        }
-    
-                        .fadeIn-top{
-                        }
-                          
-                        .fadeIn-left{
-                        }
-
-                        
-                    }
+        .hoverIcons {
+            a {
+                .fa-heart, .fa-download, .fa-expand-alt {
+                    line-height: 1.5em;
+                    
                 }
             }
         }
@@ -393,6 +254,20 @@ main {
 
 /* Escritorios muy anchos
     ------------------------------------------------------------------------- */
-@media screen and (min-width: 1200px) {} 
+@media screen and (min-width: 1200px) {
+    main {
+    
+        .hoverIcons {
+            a {
+                .fa-heart, .fa-download, .fa-expand-alt {
+                    width: 0.5vw;
+                    height: 0.5vw;
+                    padding: 0.5em;
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+} 
 
    

@@ -98,12 +98,18 @@ main {
 
                 .loader {
                     color: $c-turquoise;
+                    background: $c-contrast;
+
+                    img {
+                        background: $c-contrast;
+                    }
                 }
 
                 .msjUploadGif {
-                    font-size: 1em;
+                    font-size: 0.938em;
                     width: max-content;
                     color: $c-background;
+                    background: $c-contrast;
                 }
             }
 
@@ -119,37 +125,45 @@ main {
                 background: $c-contrast;
 
                 .containerIconsUploadOk {
-                    align-self: flex-end; //REVISAR -> ARRIBA A LA DERECHA 
-                    // justify-self: flex-start;
                     display: flex;
                     width: max-content;
                     padding: 0.1em;
+                    background: $c-contrast;
 
                     a {
                         width: max-content;
                         padding: 0.2em;
+                        background: $c-contrast;
 
                         .btndownloadMyGifoPrev, .fa-link {
-                            width: 10vw;
-                            height: 10vw;
-                            line-height: 0.5vh;
+                            width: 8vw;
+                            height: 8vw;
+                            line-height: -2vh;
                             color: $c-contrast;
                             background: $c-background;
                             opacity: 0.7;
-                            padding: 0.2em 0 0 0;
+                            padding: 0.2em;
                             border-radius: 0.3em;
                         }
                     }
                 }
 
                 .check {
+                    justify-self: center;
                     color: $c-turquoise;
+                    background: $c-contrast;
+                    
+                    img {
+                        background: $c-contrast;
+                    }
                 }
 
                 .msjUploadGifConfirm {
-                    font-size: 1em;
+                    justify-self: center;
+                    font-size: 0.938em;
                     width: max-content;
                     color: $c-background;
+                    background: $c-contrast;
                 }
             }
 
@@ -278,14 +292,13 @@ main {
    @media screen and (min-width: 768px) {
     main {
         .contairer-create {
-            margin-top: 21.1vh;
-            padding: 0 0 1em 0;
+            margin-top: 17vh;
+            padding: 1em 0 5em 0em;
     
             .filmanimation1 {
                 margin-left: 35vw;
 
                 .cintas {
-    
                     .animationCinta1 {
                         width: 5vw;
                         height: 5vw;
@@ -300,15 +313,14 @@ main {
                 }
     
                 .cam {
-    
                     .animationCam {
                         width: 15vw;
                     }
         
-                   .animationLight {
+                    .animationLight {
                         width: 9vw;
-                        right: 35.8vw;
-                        top: 20.34vw;
+                        right: 35vw;
+                        top: 19vw;
                     }
                 }
             }
@@ -316,39 +328,53 @@ main {
             .contairer-cam {
                 width: 89.6vw;
                 height: 77.5vh;
-                padding: 0.5em;
                 margin-left: 0;
-                
     
                 .corner1 {
                     width: 4vw;
                     height: 4vw;
                 }
-               
 
                 .containerVideoCam {
-                    grid-area: 1 / 2 / 3 / 3;
 
                     #video {
-                        display: block;
-                        width: 50vw;
-                        height: 30vw;
+                        width: 60vw;
+                        height: 60vh;
                     }
                 }
 
+                .preview-gif {
+                    width: 60vw;
+                    height: 60vh;
+                }
+
                 .uploadGif {
-                    display: none;
-                    grid-area: 1 / 2 / 3 / 3;
-                    width: 50vw;
-                    height: 30vw;
-                    opacity: 0.6;
-                    background: $c-contrast;
-                    z-index: 96;
+                    width: 60vw;
+                    height: 60vh;
+                }
+
+                .uploadGifConfirm {
+                    width: 60vw;
+                    height: 60vh;
+
+                    .containerIconsUploadOk {
     
-                    .msjUploadGif {
-                        font-size: 0.65em;
-                        width: max-content;
-                        color: $c-background;
+                        a {
+                            width: max-content;
+                            padding: 0.2em;
+                            background: $c-contrast;
+    
+                            .btndownloadMyGifoPrev, .fa-link {
+                                width: 3vw;
+                                height: 3vw;
+                                line-height: -2vh;
+                                color: $c-contrast;
+                                background: $c-background;
+                                opacity: 0.7;
+                                padding: 0.2em;
+                                border-radius: 0.3em;
+                            }
+                        }
                     }
                 }
 
@@ -369,11 +395,11 @@ main {
     
                 .titleCamSection {
                     justify-self: center;
-                    width: 35vw;
+                    width: 40vw;
                 }
     
                 .subtitleCamSection {
-                    width: 33vw;
+                    width: 50vw;
                 }
             }
 
@@ -480,6 +506,49 @@ main {
                         width: 2.5vw;
                         height: 2.5vw;
                     }
+
+                    .containerVideoCam {
+
+                        #video {
+                            width: 52vw;
+                            height: 48vh;
+                        }
+                    }
+    
+                    .preview-gif {
+                        width: 45vw;
+                        height: 45vh;
+                    }
+    
+                    .uploadGif {
+                        width: 45vw;
+                        height: 45vh;
+                    }
+    
+                    .uploadGifConfirm {
+                        width: 45vw;
+                        height: 45vh;
+    
+                        .containerIconsUploadOk {
+        
+                            a {
+                                width: max-content;
+                                padding: 0.2em;
+                                background: $c-contrast;
+        
+                                .btndownloadMyGifoPrev, .fa-link {
+                                    width: 2.5vw;
+                                    height: 2.5vw;
+                                    line-height: -2vh;
+                                    color: $c-contrast;
+                                    background: $c-background;
+                                    opacity: 0.7;
+                                    padding: 0.2em;
+                                    border-radius: 0.3em;
+                                }
+                            }
+                        }
+                    }
     
                     .corner2 {
                         width: 2.5vw;
@@ -495,6 +564,30 @@ main {
                         width: 2.5vw;
                         height: 2.5vw;
                     }
+
+                    .subtitleCamSection {
+                        width: 40vw;
+                    }
+                }
+            }
+
+            .container-infoCam {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 68vw;
+
+                .info-cam {
+                    width: 30vw;
+
+                    .bot1, .bot2, .bot3 {
+                        width: 3.5vw;
+                        height: 3.5vw;
+                    }
+                }
+                
+                .btnRepeatRecord {
+                    justify-content: flex-end;
                 }
             }
     
@@ -502,10 +595,10 @@ main {
                 width: 77.72vw;
             }
     
-            .button-cam {
-                width: 12.45vw;
-            }
-    
+            .button-cam, .button-record, .button-stopRecord, .button-uploadRecord {
+                width: 16.55vw;
+            }    
+
             .filmanimation2 {
                 position: absolute;
                 align-self: flex-end;
@@ -525,7 +618,7 @@ main {
 @media screen and (min-width: 1200px) {
     main {
         .contairer-create {
-            margin-top: 22vh;
+            margin-top: 15vh;
 
             .containerFlexCreateAnimation {
                 .filmanimation1 {
@@ -554,6 +647,40 @@ main {
                     width: 55vw;
                     height: 65vh;
 
+                    .containerVideoCam {
+
+                        #video {
+                            width: 45vw;
+                            height: 45vh;
+                        }
+                    }
+    
+                    .preview-gif {
+                        width: 45vw;
+                        height: 45vh;
+                    }
+    
+                    .uploadGif {
+                        width: 45vw;
+                        height: 45vh;
+                    }
+    
+                    .uploadGifConfirm {
+                        width: 45vw;
+                        height: 45vh;
+    
+                        .containerIconsUploadOk {
+        
+                            a {
+        
+                                .btndownloadMyGifoPrev, .fa-link {
+                                    width: 2vw;
+                                    height: 2vw;
+                                }
+                            }
+                        }
+                    }
+
                     .titleCamSection {
                         width: 25vw;
                         align-self: flex-end;
@@ -570,10 +697,8 @@ main {
 
             .info-cam {
                 .bot1, .bot2, .bot3 {
-                    width: 2vw;
-                    height: 2vw;
-                    padding: 0.2em;
-                    margin: 0 0.6em;
+                    width: 1vw;
+                    height: 1vw;
                 }
             }
     

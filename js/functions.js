@@ -41,10 +41,18 @@ if (modeSelect == "Nocturno") {
   document.body.classList.toggle("night-mode");
   buttonColorMode.textContent = 'Modo Diurno';
   document.querySelector('.imglogo').src = "./css/images/Logo-modo-noc.svg";
-  document.querySelector('.animationCinta1').src = "./css/images/element_cinta1-modo-noc.svg";
-  document.querySelector('.animationCinta2').src = "./css/images/element_cinta2-modo-noc.svg";
-  // document.querySelector('.animationCam').src = "./css/images/";
-  document.querySelector('.animationCinta3').src = "./css/images/pelicula-modo-noc.svg";
+
+  if (document.querySelector('.trendingSection')) {
+    document.querySelector('.leftBtn > img').src = "./css/images/button-slider-left-md-noct.svg";
+    document.querySelector('.rightBtn > img').src = "./css/images/button-slider-right-md-noct.svg";
+  }
+
+  if (document.querySelector('.contairer-create')) {
+    document.querySelector('.animationCinta1').src = "./css/images/element_cinta1-modo-noc.svg";
+    document.querySelector('.animationCinta2').src = "./css/images/element_cinta2-modo-noc.svg";
+    document.querySelector('.animationCinta3').src = "./css/images/pelicula-modo-noc.svg";
+  }
+
 } else {
   buttonColorMode.textContent = 'Modo Nocturno';
 }
@@ -60,17 +68,33 @@ buttonColorMode.addEventListener("click", () => {
     localStorage.setItem("modeSelect", "Nocturno");
     buttonColorMode.textContent = 'Modo Diurno';
     document.querySelector('.imglogo').src = "./css/images/Logo-modo-noc.svg";
-    document.querySelector('.animationCinta1').src = "./css/images/element_cinta1-modo-noc.svg";
-    document.querySelector('.animationCinta2').src = "./css/images/element_cinta2.svg";
-    document.querySelector('.animationCinta3').src = "./css/images/pelicula.svg";
+
+    if (document.querySelector('.trendingSection')) {
+      document.querySelector('.leftBtn > img').src = "./css/images/button-slider-left-md-noct.svg";
+      document.querySelector('.rightBtn > img').src = "./css/images/button-slider-right-md-noct.svg";
+    }
+
+    if (document.querySelector('.contairer-create')) {
+      document.querySelector('.animationCinta1').src = "./css/images/element_cinta1-modo-noc.svg";
+      document.querySelector('.animationCinta2').src = "./css/images/element_cinta2-modo-noc.svg";
+      document.querySelector('.animationCinta3').src = "./css/images/pelicula-modo-noc.svg";
+    }
 
   } else {
     localStorage.setItem("modeSelect", "Diurno");
     buttonColorMode.textContent = 'Modo Nocturno';
     document.querySelector('.imglogo').src = "./css/images/logo-desktop.svg";
-    document.querySelector('.animationCinta1').src = "./css/images/element_cinta1.svg";
-    document.querySelector('.animationCinta2').src = "./css/images/element_cinta2-modo-noc.svg";
-    document.querySelector('.animationCinta3').src = "./css/images/pelicula-modo-noc.svg";
+
+    if (document.querySelector('.trendingSection')) {
+      document.querySelector('.leftBtn > img').src = "./css/images/button-slider-left.svg";
+      document.querySelector('.rightBtn > img').src = "./css/images/button-slider-right.svg";
+    }
+
+    if (document.querySelector('.contairer-create')) {
+      document.querySelector('.animationCinta1').src = "./css/images/element_cinta1.svg";
+      document.querySelector('.animationCinta2').src = "./css/images/element_cinta2.svg";
+      document.querySelector('.animationCinta3').src = "./css/images/pelicula.svg";
+    }
   }
 });
 

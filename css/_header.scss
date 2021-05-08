@@ -103,16 +103,14 @@ header {
     }
 }
 
-
-
 /* Móviles en horizontal o tablets en vertical
    ------------------------------------------------------------------------- */
 @media screen and (min-width: 768px) {
     header {
         position: fixed;
-    
+        height: 18vh;
+
         nav {
-           
             .mh, .x {
                 display: none;
             }
@@ -165,9 +163,6 @@ header {
 
                         .fa-plus, .menusearch {
                             width: 100%;
-                            padding: 1em;
-                            border-radius: 100%;
-                            border: 0.1em solid $c-contrast;
                         }
 
                         .fa-plus:hover {
@@ -205,7 +200,11 @@ header {
     }
 }
 
-// /* Escritorios muy anchos
-//    ------------------------------------------------------------------------- */
-// @media screen and (min-width: 1200px) {}
+/* Escritorios muy anchos
+   ------------------------------------------------------------------------- */
+@media screen and (min-width: 1200px) {
+    header {
+        height: 15vh;
+    }
+}
 

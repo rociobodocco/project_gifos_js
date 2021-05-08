@@ -7,16 +7,20 @@ main {
         margin-top: 16vh;
         padding: 1em 0 2em 0em;
 
+        .containerIconFavNone {
+            padding: 1em 0 0 0;
+        }
+
+        .textFavSection {
+            font-size: 1.25em;
+        }
+
         .emptyFavoritesSection {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 1em 0 2em 0em;
 
-            .textFavSection {
-                font-size: 1.25em;
-            }
-    
             .containerImgFavNone {
                 .imgFav {
                     padding: 1em 0 1em 0em;
@@ -40,7 +44,6 @@ main {
             padding: 1em;
 
             .container-img-favGifos {
-
                 .imgFavoritesGifos {
                     width: 95%;
                     padding: 0.5em 0;
@@ -50,6 +53,18 @@ main {
                     display: none;                    
                 }
             }
+        }
+
+        .btnSeeMoreGifos {
+            width: 50vw;
+            padding: 1em;
+            margin: 1em 0;
+            font-family: $title-font;
+            font-size: 0.815em;
+            color: $c-contrast;
+            border: 0.1em solid $c-contrast;
+            border-radius: 1.6875em;
+            background: none;
         }
 
         .btnSeeMoreGifos {
@@ -145,19 +160,10 @@ main {
    @media screen and (min-width: 768px) {
     main {
         .favoriteSection {
-            margin-top: 19vh;
+            margin-top: 17vh;
             padding: 1em 0 5em 0em;
 
             .emptyFavoritesSection {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 1em 0 2em 0em;
-    
-                .textFavSection {
-                    font-size: 1.25em;
-                }
-        
                 .containerImgFavNone {
                     .imgFav {
                         padding: 3em 0 1em 0em;
@@ -165,10 +171,7 @@ main {
                 }
         
                 .textFavNone {
-                    padding: 1em;
-                    font-family: $title-font;
-                    color: $c-turquoise;
-                    font-size: 1.38em;
+                    width: 67vw;
                 }
             }
 
@@ -190,7 +193,7 @@ main {
     
                     &:hover .containerDetails .content-details {
                         top: 50%;
-                        opacity: 1;
+                        opacity: 0.6;
                     }
                     
                     .imgFavoritesGifos {
@@ -204,7 +207,7 @@ main {
                         display: block;
 
                         .content-overlay {
-                            background: $c-contrast;
+                            background-color: $c-hovercardsgifs;
                             position: absolute;
                             top: 0;
                             bottom: 0;
@@ -214,6 +217,7 @@ main {
                         }
 
                         .content-details {
+                            background-color: $c-hovercardsgifs;
                             display: grid;
                             grid-template: repeat(4, 1fr) / repeat(3, 1fr);
                             position: absolute;
@@ -281,87 +285,40 @@ main {
                     }
                 }
                 
+            }
+
+            .btnSeeMoreGifos {
+                width: 15vw;
+                margin: 2em 0;
+
+                &:hover {
+                    background-color: $c-whitetexts;
+                }
+            }
+
+            .show {
+                .img-expand {
+                    width: 60vw;
+                    height: 45vw;
+                }
     
-                
-    
-                // .show {
-                //     display: none; 
-                //     flex-direction: column;
-                //     align-items: center;
-                //     justify-content: center;
-                //     position: fixed; 
-                //     z-index: 1;
-                //     left: 0;
-                //     top: 6.3em;
-                //     padding: 0.5em 5em;
-                //     width: 100%; 
-                //     overflow: auto; 
-                //     background-color: rgba(255, 255, 255, 0.842); 
-    
-                //     .close-btn-modalExpand {
-                //         align-self: flex-end;
-                //         width: 3vw;
-                //         height: 3vw;
-                //         color: $c-contrast;
-                //         background: $c-background;
-                //         opacity: 0.7;
-                //         padding: 0.35em;
-                //         border-radius: 0.375em;
-                //     }
-    
-                //     .img-expand {
-                //         padding: 0.5em;
-                //         width: 35vw;
-                //         height: 35vw;
-    
-                //         img {
-                //             width: 100%;
-                //             height: 100%;
-                //         }
-                //     }
-    
-                //     .constainerIcons {
-                //         align-self: flex-end;
-                //         display: flex;
-    
-                //         a {
-                //             padding: 0.2em;
-        
-                //             .fa-heart, .fa-download, .fa-expand-alt {
-                //                 width: 3vw;
-                //                 height: 3vw;
-                //                 color: $c-contrast;
-                //                 background: $c-background;
-                //                 opacity: 0.7;
-                //                 padding: 0.2em;
-                //                 border-radius: 0.375em;
-        
-                //                 &:hover {
-                //                     opacity: 1;
-                //                 }
-                //             }
-                //         }
-                //     }
-    
-                //     .textCardimg, .titleCardimg {
-                //         align-self: flex-start;
-                //         color: $c-blacktexts;
-                //     }
-    
-                //     .textCardimg {
-                //         font-size: 0.9em;
-                //         width: max-content;
-                //     }
-    
-                //     .titleCardimg {
-                //         padding: 0.3em 0 0 0 ;
-                //         font-family: $blodtext-font;
-                //         font-size: 1em;
-                //         width: 22vw;
-                //         text-align: left;
-                //     }
-                // }
-                
+                .constainerIcons {
+                    a {
+                        .fa-heart, .fa-download {
+                            width: 3.5vw;
+                            height: 3.5vw;
+                            color: $c-contrast;
+                            border: 0.1em solid $c-placeholdersactives;
+                            opacity: 0.7; 
+                            padding: 0.2em;
+                            border-radius: 0.375em;
+
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -372,8 +329,26 @@ main {
 @media screen and (min-width: 1024px) {
     main {
         .favoriteSection {
+            margin-top: 18vh;
+
             .textFavNone {
                 width: 50%;
+            }
+
+            .show {
+                .img-expand {
+                    width: 50vw;
+                    height: 35vw;
+                }
+    
+                .constainerIcons {
+                    a {
+                        .fa-heart, .fa-download {
+                            width: 2.5vw;
+                            height: 2.5vw;
+                        }
+                    }
+                }
             }
         }
     }
@@ -386,6 +361,22 @@ main {
         .favoriteSection {
             .textFavNone {
                 width: 40%;
+            }
+
+            .show {
+                .img-expand {
+                    width: 40vw;
+                    height: 25vw;
+                }
+    
+                .constainerIcons {
+                    a {
+                        .fa-heart, .fa-download {
+                            width: 2vw;
+                            height: 2vw;
+                        }
+                    }
+                }
             }
         }
     }

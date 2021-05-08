@@ -145,6 +145,7 @@ const printFavorites = () => {
       cardGifosFav.querySelector('.btnRemoveFavorites').addEventListener("click", removeFavoritesHandler);
 
     });
+    
   } else {
     emptyFavSec.style.display = 'flex';
   };
@@ -162,7 +163,7 @@ const addFavoritesHandler = (ev => {
   localFavorites.favorites.push(gifosJson);
   localStorage.setItem('favorites', JSON.stringify(localFavorites));
   printFavorites();
-
+  location.reload();
 });
 
 // Remove Favorite and delete item of DOM 

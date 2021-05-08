@@ -22,9 +22,7 @@ const uploadEndpoint = 'http://upload.giphy.com/v1/gifs?api_key=W7yxLc2XnPExjexS
 
 function showPreviewGif({ id }) {
     console.log(id);
-    contairerCam.innerHTML = `<img class='preview-gif' data-id='${id}' src='https://i.giphy.com/${id}.gif'>`;
-
-
+    contairerCam.innerHTML = `<img class='preview-gif' data-id='${id}' src='https://i.giphy.com/${id}.gif' alt="myGifo">`;
 };
 
 btnUploadRecord.addEventListener('click', function (ev) {
@@ -45,22 +43,23 @@ btnUploadRecord.addEventListener('click', function (ev) {
         document.querySelector('.uploadGifConfirm').style.color = '#FFFFFF';
 
         // Download
-        const downloadMyGifsPrev = async (ev) => {
+        const downloadMyGifsPrev = async () => {
             const downloadUrlMyGifos = `https://media.giphy.com/media/${id}/giphy.gif`;
             console.log(downloadUrlMyGifos)
             const fetchedGif = fetch(downloadUrlMyGifos);
             const blobGifos = (await fetchedGif).blob();
             const urlGifos = URL.createObjectURL(await blobGifos);
-            // const titleGif = document.querySelector('.imgmygifos').alt;
+            const titleGif = document.querySelector('.preview-gif').alt;
             const saveGifImg = document.createElement("a");
             saveGifImg.href = urlGifos;
+            saveGifImg.download = `${titleGif}.gif`;
             console.log(urlGifos)
-            // saveGifImg.download = `${titleGif}.gif`;
             saveGifImg.style = 'display: "none"';
             document.body.appendChild(saveGifImg);
             saveGifImg.click();
             document.body.removeChild(saveGifImg);
         };
+        
         const btnDownload = document.querySelector('.btndownloadMyGifoPrev');
         btnDownload.addEventListener("click", downloadMyGifsPrev);
 
@@ -68,12 +67,12 @@ btnUploadRecord.addEventListener('click', function (ev) {
         btnLink.addEventListener("click", ()=> {
             btnLink.href = url;
             console.log(btnLink);
-            // btnLink.target = "_blank";
+            btnLink.target = "_blank";
         });
 
-        // setTimeout(() => {
-        //     location.reload();
-        // }, 5000);
+        setTimeout(() => {
+            location.reload();
+        }, 10000);
     }, 5000);
 });
 
