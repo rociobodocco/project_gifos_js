@@ -310,7 +310,8 @@ body {
           body header nav ul li .changeTheme {
             color: #572EE5;
             text-transform: uppercase;
-            font-size: 0.8129em; }
+            font-size: 0.8129em;
+            cursor: pointer; }
           body header nav ul li .changeTheme:hover {
             border-bottom: 0.2em solid #5ED7C6; }
           body header nav ul li .changeTheme:active {
@@ -321,7 +322,8 @@ body {
           body header nav ul li a {
             text-transform: uppercase;
             font-size: 0.8129em;
-            color: #572EE5; }
+            color: #572EE5;
+            cursor: pointer; }
             body header nav ul li a:active {
               color: #9CAFC3;
               text-decoration: none; }
@@ -590,7 +592,8 @@ body {
         body main .home .containerSearch .containerAutocomplete {
           width: 65vw; }
           body main .home .containerSearch .containerAutocomplete .itemSuggestions {
-            width: max-content; }
+            width: max-content;
+            cursor: pointer; }
       body main .home .containerTrending {
         margin-top: 5vh;
         padding: 1em 0; }
@@ -599,6 +602,7 @@ body {
         body main .home .containerTrending .containerTrendingTopics {
           flex-direction: row; }
           body main .home .containerTrending .containerTrendingTopics .trendigTopics {
+            cursor: pointer;
             font-size: 1em; }
       body main .home .containerTitleSearch .lineSearch {
         width: 40vw; }
@@ -660,7 +664,8 @@ body {
                     background: #FFFFFF;
                     opacity: 0.7;
                     padding: 0.2em 0 0 0;
-                    border-radius: 0.375em; }
+                    border-radius: 0.375em;
+                    cursor: pointer; }
                     body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .hoverIcons a .fa-heart:hover, body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .hoverIcons a .fa-download:hover, body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .hoverIcons a .fa-expand-alt:hover {
                       opacity: 1; }
               body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .textCardimg, body main .home .containerGifsSearch .container-img-searchGifos .containerDetails .content-details .titleCardimg {
@@ -694,7 +699,8 @@ body {
             font-size: 1.38em; }
       body main .home .btnSeeMoreGifos {
         width: 15vw;
-        margin: 2em 0; }
+        margin: 2em 0;
+        cursor: pointer; }
         body main .home .btnSeeMoreGifos:hover {
           background-color: #572EE5; }
       body main .home .show .img-expand {
@@ -708,7 +714,8 @@ body {
         border: 0.1em solid #9CAFC3;
         opacity: 0.7;
         padding: 0.2em;
-        border-radius: 0.375em; }
+        border-radius: 0.375em;
+        cursor: pointer; }
         body main .home .show .constainerIcons a .fa-heart:hover, body main .home .show .constainerIcons a .fa-download:hover {
           opacity: 1; } }
   @media screen and (min-width: 1024px) {
@@ -936,7 +943,8 @@ body {
                     background: #FFFFFF;
                     opacity: 0.7;
                     padding: 0.2em 0 0 0;
-                    border-radius: 0.375em; }
+                    border-radius: 0.375em;
+                    cursor: pointer; }
                     body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .hoverIcons a .fa-heart:hover, body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .hoverIcons a .fa-download:hover, body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .hoverIcons a .fa-expand-alt:hover {
                       opacity: 1; }
               body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .textCardimg, body main .favoriteSection .containerFavorites .container-img-favGifos .containerDetails .content-details .titleCardimg {
@@ -957,7 +965,8 @@ body {
               left: 50%; }
       body main .favoriteSection .btnSeeMoreGifos {
         width: 15vw;
-        margin: 2em 0; }
+        margin: 2em 0;
+        cursor: pointer; }
         body main .favoriteSection .btnSeeMoreGifos:hover {
           background-color: #fffff1; }
       body main .favoriteSection .show .img-expand {
@@ -970,7 +979,8 @@ body {
         border: 0.1em solid #9CAFC3;
         opacity: 0.7;
         padding: 0.2em;
-        border-radius: 0.375em; }
+        border-radius: 0.375em;
+        cursor: pointer; }
         body main .favoriteSection .show .constainerIcons a .fa-heart:hover, body main .favoriteSection .show .constainerIcons a .fa-download:hover {
           opacity: 1; } }
   @media screen and (min-width: 1024px) {
@@ -1156,7 +1166,8 @@ body {
                     background: #FFFFFF;
                     opacity: 0.7;
                     padding: 0.2em 0 0 0;
-                    border-radius: 0.375em; }
+                    border-radius: 0.375em;
+                    cursor: pointer; }
                     body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a .fa-trash-alt:hover, body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a .fa-download:hover, body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .hoverIcons a .fa-expand-alt:hover {
                       opacity: 1; }
               body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .textCardimg, body main .misgifosSection .containerMyGifos .container-img-mygifos .containerDetails .content-details .titleCardimg {
@@ -1177,7 +1188,8 @@ body {
               left: 50%; }
       body main .misgifosSection .btnSeeMoreGifos {
         width: 15vw;
-        margin: 2em 0; }
+        margin: 2em 0;
+        cursor: pointer; }
         body main .misgifosSection .btnSeeMoreGifos:hover {
           background-color: #fffff1; }
       body main .misgifosSection .show .img-expand {
@@ -1191,7 +1203,8 @@ body {
         border: 0.1em solid #9CAFC3;
         opacity: 0.7;
         padding: 0.2em;
-        border-radius: 0.375em; }
+        border-radius: 0.375em;
+        cursor: pointer; }
         body main .misgifosSection .show .constainerIcons a .fa-heart:hover, body main .misgifosSection .show .constainerIcons a .fa-trash-alt:hover, body main .misgifosSection .show .constainerIcons a .fa-download:hover {
           opacity: 1; } }
   @media screen and (min-width: 1024px) {
@@ -1475,7 +1488,8 @@ body {
               background: #FFFFFF;
               opacity: 0.7;
               padding: 0.2em;
-              border-radius: 0.3em; }
+              border-radius: 0.3em;
+              cursor: pointer; }
         body main .contairer-create .contairer-cam .corner2 {
           width: 4vw;
           height: 4vw; }
@@ -1496,13 +1510,15 @@ body {
           width: 4.559vw;
           height: 4.559vw; }
         body main .contairer-create .container-infoCam .btnRepeatRecord {
-          justify-content: flex-end; }
+          justify-content: flex-end;
+          cursor: pointer; }
           body main .contairer-create .container-infoCam .btnRepeatRecord:hover {
             border-bottom: 0.2em solid #5ED7C6; }
       body main .contairer-create .line {
         width: 95vw; }
       body main .contairer-create .button-cam, body main .contairer-create .button-record, body main .contairer-create .button-stopRecord, body main .contairer-create .button-uploadRecord {
-        width: 16.55vw; }
+        width: 16.55vw;
+        cursor: pointer; }
         body main .contairer-create .button-cam:hover, body main .contairer-create .button-record:hover, body main .contairer-create .button-stopRecord:hover, body main .contairer-create .button-uploadRecord:hover {
           background: #572EE5;
           color: #FFFFFF; }
@@ -1816,7 +1832,8 @@ body {
                       background: #FFFFFF;
                       opacity: 0.7;
                       padding: 0.2em 0 0 0;
-                      border-radius: 0.375em; }
+                      border-radius: 0.375em;
+                      cursor: pointer; }
                       body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-heart:hover, body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-download:hover, body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .hoverIcons a .fa-expand-alt:hover {
                         opacity: 1; }
                 body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .textCardimg, body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .content-details .titleCardimg {
@@ -1835,7 +1852,15 @@ body {
                 top: 50%; }
               body main .trendingSection .gifosTrendingGallery .container-slider .container-img-trendinggifos .containerDetails .fadeIn-left {
                 left: 50%; }
+        body main .trendingSection .gifosTrendingGallery .leftBtn {
+          cursor: pointer;
+          display: block;
+          padding: 1em; }
+          body main .trendingSection .gifosTrendingGallery .leftBtn img {
+            width: 5vw;
+            height: 5vw; }
         body main .trendingSection .gifosTrendingGallery .rightBtn {
+          cursor: pointer;
           display: block;
           padding: 1em; }
           body main .trendingSection .gifosTrendingGallery .rightBtn img {
@@ -1891,6 +1916,8 @@ body {
           justify-content: space-evenly;
           width: 15vw;
           padding: 0 0 0 0.8em; }
+          body footer .social-footer .containerRedes .fa-facebook-f, body footer .social-footer .containerRedes .fa-twitter, body footer .social-footer .containerRedes .fa-instagram {
+            cursor: pointer; }
           body footer .social-footer .containerRedes .fa-facebook-f:hover {
             color: #572EE5; }
           body footer .social-footer .containerRedes .fa-twitter:hover {
