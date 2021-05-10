@@ -57,6 +57,10 @@ footer {
                 width: 15vw;
                 padding: 0 0 0 0.8em;
 
+                .fa-facebook-f, .fa-twitter, .fa-instagram {
+                    cursor: pointer;
+                }
+
                 .fa-facebook-f:hover {
                     color: $c-contrast;
                 }

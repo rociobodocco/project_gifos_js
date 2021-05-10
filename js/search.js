@@ -277,7 +277,7 @@ const printTagsTrendTopic = async (tags) => {
     </div>
     <div class="secondContainerTrendTopics">
       <p class="trendigTopics tt3">${tags.data[i + 2].charAt(0).toUpperCase() + tags.data[i + 2].slice(1)}</p><p>,</p>
-      <p class="trendigTopics tt4">${tags.data[i + 3].charAt(0).toUpperCase() + tags.data[i + 3].slice(1)}</p><p>,</p>
+      <p class="trendigTopics tt4">${tags.data[i + 3].charAt(0).toUpperCase() + tags.data[i + 3].slice(1)}</p><p> y </p>
       <p class="trendigTopics tt5">${tags.data[i + 4].charAt(0).toUpperCase() + tags.data[i + 4].slice(1)}</p>
     </div>`;
     containerTrending.appendChild(containerTrendingTopics);

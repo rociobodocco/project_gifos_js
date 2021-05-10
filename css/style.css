@@ -696,7 +696,7 @@ body {
         width: 15vw;
         margin: 2em 0; }
         body main .home .btnSeeMoreGifos:hover {
-          background-color: #fffff1; }
+          background-color: #572EE5; }
       body main .home .show .img-expand {
         padding: 0.5em;
         width: 60vw;
@@ -748,8 +748,10 @@ body {
       margin-top: 1em;
       width: 48vw; }
     body main .home .containerSearch {
-      margin-top: -2.5vh;
-      width: 48vw; }
+      margin-top: -2.2vh;
+      width: 40vw; }
+      body main .home .containerSearch .lineSearchSuggestions {
+        width: 37vw; }
     body main .home .containerGifsSearch .fa-heart, body main .home .containerGifsSearch .fa-download, body main .home .containerGifsSearch .fa-expand-alt {
       width: 0.5vw;
       height: 0.5vw;
@@ -983,14 +985,16 @@ body {
         width: 2.5vw;
         height: 2.5vw; } }
   @media screen and (min-width: 1200px) {
-    body main .favoriteSection .textFavNone {
-      width: 40%; }
-    body main .favoriteSection .show .img-expand {
-      width: 40vw;
-      height: 25vw; }
-    body main .favoriteSection .show .constainerIcons a .fa-heart, body main .favoriteSection .show .constainerIcons a .fa-download {
-      width: 2vw;
-      height: 2vw; } }
+    body main .favoriteSection {
+      margin-top: 14.85vh; }
+      body main .favoriteSection .textFavNone {
+        width: 40%; }
+      body main .favoriteSection .show .img-expand {
+        width: 40vw;
+        height: 25vw; }
+      body main .favoriteSection .show .constainerIcons a .fa-heart, body main .favoriteSection .show .constainerIcons a .fa-download {
+        width: 2vw;
+        height: 2vw; } }
   body main .misgifosSection {
     display: flex;
     flex-direction: column;
@@ -1204,14 +1208,16 @@ body {
         width: 2.5vw;
         height: 2.5vw; } }
   @media screen and (min-width: 1200px) {
-    body main .misgifosSection .hoverIcons a .fa-trash-alt, body main .misgifosSection .hoverIcons a .fa-download, body main .misgifosSection .hoverIcons a .fa-expand-alt {
-      font-size: 1.2em; }
-    body main .misgifosSection .show .img-expand {
-      width: 40vw;
-      height: 25vw; }
-    body main .misgifosSection .show .constainerIcons a .fa-heart, body main .misgifosSection .show .constainerIcons a .fa-trash-alt, body main .misgifosSection .show .constainerIcons a .fa-download {
-      width: 2vw;
-      height: 2vw; } }
+    body main .misgifosSection {
+      margin-top: 14.85vh; }
+      body main .misgifosSection .hoverIcons a .fa-trash-alt, body main .misgifosSection .hoverIcons a .fa-download, body main .misgifosSection .hoverIcons a .fa-expand-alt {
+        font-size: 1.2em; }
+      body main .misgifosSection .show .img-expand {
+        width: 40vw;
+        height: 25vw; }
+      body main .misgifosSection .show .constainerIcons a .fa-heart, body main .misgifosSection .show .constainerIcons a .fa-trash-alt, body main .misgifosSection .show .constainerIcons a .fa-download {
+        width: 2vw;
+        height: 2vw; } }
   body main .contairer-create {
     display: flex;
     flex-direction: column;

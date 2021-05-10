@@ -232,6 +232,7 @@ main {
                                         opacity: 0.7;
                                         padding: 0.2em 0 0 0;
                                         border-radius: 0.375em;
+                                        cursor: pointer;
     
                                         &:hover {
                                             opacity: 1;
@@ -274,6 +275,7 @@ main {
             .btnSeeMoreGifos {
                 width: 15vw;
                 margin: 2em 0;
+                cursor: pointer;
 
                 &:hover {
                     background-color: $c-whitetexts;
@@ -297,6 +299,7 @@ main {
                             opacity: 0.7; 
                             padding: 0.2em;
                             border-radius: 0.375em;
+                            cursor: pointer;
 
                             &:hover {
                                 opacity: 1;
@@ -353,7 +356,8 @@ main {
 @media screen and (min-width: 1200px) {
     main {
         .misgifosSection {
-    
+            margin-top: 14.85vh;
+            
             .hoverIcons {
                 a {
                     .fa-trash-alt, .fa-download, .fa-expand-alt {

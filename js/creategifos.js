@@ -18,7 +18,7 @@ const createVideo = () => {
     por el tiempo en el que estés creando el GIFO.`;
 };
 
-const uploadEndpoint = 'http://upload.giphy.com/v1/gifs?api_key=W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I';
+const uploadEndpoint = 'https://upload.giphy.com/v1/gifs?api_key=W7yxLc2XnPExjexSDj5c7HT1JVgjfL4I';
 
 function showPreviewGif({ id }) {
     console.log(id);

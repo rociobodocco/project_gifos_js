@@ -136,6 +136,7 @@ header {
                         color: $c-contrast;
                         text-transform: uppercase;
                         font-size: 0.8129em;
+                        cursor: pointer;
                     }
 
                     .changeTheme:hover {
@@ -155,6 +156,7 @@ header {
                         text-transform: uppercase;
                         font-size: 0.8129em;
                         color: $c-contrast;
+                        cursor: pointer;
     
                         &:active {
                             color: $c-placeholdersactives;
